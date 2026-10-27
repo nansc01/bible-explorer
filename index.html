@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Bible Explorer</title>
-<meta name="description" content="An interactive Bible library: hands-on pages for Genesis 1-3, Exodus 12-14, Judges 1-21, Luke 22-24, John 1-3, Acts 1-2, Romans 3-8 and Revelation 21-22, each point linked to its verse.">
+<meta name="description" content="An interactive Bible library: hands-on pages for Genesis 1-3, Exodus 12-14, Judges 1-21, Esther 1-10, Luke 22-24, John 1-3, Acts 1-2, Romans 3-8 and Revelation 21-22, each point linked to its verse.">
 <style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-size:14px}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
@@ -858,6 +858,93 @@ footer{border-top:1px solid var(--rule);margin-top:2.5rem;padding-block:1.6rem 2
 .jd-benjamin canvas{width:100%;height:auto;aspect-ratio:16/5;display:block}
 @media (max-width:640px){.jd-benjamin canvas{aspect-ratio:4/3}}
 .jd-next{padding:1.2rem;display:grid;gap:.5rem;border-color:var(--gold)!important}
+/* ---------- Esther 1–10 tab ---------- */
+.es-hero h1{color:#f6e2c0}
+.es-clues{padding:1.1rem 1.2rem;display:grid;gap:.7rem;margin-top:1rem}
+.es-cluegrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.5rem}
+@media (max-width:760px){.es-cluegrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.es-clue{display:grid;gap:.25rem;align-content:start;text-align:left;padding:.8rem .9rem;border-radius:14px;border:1px solid var(--rule);background:var(--surface-solid);cursor:pointer;color:var(--ink);transition:all .35s;min-height:6.4rem}
+.es-clue b{font:600 .9rem var(--f-label)}
+.es-clue .es-pay{font:500 .78rem/1.4 var(--f-label);color:var(--muted)}
+.es-ref{font:700 .66rem var(--f-label);letter-spacing:.08em;color:var(--gold)}
+.es-clue.on{border-color:var(--gold);box-shadow:inset 3px 0 0 var(--gold)}
+.es-clue[aria-pressed="true"]{background:linear-gradient(135deg,var(--gold-soft),transparent),var(--surface-solid)}
+.es-clue[aria-pressed="true"] .es-pay{color:var(--ink)}
+.es-clue.ping{animation:esPing 1.2s ease}
+@keyframes esPing{0%,100%{transform:none}30%{transform:scale(1.04);box-shadow:0 0 0 4px var(--glow)}}
+.es-empire{padding:0;display:grid;gap:.4rem;overflow:hidden}
+.es-empire canvas{width:100%;aspect-ratio:16/9;display:block}
+.es-list{margin:0;padding-left:1.1rem;display:grid;gap:.35rem}
+.es-year{padding:1.2rem;display:grid;gap:.8rem;align-content:start}
+.es-months{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:4px}
+@media (max-width:520px){.es-months{grid-template-columns:repeat(6,minmax(0,1fr))}}
+.es-months span{aspect-ratio:1/1.3;border-radius:10px;border:1px solid var(--rule);display:grid;place-items:center;font:700 .8rem var(--f-label);color:var(--muted);background:var(--surface-solid);transition:all .35s}
+.es-months span.on.myrrh{background:linear-gradient(180deg,#c98a3e,#8a5420);color:#fff;border-color:transparent}
+.es-months span.on.perf{background:linear-gradient(180deg,#d68ab8,#8a4a7a);color:#fff;border-color:transparent}
+.es-lotbox{padding:1rem 0 0;display:grid;gap:.6rem}
+.es-lotbox svg{width:100%;max-width:21rem;height:auto;margin:0 auto;display:block}
+.es-lotring{fill:none;stroke:var(--rule);stroke-width:2;stroke-dasharray:3 6}
+.es-mo circle{fill:var(--surface-solid);stroke:var(--rule);stroke-width:1.5;transition:all .4s}
+.es-mo text{font:700 13px var(--f-label);fill:var(--muted);text-anchor:middle}
+.es-mo text.nm{font-size:8px;font-weight:600;letter-spacing:.04em}
+.es-mo.named circle{stroke:var(--gold)}
+.es-mo.hit circle{fill:var(--rubric);stroke:var(--rubric);filter:drop-shadow(0 0 10px rgba(176,52,42,.6))}
+.es-mo.hit text{fill:#fff}
+.es-ptr{fill:var(--gold)}
+.es-hub{fill:var(--ink)}
+.es-relay{padding:1.2rem;display:grid;gap:.8rem}
+.es-lanes{display:flex;justify-content:space-between;font:700 .74rem var(--f-label);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.es-track{position:relative;height:1.6rem;margin:0 1.6rem;border-bottom:2px dashed var(--rule)}
+.es-track i{position:absolute;top:.2rem;width:1.2rem;height:1.2rem;border-radius:50%;background:var(--gold);transform:translateX(-50%);box-shadow:0 0 12px var(--glow)}
+.es-relay .stepcard{min-height:8.5rem;padding:1rem 1.1rem;border-radius:14px;background:var(--gold-soft);display:grid;gap:.35rem;align-content:start}
+.es-relay .stepcard h3{font-size:1.3rem;margin:0}
+.es-relay .stepcard p{margin:0}
+.es-night{padding:1.2rem;display:grid;gap:.8rem;align-content:start;background:linear-gradient(180deg,#070b1c,#141a34)!important;color:#ece4cf}
+.es-night .eyebrow{color:#9fb0e8}
+.es-night sup.cite{background:rgba(233,192,102,.2);color:#f0cd7a}
+.es-flag{margin:0;padding:.5rem .8rem;border-radius:10px;border:1px solid rgba(233,192,102,.5);color:#f0cd7a;font:600 .82rem var(--f-label)}
+.es-haman{padding:1.2rem;display:grid;gap:.8rem;align-content:start}
+.es-wish{display:grid;gap:.4rem}
+.es-wish button{text-align:left;min-height:2.9rem;padding:.5rem .9rem;border-radius:12px;border:1px dashed var(--rule);background:var(--surface-solid);font:600 .86rem var(--f-label);cursor:pointer;color:var(--ink);transition:all .4s}
+.es-wish button.on{border-style:solid;border-color:var(--gold);background:var(--gold-soft)}
+.es-wish button.on::before{content:"✓ ";color:var(--gold)}
+.es-wish.flip button.on{border-color:var(--rubric);background:linear-gradient(90deg,rgba(176,52,42,.12),transparent),var(--surface-solid)}
+.es-wish.flip button.on::after{content:" → Mordecai";color:var(--rubric);font-weight:700}
+.es-swaps,.es-edicts{padding:1.2rem;display:grid;gap:.8rem}
+.es-swapgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.5rem}
+@media (max-width:760px){.es-swapgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:420px){.es-swapgrid{grid-template-columns:1fr}}
+.es-swapgrid button{display:grid;gap:.3rem;text-align:left;padding:.85rem .95rem;border-radius:14px;border:1px solid var(--rule);background:var(--surface-solid);cursor:pointer;color:var(--ink);min-height:5.4rem;align-content:start;transition:all .4s}
+.es-was{font:500 .82rem/1.4 var(--f-label);color:var(--muted)}
+.es-was b{color:var(--ink)}
+.es-now{font:700 .9rem/1.35 var(--f-label);color:var(--rubric);opacity:0;transform:translateY(-4px);transition:all .4s}
+.es-swapgrid button.on{border-color:var(--rubric)}
+.es-swapgrid button.on .es-now{opacity:1;transform:none}
+.es-cal{position:relative;padding:4.4rem 0 .4rem}
+.es-calbar{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));border:1px solid var(--rule);border-radius:10px;overflow:hidden}
+.es-calbar span{padding:.4rem 0;text-align:center;font:700 .72rem var(--f-label);color:var(--muted);border-left:1px solid var(--rule);background:var(--surface-solid)}
+.es-calbar span:first-child{border-left:0}
+.es-pin{position:absolute;top:0;width:0;display:grid;justify-items:start;align-content:start;gap:.2rem;border:0;background:transparent;cursor:pointer;padding:0;min-height:2.75rem;color:var(--ink)}
+.es-pin b{font:700 .74rem/1.2 var(--f-label);white-space:nowrap;padding:.2rem .5rem;border-radius:999px;background:var(--surface-solid);border:1px solid currentColor;transform:translateX(-50%)}
+.es-pin i{position:absolute;left:0;top:1.5rem;width:2px;height:3rem;background:currentColor}
+.es-pin.rub{color:var(--rubric)}.es-pin.gold{color:var(--gold)}.es-pin.ink{color:var(--ink)}
+.es-pin:last-of-type b{transform:translateX(-90%)}
+.es-pin:nth-of-type(1) b{transform:translateX(-10%)}
+.es-pin.on b{background:color-mix(in srgb,currentColor 22%,var(--surface-solid));box-shadow:0 0 0 2px currentColor}
+.es-pin.gold{top:1.9rem}.es-pin.gold i{top:1.5rem;height:1.1rem}
+.es-days{padding:1.2rem;display:grid;gap:.8rem;align-content:start}
+.es-dayrow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.5rem}
+.es-day{display:grid;justify-items:center;gap:.1rem;padding:.8rem .4rem;border-radius:14px;border:1px solid var(--rule);background:var(--surface-solid);transition:all .4s}
+.es-day span{font:600 .66rem var(--f-label);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.es-day b{font-family:var(--f-display);font-size:2rem;line-height:1}
+.es-day i{font:600 .78rem var(--f-label);font-style:normal}
+.es-day.fight{border-color:var(--rubric);background:linear-gradient(180deg,rgba(176,52,42,.12),transparent),var(--surface-solid)}
+.es-day.fight i{color:var(--rubric)}
+.es-day.rest{border-color:var(--gold);background:linear-gradient(180deg,var(--gold-soft),transparent),var(--surface-solid)}
+.es-day.rest i{color:var(--gold)}
+.es-day.empty{opacity:.45}
+.es-keep{display:flex;flex-wrap:wrap;gap:.4rem}
+.es-keep span{padding:.35rem .8rem;border-radius:999px;background:var(--gold-soft);font:600 .8rem var(--f-label)}
 </style>
 
 <div class="ambient" aria-hidden="true"></div>
@@ -3083,6 +3170,237 @@ footer{border-top:1px solid var(--rule);margin-top:2.5rem;padding-block:1.6rem 2
   <p><strong>Labels:</strong> <em>Illustration</em> means drawn to explain. <em>Counted</em> and <em>Calculated</em> mean tallied or worked out from numbers in the text. <em>Interpretation</em> means a reading the text does not state. <em>Observation</em> means a link you can check yourself.</p>
 </footer>
 </div>
+<div class="tabpane" id="tab-esther-1-10" data-tab="esther-1-10" hidden>
+
+<section data-hero class="hero es-hero" id="esTop">
+  <figure data-figure style="position:absolute;inset:0;z-index:-1">
+    <canvas id="esHeroCanvas" role="img" aria-label="A Persian throne hall of tall columns; a queen stands in the inner court and the king's gold scepter lowers toward her"></canvas>
+  </figure>
+  <div class="hero-in">
+    <span class="kick">Esther 1 – 10 · the whole book</span>
+    <h1>For <em>Such a Time</em></h1>
+    <p class="thesis">An orphaned Jewish girl becomes queen of Persia, keeping her people secret<sup class="cite" data-cite="e2_queen">2:17</sup><sup class="cite" data-cite="e2_secret">2:10</sup>. When the king's top official arranges for every Jew in the empire to be killed on one day<sup class="cite" data-cite="e3_edict">3:13</sup>, she risks her life to go to the king uninvited<sup class="cite" data-cite="e4_perish">4:16</sup>, and everything Haman planned turns back on him<sup class="cite" data-cite="e9_turned">9:1</sup>.</p>
+    <button class="speak" id="esApproach"><span class="pulse"></span><span id="esApproachTxt">Approach the throne uninvited</span></button>
+    <p class="cap">The inner court of the king's hall in Susa<sup class="cite" data-cite="e5_scepter">5:1–2</sup> <span class="tag" data-label="Illustration">Illustration</span></p>
+  </div>
+</section>
+
+<ol class="journey" aria-label="Esther in seven scenes">
+  <li><button data-ego2="es1"><span class="n">i</span><span class="t">Vashti</span><span class="r">1</span></button></li>
+  <li><button data-ego2="es2"><span class="n">ii</span><span class="t">A new queen</span><span class="r">2</span></button></li>
+  <li><button data-ego2="es3"><span class="n">iii</span><span class="t">The lot</span><span class="r">3</span></button></li>
+  <li><button data-ego2="es4"><span class="n">iv</span><span class="t">Such a time</span><span class="r">4</span></button></li>
+  <li><button data-ego2="es5"><span class="n">v</span><span class="t">A sleepless night</span><span class="r">5–6</span></button></li>
+  <li><button data-ego2="es6"><span class="n">vi</span><span class="t">Reversal</span><span class="r">7–8</span></button></li>
+  <li><button data-ego2="es7"><span class="n">vii</span><span class="t">Purim</span><span class="r">9–10</span></button></li>
+</ol>
+
+<div class="glass es-clues">
+  <span class="eyebrow">Small details that come back later · tap to track them</span>
+  <div class="es-cluegrid" id="esClues"></div>
+</div>
+
+<!-- E1 -->
+<section class="scene" id="es1" data-escene2="1">
+  <div class="head">
+    <span class="num">1:1</span>
+    <span class="eyebrow">Scene 1 · A queen refuses</span>
+    <h2>Six months of showing off</h2>
+    <p class="point">King Xerxes rules an empire of 127 provinces from India to Cush<sup class="cite" data-cite="e1_empire">1:1</sup>. He displays his wealth for 180 days, then throws a seven-day banquet in Susa<sup class="cite" data-cite="e1_banquet">1:3–8</sup>.</p>
+  </div>
+  <div data-guess id="esg1">
+    <span class="lab">Guess first</span>
+    <p class="q">Drunk on the seventh day, the king summons Queen Vashti to show off her beauty. What does she do?</p>
+    <div class="row" role="group" aria-label="Pick one"><button class="choice">Comes at once</button><button class="choice" data-right>Refuses to come</button><button class="choice">Sends a gift instead</button></div>
+    <p class="reveal" hidden><strong>She refuses.</strong> The king is furious; on his advisers' counsel she is barred from his presence for good, and a decree goes out in every language that each man should rule his own household.<sup class="cite" data-cite="e1_vashti">1:10–12</sup><sup class="cite" data-cite="e1_decree">1:19–22</sup></p>
+  </div>
+  <div class="split">
+    <figure data-figure class="glass es-empire">
+      <canvas id="esEmpire" role="img" aria-label="127 dots for the provinces; the decree spreads to each in its own script"></canvas>
+      <div class="row" style="padding:0 1rem 1rem"><button class="btn" id="esSend">Send the decree</button><span class="small" id="esSendTxt">To each province in its own script, each people in its own language.<sup class="cite" data-cite="e1_decree">1:22</sup></span></div>
+    </figure>
+    <div class="glass" style="padding:1.2rem;display:grid;gap:.7rem;align-content:start">
+      <span class="eyebrow">The banquet garden · 1:6–7</span>
+      <ul class="es-list"><li>White and blue linen hangings on silver rings and marble pillars</li><li>Couches of gold and silver on a mosaic floor of costly stones</li><li>Wine in gold goblets, each one different</li></ul>
+      <p class="small">Everyone could drink as much as they liked.<sup class="cite" data-cite="e1_banquet">1:6–8</sup></p>
+    </div>
+  </div>
+  <figcaption>One dot per province, not a map <span class="tag" data-label="Illustration">Illustration</span></figcaption>
+</section>
+
+<!-- E2 -->
+<section class="scene" id="es2" data-escene2="2">
+  <div class="head">
+    <span class="num">2:7</span>
+    <span class="eyebrow">Scene 2 · A new queen</span>
+    <h2>Hadassah, also called Esther</h2>
+    <p class="point">Mordecai, a Benjamite exile in Susa, has raised his orphaned cousin Esther as his own daughter<sup class="cite" data-cite="e2_mordecai">2:5–7</sup>. She is taken into the king's harem with many other young women, and on Mordecai's orders tells no one she is Jewish<sup class="cite" data-cite="e2_secret">2:8–10</sup>.</p>
+  </div>
+  <div class="split">
+    <div class="glass es-year">
+      <span class="eyebrow">Before seeing the king · 2:12</span>
+      <div class="es-months" id="esMonths"></div>
+      <div class="row"><button class="btn ghost" id="esMonthBtn">Count the twelve months</button><span class="small" id="esMonthTxt">Six with oil of myrrh, six with perfumes and cosmetics.<sup class="cite" data-cite="e2_year">2:12</sup></span></div>
+    </div>
+    <div class="glass" style="padding:1.2rem;display:grid;gap:.7rem;align-content:start">
+      <span class="eyebrow">Meanwhile, at the king's gate · 2:21–23</span>
+      <p>Mordecai overhears two doorkeepers plotting to kill the king. He tells Esther, she tells the king and credits Mordecai, the plotters are hanged, and it's written in the royal record.<sup class="cite" data-cite="e2_plot">2:21–23</sup></p>
+      <p class="small">Nobody rewards him. Keep this in mind. <span class="tag" data-label="Observation">Observation</span></p>
+      <button class="btn ghost" data-clue="annals">Track this detail</button>
+    </div>
+  </div>
+  <p class="point">The king loves Esther more than all the others and sets the royal crown on her head.<sup class="cite" data-cite="e2_queen">2:16–18</sup></p>
+</section>
+
+<!-- E3 -->
+<section class="scene" id="es3" data-escene2="3">
+  <div class="head">
+    <span class="num">3:7</span>
+    <span class="eyebrow">Scene 3 · The lot</span>
+    <h2>One man won't bow</h2>
+    <p class="point">The king promotes Haman the Agagite above every noble and orders everyone at the gate to kneel to him. Mordecai won't<sup class="cite" data-cite="e3_kneel">3:1–4</sup>. Enraged, Haman decides to destroy not just Mordecai but all his people<sup class="cite" data-cite="e3_all">3:5–6</sup>.</p>
+  </div>
+  <div class="split">
+    <figure data-figure class="glass es-lotbox">
+      <svg viewBox="0 0 360 360" id="esLot" role="img" aria-label="The twelve months in a ring; the lot spins and lands on a month"></svg>
+      <div class="row" style="justify-content:center;padding:0 1rem 1rem"><button class="btn" id="esCast">Cast the pur</button></div>
+    </figure>
+    <div class="glass" style="padding:1.2rem;display:grid;gap:.7rem;align-content:start">
+      <p class="info" id="esLotInfo" aria-live="polite">In the first month, Nisan, they cast the pur, a lot, in front of Haman to choose the day.<sup class="cite" data-cite="e3_pur">3:7</sup></p>
+      <p>Haman tells the king that a scattered people with different customs ignores his laws, and offers 10,000 talents of silver. The king hands him his signet ring.<sup class="cite" data-cite="e3_offer">3:8–11</sup></p>
+      <p>The order goes out to every province: on the thirteenth of Adar, kill every Jew, young and old, women and children.<sup class="cite" data-cite="e3_edict">3:12–14</sup></p>
+      <p class="small">The king and Haman sit down to drink, but the city of Susa is bewildered.<sup class="cite" data-cite="e3_drink">3:15</sup></p>
+      <button class="btn ghost" data-clue="ring">Track the signet ring</button>
+    </div>
+  </div>
+  <figcaption>The lot falls almost a year ahead <span class="tag" data-label="Illustration">Illustration</span></figcaption>
+</section>
+
+<!-- E4 -->
+<section class="scene" id="es4" data-escene2="4">
+  <div class="head">
+    <span class="num">4:14</span>
+    <span class="eyebrow">Scene 4 · Such a time</span>
+    <h2>Messages through the gate</h2>
+    <p class="point">Mordecai puts on sackcloth and wails at the king's gate; Jews in every province fast and mourn<sup class="cite" data-cite="e4_mourn">4:1–3</sup>. Esther sends her attendant Hathach to find out why. Step through what passes between them.</p>
+  </div>
+  <div class="glass es-relay">
+    <div class="es-lanes"><span>Mordecai</span><span>Hathach</span><span>Esther</span></div>
+    <div class="es-track"><i id="esRunner"></i></div>
+    <div class="stepcard" id="esRelayCard" aria-live="polite"></div>
+    <div class="row"><button class="btn ghost" id="esRelayPrev">Previous</button><button class="btn" id="esRelayNext">Next</button></div>
+  </div>
+  <div data-guess id="esg2">
+    <span class="lab">Guess first</span>
+    <p class="q">Esther is afraid to go: anyone who approaches the king uninvited is put to death, unless he holds out his gold scepter. How long has it been since he last called for her?</p>
+    <div class="row" role="group" aria-label="Pick one"><button class="choice">Three days</button><button class="choice">A week</button><button class="choice" data-right>Thirty days</button><button class="choice">A year</button></div>
+    <p class="reveal" hidden><strong>Thirty days.</strong><sup class="cite" data-cite="e4_law">4:11</sup></p>
+  </div>
+</section>
+
+<!-- E5 -->
+<section class="scene" id="es5" data-escene2="5">
+  <div class="head">
+    <span class="num">6:1</span>
+    <span class="eyebrow">Scene 5 · Two banquets and a sleepless night</span>
+    <h2>The man the king delights to honor</h2>
+    <p class="point">The king holds out the scepter, offers her up to half his kingdom, and she asks only that he and Haman come to a banquet, then to a second one<sup class="cite" data-cite="e5_scepter">5:2–8</sup>. Haman leaves happy, sees Mordecai not rising, and has a gallows built for him<sup class="cite" data-cite="e5_gallows">5:9–14</sup>.</p>
+  </div>
+  <div class="split">
+    <div class="glass es-night">
+      <span class="eyebrow">That night</span>
+      <p>The king can't sleep, so he has the royal record read to him, and hears how Mordecai exposed the plot. Was he ever honored? Nothing was done.<sup class="cite" data-cite="e6_sleep">6:1–3</sup></p>
+      <p class="es-flag" id="esAnnalsFlag" hidden>That's the detail from scene 2.</p>
+      <p>Just then Haman walks into the court to ask for Mordecai's hanging. The king asks him what should be done for a man he wants to honor.<sup class="cite" data-cite="e6_honor">6:4–6</sup></p>
+    </div>
+    <div class="glass es-haman">
+      <span class="eyebrow">Haman assumes it's him. Build his wish list:</span>
+      <div class="es-wish" id="esWish">
+        <button>A royal robe the king has worn</button><button>A horse the king has ridden</button><button>A royal crest on its head</button><button>A noble prince to lead him through the city</button>
+      </div>
+      <p class="info" id="esWishInfo" aria-live="polite">Tap each item.</p>
+    </div>
+  </div>
+</section>
+
+<!-- E6 -->
+<section class="scene" id="es6" data-escene2="6">
+  <div class="head">
+    <span class="num">7:3</span>
+    <span class="eyebrow">Scene 6 · Reversal</span>
+    <h2>Grant me my life</h2>
+    <p class="point">At the second banquet Esther finally answers: spare her life and her people, who have been sold to be destroyed<sup class="cite" data-cite="e7_ask">7:2–4</sup>. Who dared? This wicked Haman<sup class="cite" data-cite="e7_haman">7:5–6</sup>.</p>
+  </div>
+  <div data-guess id="esg3">
+    <span class="lab">Guess first</span>
+    <p class="q">What happens to the gallows Haman built for Mordecai?</p>
+    <div class="row" role="group" aria-label="Pick one"><button class="choice">It's torn down</button><button class="choice">Mordecai is hanged on it</button><button class="choice" data-right>Haman is hanged on it</button></div>
+    <p class="reveal" hidden><strong>Haman is hanged on it.</strong> A eunuch points it out, and the king orders it. Then his anger subsides.<sup class="cite" data-cite="e7_hanged">7:9–10</sup></p>
+  </div>
+  <div class="glass es-swaps">
+    <span class="eyebrow">Turned around · tap each pair</span>
+    <div class="es-swapgrid" id="esSwaps"></div>
+    <p class="info" id="esSwapInfo" aria-live="polite">Tap a card to turn it.</p>
+  </div>
+  <div class="glass es-edicts">
+    <span class="eyebrow">Two decrees, one day · a Persian law can't be canceled, so a second one is written</span>
+    <div class="es-cal" id="esCal"></div>
+    <p class="info" id="esCalInfo" aria-live="polite">Tap a date.</p>
+  </div>
+</section>
+
+<!-- E7 -->
+<section class="scene" id="es7" data-escene2="7">
+  <div class="head">
+    <span class="num">9:1</span>
+    <span class="eyebrow">Scene 7 · Purim</span>
+    <h2>Sorrow turned to joy</h2>
+    <p class="point">On the thirteenth of Adar, the day their enemies hoped to overpower them, the Jews instead get the upper hand<sup class="cite" data-cite="e9_turned">9:1–5</sup>. Three times the text notes they did not take the plunder<sup class="cite" data-cite="e9_plunder">9:10, 15, 16</sup>.</p>
+  </div>
+  <div class="split">
+    <div class="glass es-days">
+      <span class="eyebrow">Fighting, then rest · 9:17–19</span>
+      <div class="seg" role="group" aria-label="Where"><button data-where="prov" aria-pressed="true">In the provinces</button><button data-where="susa" aria-pressed="false">In Susa</button></div>
+      <div class="es-dayrow" id="esDayRow"></div>
+      <p class="small" id="esDayTxt"></p>
+    </div>
+    <div class="glass" style="padding:1.2rem;display:grid;gap:.7rem;align-content:start">
+      <span class="eyebrow">How to keep Purim · 9:20–28</span>
+      <div class="es-keep"><span>feasting</span><span>joy</span><span>food for one another</span><span>gifts to the poor</span></div>
+      <p>Mordecai writes to Jews near and far to keep the fourteenth and fifteenth of Adar every year, the month their mourning became celebration. The name comes from pur, the lot Haman cast.<sup class="cite" data-cite="e9_purim">9:20–26</sup></p>
+      <p class="small">Esther herself writes with full authority to confirm it.<sup class="cite" data-cite="e9_esther">9:29–32</sup></p>
+    </div>
+  </div>
+  <div data-guess id="esg4">
+    <span class="lab">Guess first</span>
+    <p class="q">How many times is God mentioned by name in the book of Esther?</p>
+    <div class="row" role="group" aria-label="Pick one"><button class="choice" data-right>Never</button><button class="choice">Once</button><button class="choice">Seven times</button><button class="choice">Twenty times</button></div>
+    <p class="reveal" hidden><strong>Not once.</strong> Neither "God" nor "Lord" appears in this NIV text of Esther. <span class="tag" data-label="Counted">Counted</span> Many readers see God at work anyway, in a sleepless night, a forgotten record and a lot that fell almost a year away; Mordecai only hints that help will come from another place.<sup class="cite" data-cite="e4_time">4:14</sup> <span class="tag" data-label="Interpretation">Interpretation</span></p>
+  </div>
+  <p class="point">The book closes with Mordecai second only to the king, working for the good of his people.<sup class="cite" data-cite="e10_end">10:3</sup></p>
+</section>
+
+<section class="scene" id="esQuiz">
+  <div class="head"><span class="num">?</span><span class="eyebrow">Can you answer these?</span></div>
+  <div data-quiz>
+    <div class="glass qz" data-ans="1"><p class="q">Why did the king want to honor Mordecai?</p>
+      <div class="row"><button class="choice">Esther asked him to</button><button class="choice">He had exposed a plot to kill the king</button><button class="choice">He won a battle</button></div>
+      <p class="reveal" hidden>He had exposed the doorkeepers' plot, and it was in the record read on a sleepless night.<sup class="cite" data-cite="e6_sleep">6:1–3</sup></p></div>
+    <div class="glass qz" data-ans="2"><p class="q">Where does the name Purim come from?</p>
+      <div class="row"><button class="choice">A Persian king</button><button class="choice">The month of Adar</button><button class="choice">Pur, the lot Haman cast</button></div>
+      <p class="reveal" hidden>From pur, the lot.<sup class="cite" data-cite="e9_purim">9:24–26</sup></p></div>
+    <div class="glass qz" data-ans="0"><p class="q">What did Esther ask everyone in Susa to do before she went to the king?</p>
+      <div class="row"><button class="choice">Fast for three days</button><button class="choice">Gather weapons</button><button class="choice">Leave the city</button></div>
+      <p class="reveal" hidden>Fast for three days and nights, as she and her maids would.<sup class="cite" data-cite="e4_perish">4:16</sup></p></div>
+    <div class="score" hidden><svg class="ring" viewBox="0 0 64 64"><circle class="bgc" cx="32" cy="32" r="26"/><circle class="fg" cx="32" cy="32" r="26" stroke-dasharray="163.4" stroke-dashoffset="163.4"/></svg><span class="scoreTxt"></span></div>
+  </div>
+</section>
+
+<footer>
+  <p><strong>Source:</strong> your NIV PDF (GODoor.net edition), pages 747–758. This tab retells all ten chapters of Esther in its own words, apart from one short quoted line (4:14). Tap any gold reference for the PDF page with the exact NIV wording.</p>
+  <p><strong>Labels:</strong> <em>Illustration</em> means drawn to explain. <em>Observation</em> means a link you can check yourself. <em>Counted</em> means tallied from the text. <em>Interpretation</em> means a reading the text does not state.</p>
+</footer>
+</div>
 </main>
 
 <div class="pop" id="pop" hidden role="dialog" aria-modal="true" aria-labelledby="popRef">
@@ -3691,7 +4009,8 @@ const BUILT = [
   { book: "Exodus", from: 12, to: 14, tab: "exodus-12-14", title: "Through the Sea", blurb: "The first Passover, the night of leaving, and the crossing of the sea" },
   { book: "John", from: 1, to: 3, tab: "john-1-3", title: "The Word Became Flesh", blurb: "The Word, John the Baptist, the first followers, Cana, the temple and Nicodemus" },
   { book: "Revelation", from: 21, to: 22, tab: "revelation-21-22", title: "All Things New", blurb: "The new heaven and earth, the holy city, and the river and tree of life" },
-  { book: "Judges", from: 1, to: 21, tab: "judges-1-21", title: "No King in Israel", blurb: "The whole book: the repeating cycle, twelve judges, Deborah, Gideon, Samson and the dark ending" }
+  { book: "Judges", from: 1, to: 21, tab: "judges-1-21", title: "No King in Israel", blurb: "The whole book: the repeating cycle, twelve judges, Deborah, Gideon, Samson and the dark ending" },
+  { book: "Esther", from: 1, to: 10, tab: "esther-1-10", title: "For Such a Time", blurb: "A hidden queen, a cast lot and a sleepless night: the whole book of Esther, where every plan turns back on its maker." }
 ];
 const TABS = [{ id: "library", label: "Library" }, ...[...BUILT].sort((a, b) => BOOKS.findIndex(x => x[0] === a.book) - BOOKS.findIndex(x => x[0] === b.book) || a.from - b.from).map(b => ({ id: b.tab, label: `${b.book} ${b.from}–${b.to}` }))];
 
@@ -5307,6 +5626,251 @@ $$(".jd-shib [data-say]").forEach(b => b.onclick = () => { const ok = b.dataset.
   $(id + " .reveal").hidden = false; $(id).classList.add("done"); }));
 (() => { let answered = 0, right = 0; const box = $("#tab-judges-1-21 [data-quiz]");
   $$("#tab-judges-1-21 .qz").forEach(q => { const ans = +q.dataset.ans;
+    $$(".choice", q).forEach((b, i) => b.onclick = () => { if (q.dataset.done) return; q.dataset.done = 1; answered++;
+      if (i === ans) right++; else b.classList.add("wrong"); $$(".choice", q)[ans].classList.add("right"); $(".reveal", q).hidden = false;
+      if (answered === 3){ $(".score", box).hidden = false; $(".scoreTxt", box).textContent = right === 3 ? "3 of 3. You know the book." : `${right} of 3. Tap the references to review.`;
+        requestAnimationFrame(() => $(".fg", box).style.strokeDashoffset = 163.4 * (1 - right / 3)); } }); }); })();
+
+
+/* =========================================================
+   ESTHER 1–10 TAB
+   ========================================================= */
+Object.assign(SOURCES, {
+  e1_empire: { page: 747, ref: "Esther 1:1–2", say: "This happened in the time of Xerxes, who ruled 127 provinces stretching from India to Cush, reigning from his royal throne in the citadel of Susa." },
+  e1_banquet: { page: 747, ref: "Esther 1:3–8", say: "In his third year Xerxes held a banquet for his nobles and officials and for 180 days displayed the wealth and splendor of his kingdom. Then he gave a seven-day banquet in the palace garden for everyone in Susa: white and blue linen hangings on silver rings and marble pillars, couches of gold and silver on a mosaic pavement, wine in gold goblets each different from the others, and each guest allowed to drink as he wished." },
+  e1_vashti: { page: 747, ref: "Esther 1:10–12", say: "On the seventh day, in high spirits from wine, the king ordered seven eunuchs to bring Queen Vashti wearing her royal crown so he could display her beauty. She refused to come, and the king burned with anger." },
+  e1_decree: { page: 748, ref: "Esther 1:19–22", say: "Memucan advised an irrevocable royal decree that Vashti never again enter the king's presence and that her position go to someone better. The king agreed and sent dispatches to every province in its own script and every people in its own language, proclaiming that every man should rule his own household." },
+  e2_mordecai: { page: 748, ref: "Esther 2:5–7", say: "In Susa lived Mordecai, a Jew of the tribe of Benjamin, whose family had been carried into exile from Jerusalem by Nebuchadnezzar with King Jehoiachin. He had brought up his cousin Hadassah, also called Esther, as his own daughter, since she had neither father nor mother. (The end of verse 7 is on page 749.)" },
+  e2_secret: { page: 749, ref: "Esther 2:8–10", say: "Many young women were brought to Susa under the care of Hegai; Esther was among them and won his favor, receiving beauty treatments, special food and seven maids. She had not revealed her nationality or family background, because Mordecai had forbidden it." },
+  e2_year: { page: 749, ref: "Esther 2:12", say: "Before her turn to go to the king, each young woman completed twelve months of beauty treatments: six months with oil of myrrh and six with perfumes and cosmetics." },
+  e2_queen: { page: 749, ref: "Esther 2:16–18", say: "Esther was taken to the king in the tenth month, Tebeth, of his seventh year. He was attracted to her more than to any of the others, set a royal crown on her head and made her queen instead of Vashti, then held a great banquet, Esther's banquet." },
+  e2_plot: { page: 750, ref: "Esther 2:21–23", say: "While Mordecai sat at the king's gate, two officers who guarded the doorway, Bigthana and Teresh, conspired to kill the king. Mordecai told Queen Esther, who reported it to the king and gave Mordecai the credit. The plot was confirmed, the two were hanged, and it was all recorded in the book of the annals in the king's presence." },
+  e3_kneel: { page: 750, ref: "Esther 3:1–4", say: "King Xerxes honored Haman the Agagite with a seat above all the other nobles, and the royal officials at the gate knelt to him as the king commanded. Mordecai would not kneel. Day after day they asked him why; he had told them he was a Jew, and they reported him to Haman." },
+  e3_all: { page: 750, ref: "Esther 3:5–6", say: "Haman was enraged. Learning who Mordecai's people were, he scorned killing only Mordecai and looked for a way to destroy all the Jews throughout the kingdom." },
+  e3_pur: { page: 750, ref: "Esther 3:7", say: "In the twelfth year of Xerxes, in the first month, Nisan, they cast the pur (that is, the lot) before Haman to choose a day and month. The lot fell on the twelfth month, Adar." },
+  e3_offer: { page: 750, ref: "Esther 3:8–11", say: "Haman told the king that a scattered people with different customs did not obey his laws, and offered ten thousand talents of silver for the royal treasury if a decree to destroy them were issued. The king gave Haman his signet ring and told him to keep the money and do with the people as he pleased." },
+  e3_edict: { page: 751, ref: "Esther 3:12–14", say: "On the thirteenth day of the first month the secretaries wrote out Haman's orders in every script and language, sealed with the king's ring. Couriers carried the order to destroy, kill and annihilate all the Jews, young and old, women and children, on one day, the thirteenth of the twelfth month, Adar, and to plunder their goods. (Verse 12 begins on page 750.)" },
+  e3_drink: { page: 751, ref: "Esther 3:15", say: "The edict was issued in Susa. The king and Haman sat down to drink, but the city of Susa was bewildered." },
+  e4_mourn: { page: 751, ref: "Esther 4:1–3", say: "Mordecai tore his clothes, put on sackcloth and ashes and wailed through the city, going only as far as the king's gate, which no one in sackcloth could enter. In every province there was great mourning among the Jews, with fasting, weeping and wailing." },
+  e4_relay: { page: 751, ref: "Esther 4:4–9", say: "Esther sent clothes to Mordecai, but he refused them. She sent Hathach to find out what was wrong. Mordecai told him everything, including the exact sum Haman had promised, gave him a copy of the edict for Esther, and urged her to go to the king and plead for her people. Hathach reported this to Esther." },
+  e4_law: { page: 751, ref: "Esther 4:10–11", say: "Esther replied that everyone knows the king's one law: anyone who approaches him in the inner court without being summoned is put to death, unless the king extends the gold scepter and spares them. And thirty days had passed since she had been called to the king." },
+  e4_time: { page: 752, ref: "Esther 4:12–14", say: "Mordecai answered that she should not think she alone of the Jews would escape because she was in the king's house. If she kept silent, relief and deliverance would arise from another place, but she and her father's family would perish. And who knows whether she had come to royal position for such a time as this." },
+  e4_perish: { page: 752, ref: "Esther 4:15–17", say: "Esther told Mordecai to gather all the Jews in Susa to fast for her, not eating or drinking for three days, night or day, as she and her maids would. Then she would go to the king, though it was against the law, and if she perished, she perished. Mordecai did as she instructed." },
+  e5_scepter: { page: 752, ref: "Esther 5:1–8", say: "On the third day Esther put on her royal robes and stood in the inner court facing the king's hall. Pleased, the king held out the gold scepter and she touched its tip. He offered her anything, up to half the kingdom. She asked that he and Haman come to a banquet; there he asked again, and she invited them to a second banquet the next day, when she would answer." },
+  e5_gallows: { page: 753, ref: "Esther 5:9–14", say: "Haman left happy, but was filled with rage when Mordecai at the gate neither rose nor showed fear. At home he boasted of his wealth, his sons and his honors, yet said none of it satisfied him while he saw Mordecai at the gate. His wife Zeresh and friends told him to build a gallows seventy-five feet high and ask the king to hang Mordecai on it; he did. (Verses 9–11 are on page 752.)" },
+  e6_sleep: { page: 753, ref: "Esther 6:1–3", say: "That night the king could not sleep, so he had the book of the chronicles of his reign read to him. It recorded that Mordecai had exposed Bigthana and Teresh's plot to assassinate him. The king asked what honor Mordecai had received; his attendants said nothing had been done." },
+  e6_honor: { page: 753, ref: "Esther 6:4–9", say: "Haman had just entered the outer court to ask the king to hang Mordecai. The king asked him what should be done for the man the king delights to honor, and Haman, thinking it must be himself, proposed a royal robe the king had worn, a horse the king had ridden with a royal crest on its head, and one of the most noble princes to robe the man and lead him through the streets proclaiming his honor." },
+  e6_mordecai: { page: 753, ref: "Esther 6:10–11", say: "The king told Haman to go at once and do all of it for Mordecai the Jew who sits at the king's gate, neglecting nothing. Haman robed Mordecai and led him on horseback through the streets, proclaiming his honor. The phrase \"the man the king delights to honor\" appears five times in 6:6–11." },
+  e6_zeresh: { page: 754, ref: "Esther 6:12–14", say: "Mordecai returned to the gate, but Haman rushed home grieving, his head covered. His advisers and Zeresh told him that since Mordecai was Jewish, his downfall had begun and he could not stand against him. The king's eunuchs then hurried him to Esther's banquet." },
+  e7_ask: { page: 754, ref: "Esther 7:1–4", say: "On the second day, as they drank wine, the king again offered Esther anything up to half the kingdom. She asked for her life and her people's, for they had been sold for destruction, slaughter and annihilation; if they had only been sold as slaves she would have kept quiet." },
+  e7_haman: { page: 754, ref: "Esther 7:5–8", say: "The king asked who had dared to do this. Esther named the adversary and enemy: this vile Haman. Haman was terrified. The king went out to the garden in a rage; returning, he found Haman falling on Esther's couch begging for his life, and they covered Haman's face." },
+  e7_hanged: { page: 754, ref: "Esther 7:9–10", say: "Harbona, one of the eunuchs, said that a seventy-five-foot gallows Haman had made for Mordecai stood by Haman's house. The king ordered Haman hanged on it, and they hanged him on the gallows he had prepared for Mordecai. Then the king's fury subsided." },
+  e8_estate: { page: 754, ref: "Esther 8:1", say: "That same day King Xerxes gave Queen Esther the estate of Haman, and Mordecai came into the king's presence, since Esther had told how he was related to her." },
+  e8_ring: { page: 755, ref: "Esther 8:2", say: "The king took off his signet ring, reclaimed from Haman, and gave it to Mordecai, and Esther put Mordecai in charge of Haman's estate." },
+  e8_irrev: { page: 755, ref: "Esther 8:3–8", say: "Esther again pleaded at the king's feet, weeping, for an end to Haman's plan; he extended the scepter and she asked for an order overruling Haman's dispatches. The king told Esther and Mordecai to write another decree as they saw fit and seal it with his ring, for a document written in the king's name and sealed with his ring cannot be revoked." },
+  e8_counter: { page: 755, ref: "Esther 8:9–12", say: "On the twenty-third day of the third month, Sivan, the secretaries wrote Mordecai's orders to the 127 provinces from India to Cush, in every script and language. Sent by fast royal couriers, the edict gave Jews in every city the right to assemble and defend themselves against any armed force that attacked them, on the same day, the thirteenth of the twelfth month, Adar." },
+  e8_robes: { page: 756, ref: "Esther 8:15–17", say: "Mordecai left the king's presence in royal garments of blue and white, a large gold crown and a purple robe of fine linen, and Susa celebrated. For the Jews in every province it was a time of joy, gladness and feasting. (Verse 15 begins on page 755.)" },
+  e9_turned: { page: 756, ref: "Esther 9:1–5", say: "On the thirteenth of Adar, the day the enemies of the Jews had hoped to overpower them, the tables were turned and the Jews got the upper hand over those who hated them. Officials throughout the provinces helped them out of fear of Mordecai, whose power kept growing." },
+  e9_susa: { page: 756, ref: "Esther 9:6–14", say: "In the citadel of Susa the Jews killed five hundred men and the ten sons of Haman, but did not lay hands on the plunder. At Esther's request the king allowed the Jews in Susa a second day, and Haman's ten sons were hanged." },
+  e9_plunder: { page: 756, ref: "Esther 9:10, 15, 16", say: "Three times the text says the Jews did not lay their hands on the plunder: in Susa on the thirteenth (9:10, page 756), in Susa on the fourteenth (9:15, page 757), and in the provinces (9:16, page 757). Haman's edict had included plundering the Jews' goods (3:13)." },
+  e9_rest: { page: 757, ref: "Esther 9:15–19", say: "On the fourteenth the Jews in Susa killed three hundred more men, again without taking plunder. In the provinces they killed seventy-five thousand on the thirteenth and rested on the fourteenth with feasting and joy; in Susa they rested on the fifteenth. So village Jews keep the fourteenth of Adar as a day of joy, feasting and giving presents." },
+  e9_purim: { page: 757, ref: "Esther 9:20–28", say: "Mordecai wrote to the Jews near and far to celebrate the fourteenth and fifteenth of Adar every year, the month their sorrow turned to joy, with feasting, gifts of food to one another and gifts to the poor. Because Haman had cast the pur (the lot) for their ruin, the days were called Purim, to be remembered in every generation." },
+  e9_esther: { page: 758, ref: "Esther 9:29–32", say: "Queen Esther, with Mordecai, wrote with full authority to confirm this second letter about Purim, sent to the Jews in the 127 provinces. Esther's decree confirmed the regulations, and it was written down in the records." },
+  e10_end: { page: 758, ref: "Esther 10:1–3", say: "Xerxes imposed tribute throughout the empire; his deeds and Mordecai's greatness are written in the annals of the kings of Media and Persia. Mordecai was second in rank to the king, held in high esteem by the Jews, because he worked for the good of his people and spoke up for their welfare." }
+});
+$$("#tab-esther-1-10 sup.cite").forEach(s => { s.tabIndex = 0; s.setAttribute("role", "button"); });
+$$("[data-ego2]").forEach(b => b.onclick = () => jumpTo(b.dataset.ego2));
+const SAMB = { dark: [["#2a2010","#0a0806"],["#2a1626","#0a050a"],["#14203a","#05080f"],["#1c1410","#060404"],["#0e1430","#04050c"],["#2a1414","#0a0406"],["#2a2410","#0a0804"]],
+               light: [["#f2e4c0","#efece6"],["#f0d6e4","#f0eaee"],["#d4dcef","#eceff6"],["#e4dcd0","#efece8"],["#d8d8f0","#ececf6"],["#efd4d0","#f0eaea"],["#f2e8c0","#efede2"]] };
+const esAmbObs = new IntersectionObserver(es => es.forEach(en => { if (!en.isIntersecting || activeTab !== "esther-1-10") return;
+  const p = SAMB[isDark() ? "dark" : "light"][+en.target.dataset.escene2 - 1]; root.style.setProperty("--amb-a", p[0]); root.style.setProperty("--amb-b", p[1]);
+}), { rootMargin: "-40% 0px -55% 0px" });
+$$("[data-escene2]").forEach(s => esAmbObs.observe(s));
+
+/* hero: the throne hall and the scepter */
+(() => {
+  const cv = $("#esHeroCanvas"), box = $("#esTop"); let t = 0, on = false, raf = 0, goal = 0, s = 0;
+  function frame(){ const F = fitCanvas(cv); if (!F) return; const { x, W, H } = F; t += motionOK() ? .016 : 0; s += (goal - s) * (motionOK() ? .045 : 1);
+    let g = x.createLinearGradient(0, 0, 0, H); g.addColorStop(0, "#150f1c"); g.addColorStop(.6, "#22160f"); g.addColorStop(1, "#0a0605"); x.fillStyle = g; x.fillRect(0, 0, W, H);
+    const narrow = W < 640, fy = H * .74;
+    // floor: mosaic perspective lines
+    x.strokeStyle = "rgba(233,192,102,.12)"; x.lineWidth = 1;
+    for (let i = -12; i <= 12; i++){ x.beginPath(); x.moveTo(W * .5 + i * W * .02, fy); x.lineTo(W * .5 + i * W * .16, H); x.stroke(); }
+    for (let j = 0; j < 6; j++){ const yy = fy + (H - fy) * Math.pow(j / 6, 1.6); x.beginPath(); x.moveTo(0, yy); x.lineTo(W, yy); x.stroke(); }
+    // columns with bull-headed capitals (simplified)
+    const cols = narrow ? 5 : 9;
+    for (let i = 0; i < cols; i++){ const cx = W * (i + .5) / cols, w = Math.max(10, W / cols * .2), top = H * .1;
+      g = x.createLinearGradient(cx - w, 0, cx + w, 0); g.addColorStop(0, "#3a2c1c"); g.addColorStop(.5, "#6a5232"); g.addColorStop(1, "#2a1e12"); x.fillStyle = g; x.fillRect(cx - w / 2, top, w, fy - top);
+      x.fillStyle = "#7a5f38"; x.fillRect(cx - w * 1.1, top - H * .03, w * 2.2, H * .03); x.beginPath(); x.ellipse(cx - w * .9, top - H * .015, w * .5, H * .02, 0, 0, 7); x.ellipse(cx + w * .9, top - H * .015, w * .5, H * .02, 0, 0, 7); x.fill();
+      x.fillStyle = "rgba(255,255,255,.04)"; for (let k = 0; k < 4; k++) x.fillRect(cx - w / 2 + k * w / 4, top, 1, fy - top); }
+    // hangings of white and blue between columns
+    for (let i = 0; i < cols - 1; i++){ const a = W * (i + .5) / cols, b = W * (i + 1.5) / cols, y0 = H * .1;
+      x.strokeStyle = i % 2 ? "rgba(120,150,220,.35)" : "rgba(240,235,220,.28)"; x.lineWidth = 6; x.beginPath(); x.moveTo(a, y0); x.quadraticCurveTo((a + b) / 2, y0 + H * .09 + Math.sin(t + i) * 3, b, y0); x.stroke(); }
+    // light from the throne
+    const tx = W * (narrow ? .78 : .8), ty = fy;
+    g = x.createRadialGradient(tx, ty - H * .2, 0, tx, ty - H * .2, H * .6); g.addColorStop(0, `rgba(255,214,130,${.22 + .25 * s})`); g.addColorStop(1, "rgba(255,214,130,0)"); x.fillStyle = g; x.fillRect(0, 0, W, H);
+    // dais and throne
+    const u = Math.min(W, H) / (narrow ? 9 : 10);
+    x.fillStyle = "#4a3620"; x.fillRect(tx - u * 1.6, ty - u * .3, u * 3.2, u * .3); x.fillStyle = "#5a4228"; x.fillRect(tx - u * 1.2, ty - u * .55, u * 2.4, u * .25);
+    x.fillStyle = "#c69a4a"; x.fillRect(tx - u * .55, ty - u * 2.6, u * 1.1, u * 2.05); x.fillStyle = "#8a6a32"; x.fillRect(tx - u * .45, ty - u * 2.4, u * .9, u * 1.2);
+    // king (silhouette)
+    x.fillStyle = "#4a3018"; x.strokeStyle = "rgba(255,210,130,.75)"; x.lineWidth = 1.5; x.beginPath(); x.moveTo(tx - u * .45, ty - u * .6); x.lineTo(tx - u * .38, ty - u * 1.75); x.lineTo(tx + u * .38, ty - u * 1.75); x.lineTo(tx + u * .45, ty - u * .6); x.fill(); x.stroke();
+    x.beginPath(); x.arc(tx, ty - u * 2.0, u * .26, 0, 7); x.fill(); x.stroke(); x.fillStyle = "#e9c066"; x.fillRect(tx - u * .22, ty - u * 2.36, u * .44, u * .14);
+    // scepter: from the king's hand toward the queen
+    const hx = tx - u * .4, hy = ty - u * 1.35, len = u * (narrow ? 2.4 : 3.2) * (.55 + .45 * s), th = 1.35 - 1.2 * s;
+    const ex = hx - Math.cos(th) * len, ey = hy - Math.sin(th) * len;
+    x.strokeStyle = "#f0cd7a"; x.lineWidth = Math.max(2.5, u * .07); x.lineCap = "round"; x.shadowColor = "rgba(255,210,120,.8)"; x.shadowBlur = 10 + 14 * s;
+    x.beginPath(); x.moveTo(hx, hy); x.lineTo(ex, ey); x.stroke(); x.fillStyle = "#ffe6a6"; x.beginPath(); x.arc(ex, ey, u * .1, 0, 7); x.fill(); x.shadowBlur = 0;
+    // queen in the inner court, stepping forward
+    const qx = narrow ? W * (.36 + .14 * s) : W * (.58 + .08 * s), qy = fy + u * .1;
+    g = x.createLinearGradient(0, qy - u * 1.8, 0, qy); g.addColorStop(0, "#9a4e92"); g.addColorStop(1, "#3a163a"); x.fillStyle = g; x.beginPath(); x.moveTo(qx - u * .55, qy); x.quadraticCurveTo(qx - u * .2, qy - u * 1.4, qx, qy - u * 1.75); x.quadraticCurveTo(qx + u * .2, qy - u * 1.4, qx + u * .55, qy); x.fill();
+    x.strokeStyle = "rgba(255,200,240,.7)"; x.lineWidth = 2; x.stroke();
+    x.fillStyle = "#6a3466"; x.beginPath(); x.arc(qx, qy - u * 1.95, u * .22, 0, 7); x.fill();
+    x.fillStyle = "#e9c066"; x.beginPath(); for (let k = 0; k < 5; k++){ const px = qx - u * .2 + k * u * .1; x.lineTo(px, qy - u * (k % 2 ? 2.12 : 2.24)); } x.lineTo(qx + u * .2, qy - u * 2.1); x.lineTo(qx - u * .2, qy - u * 2.1); x.fill();
+    if (s > .85){ x.fillStyle = `rgba(255,230,170,${(s - .85) * 4})`; x.beginPath(); x.arc(qx + u * .3, qy - u * 1.3, u * .12 + Math.sin(t * 4) * 2, 0, 7); x.fill(); }
+    // dust in the light
+    const R = rand(7); for (let i = 0; i < 50; i++){ const px = (R() * W + t * 8 * (R() + .2)) % W, py = H * .1 + R() * H * .6 + Math.sin(t + i) * 4; x.fillStyle = `rgba(255,225,160,${.08 + R() * .2})`; x.fillRect(px, py, 1.5, 1.5); }
+    g = x.createLinearGradient(0, H * .45, 0, H); g.addColorStop(0, "rgba(0,0,0,0)"); g.addColorStop(1, "rgba(0,0,0,.7)"); x.fillStyle = g; x.fillRect(0, 0, W, H);
+    g = x.createLinearGradient(0, 0, W * .6, 0); g.addColorStop(0, "rgba(0,0,0,.55)"); g.addColorStop(1, "rgba(0,0,0,0)"); x.fillStyle = g; x.fillRect(0, 0, W, H);
+    if (on && (motionOK() || Math.abs(goal - s) > .01)) raf = requestAnimationFrame(frame); }
+  whenVisible(box, v => { on = v; cancelAnimationFrame(raf); if (v) raf = requestAnimationFrame(frame); });
+  addEventListener("resize", () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); });
+  $("#esApproach").onclick = () => { goal = goal ? 0 : 1; $("#esApproachTxt").textContent = goal ? "He holds out the gold scepter" : "Approach the throne uninvited"; cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); };
+})();
+
+/* details that come back later */
+(() => {
+  const C = [
+    ["annals", "A plot written in the record", "2:23", "e2_plot", "A sleepless king has that record read aloud, and asks how Mordecai was rewarded.", "6:1–3", "e6_sleep"],
+    ["ring", "The king's signet ring", "3:10", "e3_offer", "The same ring, taken back from Haman, goes to Mordecai to seal a new decree.", "8:2, 8", "e8_ring"],
+    ["gallows", "A 75-foot gallows", "5:14", "e5_gallows", "Haman is hanged on the gallows he built for Mordecai.", "7:9–10", "e7_hanged"],
+    ["pur", "The pur, a lot", "3:7", "e3_pur", "The festival is named Purim after it.", "9:24–26", "e9_purim"]];
+  let tracked = {}; try { tracked = JSON.parse(store.get("es-clues") || "{}") || {}; } catch {}
+  const grid = $("#esClues");
+  grid.innerHTML = C.map(([k, h, r]) => `<button class="es-clue" data-k="${k}" aria-pressed="false"><span class="es-ref">${r}</span><b>${h}</b><span class="es-pay"></span></button>`).join("");
+  const paint = () => $$(".es-clue", grid).forEach(b => { const c = C.find(z => z[0] === b.dataset.k), on = !!tracked[c[0]], open = b.classList.contains("open");
+    b.classList.toggle("on", on); b.setAttribute("aria-pressed", open ? "true" : "false");
+    $(".es-pay", b).innerHTML = open ? `${c[4]} <span class="es-ref">${c[5]}</span>` : on ? "Tracking. Tap to see where it returns." : "Tap to see where it returns.";
+    const f = $("#esAnnalsFlag"); if (f) f.hidden = !tracked.annals; });
+  $$(".es-clue", grid).forEach(b => b.onclick = () => { b.classList.toggle("open"); tracked[b.dataset.k] = 1; store.set("es-clues", JSON.stringify(tracked)); paint(); });
+  $$("#tab-esther-1-10 [data-clue]").forEach(b => b.onclick = () => { tracked[b.dataset.clue] = 1; store.set("es-clues", JSON.stringify(tracked)); paint();
+    b.textContent = "Tracking. It's pinned above."; const el = $(`.es-clue[data-k="${b.dataset.clue}"]`, grid); el.classList.add("ping"); setTimeout(() => el.classList.remove("ping"), 1200); });
+  paint();
+})();
+
+/* scene 1: 127 provinces */
+(() => {
+  const cv = $("#esEmpire"); let sent = 0, p = 0, raf = 0, on = false;
+  const R = rand(31), pts = []; for (let i = 0; i < 127; i++){ const a = Math.PI * (.08 + .84 * (i / 126)) + (R() - .5) * .08, r = .55 + R() * .38; pts.push([a, r, R()]); }
+  const GL = "ΣאΩبΦשΨعΔל"; // generic marks standing in for many scripts
+  function frame(){ const F = fitCanvas(cv); if (!F) return; const { x, W, H } = F; p += ((sent ? 1 : 0) - p) * (motionOK() ? .03 : 1);
+    x.clearRect(0, 0, W, H); const cx = W / 2, cy = H * .92, RR = Math.min(W * .48, H * .85);
+    x.strokeStyle = "rgba(160,130,80,.25)"; x.setLineDash([3, 5]); x.beginPath(); x.arc(cx, cy, RR * .95, Math.PI, 0); x.stroke(); x.setLineDash([]);
+    let lit = 0;
+    pts.forEach(([a, r, k], i) => { const px = cx - Math.cos(a) * RR * r, py = cy - Math.sin(a) * RR * r * .95, d = r, on2 = p * 1.15 > d * .9 + k * .1;
+      if (on2) lit++; x.fillStyle = on2 ? "#d9a441" : "rgba(140,120,90,.45)"; x.beginPath(); x.arc(px, py, on2 ? 3.6 : 2.6, 0, 7); x.fill();
+      if (on2 && W > 420 && i % 3 === 0){ x.fillStyle = isDark() ? "rgba(240,220,170,.8)" : "rgba(90,60,20,.75)"; x.font = "10px serif"; x.fillText([...GL][i % [...GL].length], px + 4, py - 4); } });
+    if (p > .02){ x.strokeStyle = `rgba(217,164,65,${.5 * (1 - p)})`; x.lineWidth = 2; x.beginPath(); x.arc(cx, cy, RR * p * 1.05, Math.PI, 0); x.stroke(); }
+    x.fillStyle = "#b0342a"; x.beginPath(); x.arc(cx, cy - 6, 6, 0, 7); x.fill(); x.fillStyle = isDark() ? "#ece4cf" : "#2a1d06"; x.font = "600 12px ui-sans-serif,-apple-system,sans-serif"; x.textAlign = "center"; x.fillText("Susa", cx, cy - 16);
+    x.textAlign = "left"; x.fillText("Cush", 8, cy - 6); x.textAlign = "right"; x.fillText("India", W - 8, cy - 6); x.textAlign = "left";
+    x.font = "700 26px Georgia,serif"; x.fillStyle = "#d9a441"; x.fillText(String(sent ? lit : 127), 12, 32); x.font = "600 11px ui-sans-serif,-apple-system,sans-serif"; x.fillStyle = isDark() ? "#c9c0a8" : "#6a5a40"; x.fillText(sent ? "provinces reached" : "provinces", 12, 48);
+    if (on && Math.abs((sent ? 1 : 0) - p) > .005) raf = requestAnimationFrame(frame); }
+  whenVisible(cv, v => { on = v; cancelAnimationFrame(raf); if (v) raf = requestAnimationFrame(frame); });
+  addEventListener("resize", () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); });
+  $("#esSend").onclick = () => { sent = sent ? 0 : 1; p = 0; $("#esSend").textContent = sent ? "Reset" : "Send the decree"; cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); };
+})();
+
+/* scene 2: twelve months */
+(() => {
+  const m = $("#esMonths"); m.innerHTML = Array.from({ length: 12 }, (_, i) => `<span class="${i < 6 ? "myrrh" : "perf"}"><b>${i + 1}</b></span>`).join("");
+  let timer = 0;
+  $("#esMonthBtn").onclick = () => { clearInterval(timer); const cells = $$("span", m); cells.forEach(c => c.classList.remove("on")); let i = 0;
+    const step = () => { if (i >= 12){ clearInterval(timer); $("#esMonthTxt").innerHTML = `Twelve months done. Only then does a young woman go to the king, and she doesn't return to him unless he calls her by name.${cite("e2_year")}`; return; }
+      cells[i].classList.add("on"); $("#esMonthTxt").innerHTML = `Month ${i + 1}: ${i < 6 ? "oil of myrrh" : "perfumes and cosmetics"}.${cite("e2_year")}`; i++; };
+    if (motionOK()) { step(); timer = setInterval(step, 260); } else { while (i <= 12) step(); } };
+})();
+
+/* scene 3: cast the pur */
+(() => {
+  const svg = $("#esLot"), NAMED = { 1: "Nisan", 3: "Sivan", 10: "Tebeth", 12: "Adar" }; let rot = 0, casts = 0;
+  let h = `<circle cx="180" cy="180" r="150" class="es-lotring"/>`;
+  for (let i = 0; i < 12; i++){ const a = (i / 12) * Math.PI * 2 - Math.PI / 2, x = 180 + Math.cos(a) * 128, y = 180 + Math.sin(a) * 128;
+    h += `<g class="es-mo${NAMED[i + 1] ? " named" : ""}" data-m="${i + 1}"><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="22"/><text x="${x.toFixed(1)}" y="${(y + (NAMED[i + 1] ? -1 : 5)).toFixed(1)}">${i + 1}</text>${NAMED[i + 1] ? `<text class="nm" x="${x.toFixed(1)}" y="${(y + 12).toFixed(1)}">${NAMED[i + 1]}</text>` : ""}</g>`; }
+  h += `<g id="esPtr" style="transform-origin:180px 180px"><path d="M180 72 L170 180 L190 180 Z" class="es-ptr"/><circle cx="180" cy="180" r="16" class="es-hub"/></g>`;
+  svg.innerHTML = h; const ptr = $("#esPtr");
+  $("#esCast").onclick = () => { casts++; $$(".es-mo", svg).forEach(g => g.classList.remove("hit"));
+    rot = rot - (rot % 360) + 360 * (motionOK() ? 4 : 1) + 330;
+    ptr.style.transition = motionOK() ? "transform 2.4s cubic-bezier(.2,.8,.2,1)" : "none"; ptr.style.transform = `rotate(${rot}deg)`;
+    setTimeout(() => { $(`.es-mo[data-m="12"]`, svg).classList.add("hit");
+      $("#esLotInfo").innerHTML = `The lot falls on the twelfth month, Adar.${cite("e3_pur")} The edict goes out on the 13th of Nisan and names the 13th of Adar: eleven months' warning.${cite("e3_edict")} <span class="tag" data-label="Calculated">Calculated</span>`; }, motionOK() ? 2450 : 0);
+    $("#esCast").textContent = "Cast again"; };
+})();
+
+/* scene 4: the relay through Hathach */
+(() => {
+  const S = [[2, 0, "Clothes", "Esther hears Mordecai is in sackcloth and sends him clothes. He won't take them.", "e4_relay"],
+    [2, 0, "Find out why", "She sends Hathach, one of the king's eunuchs assigned to her, out to the square in front of the gate.", "e4_relay"],
+    [0, 2, "Everything", "Mordecai tells him all of it, down to the exact sum Haman promised, hands over a copy of the edict, and says Esther must go and plead with the king.", "e4_relay"],
+    [2, 0, "The law", "Esther answers: everyone knows that going to the king uninvited means death, unless he holds out the gold scepter. And the king hasn't called for her in a while.", "e4_law"],
+    [0, 2, "Such a time", `Mordecai: don't imagine you'll be the one Jew who escapes. If you stay silent, help will come from another place, but you and your family will die. And who knows if you were made queen "for such a time as this"?`, "e4_time"],
+    [2, 0, "Fast for me", "Esther: gather the Jews of Susa and fast for three days and nights; she and her maids will too. Then she will go to the king against the law, and if she dies, she dies.", "e4_perish"]];
+  let i = -1; const run = $("#esRunner"), card = $("#esRelayCard");
+  const pos = l => `${l * 50}%`;
+  const render = () => { if (i < 0){ card.innerHTML = `<span class="eyebrow">Start</span><p>Mordecai can't pass the gate in sackcloth.${cite("e4_mourn")} Tap Next.</p>`; run.style.left = pos(0); run.className = ""; }
+    else { const [a, b, h, txt, id] = S[i]; card.innerHTML = `<span class="eyebrow">${i + 1} of ${S.length} · ${a === 0 ? "Mordecai → Esther" : "Esther → Mordecai"}</span><h3>${h}</h3><p>${txt}${cite(id)}</p>`;
+      run.className = "go"; run.style.transition = "none"; run.style.left = pos(a); void run.offsetWidth; run.style.transition = motionOK() ? "left 1.1s ease-in-out" : "none"; run.style.left = pos(b); }
+    $("#esRelayPrev").disabled = i < 0; $("#esRelayNext").disabled = i === S.length - 1; };
+  $("#esRelayNext").onclick = () => { i = Math.min(S.length - 1, i + 1); render(); }; $("#esRelayPrev").onclick = () => { i = Math.max(-1, i - 1); render(); }; render();
+})();
+
+/* scene 5: Haman's wish list */
+(() => {
+  const bs = $$("#esWish button"); let n = 0;
+  bs.forEach(b => b.onclick = () => { if (b.classList.contains("on")) return; b.classList.add("on"); n++;
+    $("#esWishInfo").innerHTML = n < bs.length ? `${n} of ${bs.length}. Haman thinks to himself: who would the king rather honor than me?${cite("e6_honor")}`
+      : `<strong>Then the king says: do all of it for Mordecai the Jew.</strong> Haman has to robe him and lead him through the streets himself, calling out his honor.${cite("e6_mordecai")} He goes home with his head covered, and even his wife says his downfall has begun.${cite("e6_zeresh")}`;
+    if (n === bs.length) $("#esWish").classList.add("flip"); });
+})();
+
+/* scene 6: swaps + calendar */
+(() => {
+  const P = [["Built for Mordecai", "a 75-foot gallows", "Haman is hanged on it", "e5_gallows", "e7_hanged"],
+    ["Given to Haman", "the king's signet ring", "given to Mordecai", "e3_offer", "e8_ring"],
+    ["Haman designs", "an honor for himself", "and leads Mordecai in it", "e6_honor", "e6_mordecai"],
+    ["Haman's house", "his estate", "goes to Esther", "", "e8_estate"],
+    ["Mordecai wears", "sackcloth and ashes", "royal blue and white", "e4_mourn", "e8_robes"],
+    ["The 13th of Adar", "the enemies' day", "the Jews get the upper hand", "e3_edict", "e9_turned"]];
+  const g = $("#esSwaps"); g.innerHTML = P.map(([a, b, c], i) => `<button data-i="${i}" aria-pressed="false"><span class="es-was">${a}: <b>${b}</b></span><span class="es-now">→ ${c}</span></button>`).join("");
+  $$("button", g).forEach(b => b.onclick = () => { const on = b.classList.toggle("on"); b.setAttribute("aria-pressed", on ? "true" : "false");
+    const [a, bb, c, i1, i2] = P[+b.dataset.i], n = $$("button.on", g).length;
+    $("#esSwapInfo").innerHTML = on ? `<strong>${a}: ${bb}</strong>${i1 ? cite(i1) : ""} → ${c}${cite(i2)} <span class="small">(${n} of ${P.length} turned)</span>` : `${n} of ${P.length} turned.`; });
+  const D = [[1, 13, "13 Nisan", "Haman's edict is written and sealed with the king's ring.", "e3_edict", "rub"],
+    [3, 23, "23 Sivan", "Mordecai's edict is written, also sealed with the ring. The first can't be revoked, so the second lets the Jews defend themselves.", "e8_counter", "gold"],
+    [12, 13, "13 Adar", "The day both decrees name. The tables are turned.", "e9_turned", "ink"]];
+  const cal = $("#esCal");
+  cal.innerHTML = `<div class="es-calbar">${Array.from({ length: 12 }, (_, i) => `<span>${i + 1}</span>`).join("")}</div>` +
+    D.map(([m, d, l, , , c], i) => `<button class="es-pin ${c}" data-i="${i}" style="left:calc(${((m - 1) + d / 30) / 12 * 100}% - 1px)"><i></i><b>${l}</b></button>`).join("");
+  $$(".es-pin", cal).forEach(b => b.onclick = () => { $$(".es-pin", cal).forEach(z => z.classList.toggle("on", z === b)); const [, , l, t, id] = D[+b.dataset.i];
+    $("#esCalInfo").innerHTML = `<strong>${l}.</strong> ${t}${cite(id)}${b.dataset.i === "1" ? `${cite("e8_irrev")} That leaves about eight and a half months to get the word out. <span class="tag" data-label="Calculated">Calculated</span>` : ""}`; });
+})();
+
+/* scene 7: three days in Adar */
+(() => {
+  const W = { prov: [["13", "Fight", "fight", "Jews across the provinces defend themselves; seventy-five thousand enemies are killed. No plunder taken.", "e9_rest"], ["14", "Rest and feast", "rest", "A day of feasting and joy. That is why village Jews keep the 14th, with presents for one another.", "e9_rest"], ["15", "", "", "", ""]],
+    susa: [["13", "Fight", "fight", "In the citadel, five hundred men and Haman's ten sons are killed. No plunder taken.", "e9_susa"], ["14", "Fight", "fight", "At Esther's request, a second day: three hundred more. No plunder taken.", "e9_rest"], ["15", "Rest and feast", "rest", "Susa rests a day later than everyone else.", "e9_rest"]] };
+  const row = $("#esDayRow");
+  const draw = w => { row.innerHTML = W[w].map(([d, h, c]) => `<div class="es-day ${c || "empty"}"><span>Adar</span><b>${d}</b><i>${h || "–"}</i></div>`).join("");
+    $("#esDayTxt").innerHTML = W[w].filter(z => z[3]).map(z => `<strong>${z[0]}:</strong> ${z[3]}${cite(z[4])}`).join("<br>"); };
+  $$("#tab-esther-1-10 [data-where]").forEach(b => b.onclick = () => { $$("#tab-esther-1-10 [data-where]").forEach(z => z.setAttribute("aria-pressed", z === b ? "true" : "false")); draw(b.dataset.where); });
+  draw("prov");
+})();
+
+/* guesses + quiz */
+["#esg1", "#esg2", "#esg3", "#esg4"].forEach(id => $$(id + " .choice").forEach(b => b.onclick = () => {
+  $$(id + " .choice").forEach(c => { c.setAttribute("aria-pressed", c === b ? "true" : "false"); if (c.hasAttribute("data-right")) c.classList.add("right"); else if (c === b) c.classList.add("wrong"); });
+  $(id + " .reveal").hidden = false; $(id).classList.add("done"); }));
+(() => { let answered = 0, right = 0; const box = $("#tab-esther-1-10 [data-quiz]");
+  $$("#tab-esther-1-10 .qz").forEach(q => { const ans = +q.dataset.ans;
     $$(".choice", q).forEach((b, i) => b.onclick = () => { if (q.dataset.done) return; q.dataset.done = 1; answered++;
       if (i === ans) right++; else b.classList.add("wrong"); $$(".choice", q)[ans].classList.add("right"); $(".reveal", q).hidden = false;
       if (answered === 3){ $(".score", box).hidden = false; $(".scoreTxt", box).textContent = right === 3 ? "3 of 3. You know the book." : `${right} of 3. Tap the references to review.`;
