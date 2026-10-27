@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Bible Explorer</title>
-<meta name="description" content="An interactive Bible library: hands-on pages for Genesis 1-3, Exodus 12-14, Luke 22-24, John 1-3, Acts 1-2, Romans 3-8 and Revelation 21-22, each point linked to its verse.">
+<meta name="description" content="An interactive Bible library: hands-on pages for Genesis 1-3, Exodus 12-14, Judges 1-21, Luke 22-24, John 1-3, Acts 1-2, Romans 3-8 and Revelation 21-22, each point linked to its verse.">
 <style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-size:14px}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
@@ -776,6 +776,88 @@ footer{border-top:1px solid var(--rule);margin-top:2.5rem;padding-block:1.6rem 2
 .rv-pair b{font-family:var(--f-display);font-size:1.15rem}
 .rv-pair p{font-size:.88rem;color:var(--muted)}
 .rv-pair.now{border-color:var(--gold);background:linear-gradient(135deg,var(--gold-soft),transparent),var(--surface-solid)}
+/* ---------- Judges 1–21 tab ---------- */
+.jd-tribes{padding:1.2rem;display:grid;gap:.8rem;align-content:start}
+.jd-tgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.4rem}
+@media (max-width:520px){.jd-tgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.jd-tgrid button{min-height:3.2rem;border-radius:12px;border:1px solid var(--rule);background:var(--surface-solid);cursor:pointer;font:600 .84rem var(--f-label);display:grid;place-items:center;gap:.1rem;transition:all .3s;padding:.3rem}
+.jd-tgrid button small{font-weight:500;font-size:.66rem;color:var(--muted)}
+.jd-tgrid button.ok{border-color:var(--gold);background:var(--gold-soft)}
+.jd-tgrid button.part{border-color:var(--rubric);background:repeating-linear-gradient(135deg,transparent 0 6px,rgba(176,52,42,.08) 6px 12px),var(--surface-solid)}
+.jd-tgrid button.on{box-shadow:0 0 0 2px var(--ink)}
+.jd-cyclebox{padding:1.2rem;display:grid;gap:.6rem;align-content:start}
+.jd-cyclebox svg{width:100%;max-width:20rem;height:auto;margin:0 auto;display:block}
+.jd-node circle{fill:var(--surface-solid);stroke:var(--rule);stroke-width:2;transition:all .4s}
+.jd-node text{font:600 13px var(--f-label);fill:var(--muted);transition:fill .4s}
+.jd-node.on circle{fill:var(--gold);stroke:var(--gold);filter:drop-shadow(0 0 8px var(--glow))}
+.jd-node.on text{fill:var(--ink)}
+#jdCycle .ring{fill:none;stroke:var(--rule);stroke-width:2;stroke-dasharray:4 6}
+#jdCycle .dot{fill:var(--rubric);transition:transform .7s cubic-bezier(.4,1.4,.5,1)}
+.jd-chart{padding:1.2rem;display:grid;gap:.8rem}
+.jd-legend{display:flex;flex-wrap:wrap;gap:.4rem .9rem;font:600 .74rem var(--f-label);color:var(--muted)}
+.jd-legend span{display:inline-flex;align-items:center;gap:.35rem}
+.jd-legend span::before{content:"";width:.9rem;height:.6rem;border-radius:3px}
+.jd-legend .op::before{background:var(--rubric)}.jd-legend .pc::before{background:var(--gold)}.jd-legend .ld::before{background:var(--lapis)}
+.jd-rows{display:grid;gap:.3rem}
+.jd-row{display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:.6rem;align-items:center;text-align:left;border:0;background:transparent;padding:.25rem .3rem;border-radius:8px;cursor:pointer;color:var(--ink);transition:background .2s}
+.jd-row:hover,.jd-row.on{background:var(--gold-soft)}
+.jd-row b{font:600 .86rem var(--f-label);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.jd-row b small{display:block;font-weight:500;font-size:.66rem;color:var(--muted)}
+.jd-bars{display:flex;gap:2px;align-items:center;min-height:1.4rem}
+.jd-bars i{height:1.1rem;border-radius:4px;display:grid;place-items:center;font:700 .62rem var(--f-label);color:#fff;font-style:normal;min-width:0;transition:width .7s ease;overflow:hidden;white-space:nowrap}
+.jd-bars .op{background:var(--rubric)}.jd-bars .pc{background:var(--gold);color:#2a1d06}.jd-bars .ld{background:var(--lapis)}
+.jd-bars .none{font:500 .72rem var(--f-label);color:var(--muted)}
+@media (max-width:520px){.jd-row{grid-template-columns:5.6rem minmax(0,1fr)}}
+.jd-battle{padding:1.2rem;display:grid;gap:.7rem;align-content:start}
+.jd-rollcall{padding:1.2rem;display:grid;gap:.7rem;align-content:start}
+.jd-calls{display:flex;flex-wrap:wrap;gap:.4rem}
+.jd-calls button{min-height:2.6rem;padding:.3rem .85rem;border-radius:999px;border:1px solid var(--rule);background:var(--surface-solid);font:600 .82rem var(--f-label);cursor:pointer;transition:all .3s}
+.jd-calls button.came{background:var(--gold);border-color:var(--gold);color:var(--bg)}
+.jd-calls button.stayed{border-style:dashed;color:var(--muted);text-decoration:line-through}
+.jd-fleece,.jd-armybox{padding:1.2rem;display:grid;gap:.7rem;align-content:start}
+.jd-fleece svg{width:100%;height:auto;display:block;border-radius:14px}
+.jd-army{position:relative;margin:0;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:var(--surface-solid);border:1px solid var(--rule)}
+.jd-army canvas{position:absolute;inset:0;width:100%;height:100%}
+.jd-army b{position:absolute;right:.7rem;top:.5rem;font-family:var(--f-display);font-size:1.8rem;color:var(--gold);font-variant-numeric:tabular-nums;background:var(--surface-solid);padding:0 .5rem;border-radius:8px}
+.jd-night{padding:1.2rem;display:grid;gap:.8rem;background:linear-gradient(180deg,#070b18,#141a30)!important;color:#ece4cf}
+.jd-night .small{color:#c9c0a8}
+.jd-night sup.cite{background:rgba(233,192,102,.2);color:#f0cd7a}
+.jd-jars{display:grid;grid-template-columns:repeat(30,minmax(0,1fr));gap:3px;padding:.4rem 0}
+@media (max-width:640px){.jd-jars{grid-template-columns:repeat(15,minmax(0,1fr))}}
+.jd-jars span{aspect-ratio:1/1.4;border-radius:40% 40% 20% 20%;background:#7a5a3a;position:relative;transition:background .3s}
+.jd-jars span.lit{background:radial-gradient(circle at 50% 40%,#fff3c0,#ff9a3a 50%,rgba(255,120,40,.0) 75%);box-shadow:0 0 10px rgba(255,170,80,.8);border-radius:50%}
+.jd-trees .flip,.jd-trees .flip .in{min-height:11rem}
+@media (max-width:760px){.jd-trees .flip,.jd-trees .flip .in{min-height:14rem}}
+.jd-trees{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:760px){.jd-trees{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.jd-shib{padding:1.2rem;display:grid;gap:.7rem;align-content:start}
+.jd-feats .glass{padding:1rem}
+.jd-delilah{padding:1.2rem;display:grid;gap:.7rem;align-content:start}
+.jd-tries{display:grid;gap:.4rem}
+.jd-tries button{text-align:left;min-height:2.9rem;padding:.5rem .9rem;border-radius:12px;border:1px solid var(--rule);background:var(--surface-solid);font:600 .86rem var(--f-label);cursor:pointer;display:flex;justify-content:space-between;gap:.6rem;align-items:center}
+.jd-tries button::after{content:attr(data-res);font-weight:700;font-size:.74rem;color:var(--gold);white-space:nowrap}
+.jd-tries button.lost::after{color:var(--rubric)}
+.jd-tries button:disabled{opacity:.4;cursor:default}
+.jd-tries button.done{opacity:1;border-color:var(--gold)}
+.jd-tries button.lost{border-color:var(--rubric)}
+.jd-meter{display:grid;grid-template-columns:auto 1fr;gap:.6rem;align-items:center;font:700 .72rem var(--f-label);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.jd-meter i{height:.8rem;border-radius:999px;background:var(--rule);overflow:hidden;display:block}
+.jd-meter b{display:block;height:100%;width:100%;background:linear-gradient(90deg,var(--rubric),var(--gold));transition:width .8s ease}
+.jd-templebox{position:relative;margin:0;border-radius:22px;overflow:hidden;aspect-ratio:4/3.3;max-width:100%;background:#120d08;box-shadow:var(--shadow)}
+.jd-templebox canvas{position:absolute;inset:0;width:100%;height:100%}
+.jd-push{position:absolute;left:50%;bottom:1rem;transform:translateX(-50%);white-space:nowrap}
+.jd-refrain{padding:1.2rem;display:grid;gap:.9rem}
+.jd-refs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.5rem}
+@media (max-width:620px){.jd-refs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.jd-refs button{display:grid;gap:.15rem;text-align:left;padding:.8rem .9rem;border-radius:14px;border:1px solid var(--rule);background:var(--surface-solid);cursor:pointer;transition:all .4s}
+.jd-refs button b{font-family:var(--f-display);font-size:1.4rem;color:var(--rubric)}
+.jd-refs button span{font:500 .78rem var(--f-label);color:var(--muted)}
+.jd-refs button.on{border-color:var(--rubric);background:linear-gradient(135deg,rgba(176,52,42,.1),transparent),var(--surface-solid)}
+.jd-warn summary{color:var(--rubric)}
+.jd-benjamin{padding:1.2rem;display:grid;gap:.8rem}
+.jd-benjamin canvas{width:100%;height:auto;aspect-ratio:16/5;display:block}
+@media (max-width:640px){.jd-benjamin canvas{aspect-ratio:4/3}}
+.jd-next{padding:1.2rem;display:grid;gap:.5rem;border-color:var(--gold)!important}
 </style>
 
 <div class="ambient" aria-hidden="true"></div>
@@ -2743,6 +2825,264 @@ footer{border-top:1px solid var(--rule);margin-top:2.5rem;padding-block:1.6rem 2
   <p><strong>Labels:</strong> <em>Illustration</em> means drawn to explain. <em>Observation</em> means a comparison you can check in the verses. <em>Calculated</em> means converted from units in the text. <em>Background</em> means general knowledge outside the text.</p>
 </footer>
 </div>
+<div class="tabpane" id="tab-judges-1-21" data-tab="judges-1-21" hidden>
+
+<section data-hero class="hero jd-hero" id="jdTop">
+  <figure data-figure style="position:absolute;inset:0;z-index:-1">
+    <canvas id="jdHeroCanvas" role="img" aria-label="A spiral that turns downward, each loop a little lower and darker than the last"></canvas>
+  </figure>
+  <div class="hero-in">
+    <span class="kick">Judges 1 – 21 · the whole book</span>
+    <h1>No King <em>in Israel</em></h1>
+    <p class="thesis">After Joshua's generation dies, Israel forgets the Lord<sup class="cite" data-cite="d_forgot">2:10</sup>. The same loop repeats: they turn to other gods, enemies crush them, they cry out, and God raises a judge to rescue them, until the judge dies and things get worse<sup class="cite" data-cite="d_cycle">2:16–19</sup>. By the end there is chaos, and the book's last line says everyone did whatever seemed right to them<sup class="cite" data-cite="d_lastline">21:25</sup>.</p>
+    <button class="speak" id="jdTurn"><span class="pulse"></span><span id="jdTurnTxt">Turn the cycle</span></button>
+    <p class="cap">Each loop lower than the last<sup class="cite" data-cite="d_cycle">2:19</sup> <span class="tag" data-label="Illustration">Illustration</span></p>
+  </div>
+</section>
+
+<ol class="journey" aria-label="Judges in seven parts">
+  <li><button data-dgo="jd1"><span class="n">i</span><span class="t">Unfinished</span><span class="r">1:1–3:6</span></button></li>
+  <li><button data-dgo="jd2"><span class="n">ii</span><span class="t">Twelve judges</span><span class="r">3:7–16:31</span></button></li>
+  <li><button data-dgo="jd3"><span class="n">iii</span><span class="t">Deborah</span><span class="r">4–5</span></button></li>
+  <li><button data-dgo="jd4"><span class="n">iv</span><span class="t">Gideon</span><span class="r">6–8</span></button></li>
+  <li><button data-dgo="jd5"><span class="n">v</span><span class="t">Thornbush &amp; vow</span><span class="r">9–12</span></button></li>
+  <li><button data-dgo="jd6"><span class="n">vi</span><span class="t">Samson</span><span class="r">13–16</span></button></li>
+  <li><button data-dgo="jd7"><span class="n">vii</span><span class="t">No king</span><span class="r">17–21</span></button></li>
+</ol>
+
+<!-- D1 -->
+<section class="scene" id="jd1" data-dscene="1">
+  <div class="head">
+    <span class="num">1:1</span>
+    <span class="eyebrow">Part 1 · Unfinished business</span>
+    <h2>The land, half taken</h2>
+    <p class="point">Judah starts well<sup class="cite" data-cite="d_judah">1:2–19</sup>, but tribe after tribe leaves Canaanites in place<sup class="cite" data-cite="d_failed">1:27–34</sup>. God's messenger warns that those nations will now be thorns in their sides<sup class="cite" data-cite="d_bokim">2:1–3</sup>. Tap each tribe.</p>
+  </div>
+  <div class="split">
+    <div class="glass jd-tribes">
+      <div class="jd-tgrid" id="jdTribes"></div>
+      <p class="info" id="jdTribeInfo" aria-live="polite">Tap a tribe to see what chapter 1 says about it.</p>
+    </div>
+    <div class="glass jd-cyclebox">
+      <span class="eyebrow">The pattern of the whole book · 2:11–19</span>
+      <svg viewBox="0 0 360 360" id="jdCycle" role="group" aria-label="The cycle in five steps; tap Next to move around it"></svg>
+      <div class="stepcard" id="jdCycleCard" aria-live="polite"></div>
+      <div class="row"><button class="btn" id="jdCycleNext">Next step</button><span class="small" id="jdLoop">Loop 1</span></div>
+    </div>
+  </div>
+  <div data-guess id="jdg1">
+    <span class="lab">Guess first</span>
+    <p class="q">How many times does Judges say the Israelites "did evil in the eyes of the Lord"?</p>
+    <div class="row" role="group" aria-label="Pick one"><button class="choice">Twice</button><button class="choice">Four times</button><button class="choice" data-right>Seven times</button><button class="choice">Twelve times</button></div>
+    <p class="reveal" hidden><strong>Seven times</strong>: 2:11, 3:7, 3:12, 4:1, 6:1, 10:6 and 13:1. Each one starts the loop again.<sup class="cite" data-cite="d_evil7">2:11 – 13:1</sup> <span class="tag" data-label="Counted">Counted</span></p>
+  </div>
+</section>
+
+<!-- D2 -->
+<section class="scene" id="jd2" data-dscene="2">
+  <div class="head">
+    <span class="num">3:7</span>
+    <span class="eyebrow">Part 2 · The twelve judges</span>
+    <h2>Years of trouble, years of rest</h2>
+    <p class="point">The book names twelve people who judged or led Israel. For some it gives how long the oppression lasted and how long the land then had peace; for others, only how long they led<sup class="cite" data-cite="d_minor">10:1–5</sup><sup class="cite" data-cite="d_minor2">12:8–15</sup>.</p>
+  </div>
+  <div data-guess id="jdg2">
+    <span class="lab">Guess first</span>
+    <p class="q">After which judge did the land have the longest peace?</p>
+    <div class="row" role="group" aria-label="Pick one"><button class="choice">Othniel</button><button class="choice" data-right>Ehud</button><button class="choice">Gideon</button><button class="choice">Samson</button></div>
+    <p class="reveal" hidden><strong>Ehud</strong>, the left-handed judge who defeated Eglon of Moab: eighty years.<sup class="cite" data-cite="d_ehud">3:15–30</sup></p>
+  </div>
+  <figure data-figure class="glass jd-chart">
+    <div class="row" style="justify-content:space-between">
+      <div class="jd-legend"><span class="op">years oppressed</span><span class="pc">years of peace</span><span class="ld">years led</span></div>
+      <div class="seg" role="group" aria-label="Order"><button data-ord="book" aria-pressed="true">Book order</button><button data-ord="long" aria-pressed="false">Longest first</button></div>
+    </div>
+    <div class="jd-rows" id="jdRows"></div>
+    <p class="info" id="jdJudgeInfo" aria-live="polite">Tap a judge.</p>
+  </figure>
+  <figcaption>Numbers as the text gives them. Twelve is a count of the people named as judging or leading; the book itself doesn't number them. Abimelech, who made himself king for three years, isn't counted. <span class="tag" data-label="Counted">Counted</span></figcaption>
+</section>
+
+<!-- D3 -->
+<section class="scene" id="jd3" data-dscene="3">
+  <div class="head">
+    <span class="num">4:4</span>
+    <span class="eyebrow">Part 3 · Deborah, Barak and Jael</span>
+    <h2>Nine hundred iron chariots</h2>
+    <p class="point">Jabin's commander Sisera has 900 iron chariots and has oppressed Israel for twenty years<sup class="cite" data-cite="d_jabin">4:2–3</sup>. Deborah, a prophet who decides disputes under a palm tree, summons Barak<sup class="cite" data-cite="d_deborah">4:4–7</sup>.</p>
+  </div>
+  <div data-guess id="jdg3">
+    <span class="lab">Guess first</span>
+    <p class="q">Barak won't go unless Deborah comes too. She agrees, but says the honor will go to someone else. Who ends up defeating Sisera?</p>
+    <div class="row" role="group" aria-label="Pick one"><button class="choice">Barak</button><button class="choice">Deborah</button><button class="choice" data-right>Jael, in her tent</button><button class="choice">Heber the Kenite</button></div>
+    <p class="reveal" hidden><strong>Jael.</strong> Sisera flees on foot to her tent; she gives him milk, and while he sleeps she drives a tent peg through his temple.<sup class="cite" data-cite="d_barak">4:8–9</sup><sup class="cite" data-cite="d_jael">4:17–22</sup></p>
+  </div>
+  <div class="split">
+    <div class="glass jd-battle">
+      <div class="steps" id="jdBatSteps" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+      <div class="stepcard" id="jdBatCard" aria-live="polite"></div>
+      <div class="row"><button class="btn ghost" id="jdBatPrev">Previous</button><button class="btn" id="jdBatNext">Next</button></div>
+    </div>
+    <div class="glass jd-rollcall">
+      <span class="eyebrow">Deborah's song: who answered the call? (5:14–18)</span>
+      <div class="jd-calls" id="jdCalls"></div>
+      <p class="small" id="jdCallInfo">Tap each tribe to see whether it came.</p>
+    </div>
+  </div>
+</section>
+
+<!-- D4 -->
+<section class="scene" id="jd4" data-dscene="4">
+  <div class="head">
+    <span class="num">6:11</span>
+    <span class="eyebrow">Part 4 · Gideon</span>
+    <h2>The least, with the fewest</h2>
+    <p class="point">Midian raids every harvest, swarming like locusts<sup class="cite" data-cite="d_midian">6:1–6</sup>. Gideon is threshing wheat in a winepress to hide it when the angel calls him a mighty warrior. He answers that his clan is the weakest and he is the least in his family<sup class="cite" data-cite="d_gideon">6:11–15</sup>.</p>
+  </div>
+  <div class="split">
+    <div class="glass jd-fleece">
+      <span class="eyebrow">Two tests with a fleece</span>
+      <svg viewBox="0 0 420 220" id="jdFleece" role="img" aria-label="A wool fleece on a threshing floor; it and the ground are wet or dry depending on the night"></svg>
+      <div class="row"><button class="btn" id="jdNight1">Night one</button><button class="btn ghost" id="jdNight2" disabled>Night two</button></div>
+      <p class="small" id="jdFleeceTxt">Gideon asks God for a sign that he will save Israel through him.<sup class="cite" data-cite="d_fleece">6:36–37</sup></p>
+    </div>
+    <div class="glass jd-armybox">
+      <span class="eyebrow">How many men? Tap to cut the army</span>
+      <figure data-figure class="jd-army"><canvas id="jdArmy" role="img" aria-label="Dots for Gideon's army shrinking from about 32,000 to 300"></canvas><b id="jdArmyN">32,000</b></figure>
+      <div class="row"><button class="btn" id="jdCut">Too many: send the fearful home</button></div>
+      <p class="small" id="jdArmyTxt">22,000 leave and 10,000 stay, so he started with about 32,000.<sup class="cite" data-cite="d_fear">7:2–3</sup> <span class="tag" data-label="Calculated">Calculated</span></p>
+    </div>
+  </div>
+  <div class="glass jd-night">
+    <div class="jd-jars" id="jdJars"></div>
+    <div class="row"><button class="btn" id="jdBlow">Blow the trumpets, break the jars</button><span class="small" id="jdNightTxt">Three companies of a hundred, each man with a trumpet and an empty jar with a torch inside.<sup class="cite" data-cite="d_jars">7:16</sup></span></div>
+  </div>
+  <details><summary>After the victory</summary><div>
+    <p>Offered a hereditary throne, Gideon refuses: neither he nor his son will rule them; the Lord will.<sup class="cite" data-cite="d_refuse">8:22–23</sup></p>
+    <p>But he makes the captured gold earrings into an ephod at Ophrah, Israel worships it, and it becomes a snare to him and his family. The land has peace forty years.<sup class="cite" data-cite="d_ephod">8:24–28</sup></p>
+  </div></details>
+</section>
+
+<!-- D5 -->
+<section class="scene" id="jd5" data-dscene="5">
+  <div class="head">
+    <span class="num">9:8</span>
+    <span class="eyebrow">Part 5 · A thornbush king and a rash vow</span>
+    <h2>Leaders who make things worse</h2>
+    <p class="point">Gideon's son Abimelech murders seventy brothers on one stone and is crowned at Shechem. Jotham, the one who escaped, shouts a story from Mount Gerizim<sup class="cite" data-cite="d_abim">9:1–7</sup>. Tap each tree.</p>
+  </div>
+  <div class="cards jd-trees">
+    <button class="flip" aria-expanded="false"><div class="in"><div class="face front"><span class="eyebrow">9:8–9</span><span class="sym">●</span><span class="who2">The olive tree</span></div><div class="face back" hidden><p>Says no: why give up its oil, which honors gods and people, just to sway over the trees?<sup class="cite" data-cite="d_fable">9:8–9</sup></p></div></div></button>
+    <button class="flip" aria-expanded="false"><div class="in"><div class="face front"><span class="eyebrow">9:10–11</span><span class="sym">◆</span><span class="who2">The fig tree</span></div><div class="face back" hidden><p>Says no: why give up its good, sweet fruit?<sup class="cite" data-cite="d_fable">9:10–11</sup></p></div></div></button>
+    <button class="flip" aria-expanded="false"><div class="in"><div class="face front"><span class="eyebrow">9:12–13</span><span class="sym">❦</span><span class="who2">The vine</span></div><div class="face back" hidden><p>Says no: why give up its wine, which cheers gods and people?<sup class="cite" data-cite="d_fable">9:12–13</sup></p></div></div></button>
+    <button class="flip" aria-expanded="false"><div class="in"><div class="face front"><span class="eyebrow">9:14–15</span><span class="sym">✳</span><span class="who2">The thornbush</span></div><div class="face back" hidden><p>Says yes: take shelter in its shade, or fire will come out of it and burn up the cedars of Lebanon.<sup class="cite" data-cite="d_fable">9:14–15</sup></p></div></div></button>
+  </div>
+  <p class="small">Abimelech rules three years, then turns on Shechem; at Thebez a woman drops a millstone on his head.<sup class="cite" data-cite="d_abimend">9:22–57</sup></p>
+  <div class="split">
+    <div class="glass jd-shib">
+      <span class="eyebrow">At the fords of the Jordan · 12:5–6</span>
+      <p>After Jephthah defeats Ammon, Ephraim attacks him. Gilead seizes the river crossings and makes each fugitive say one word.</p>
+      <div class="row"><button class="btn" data-say="Shibboleth">Say "Shibboleth"</button><button class="btn ghost" data-say="Sibboleth">Say "Sibboleth"</button></div>
+      <p class="info" id="jdShibInfo" aria-live="polite">Ephraimites couldn't pronounce it.<sup class="cite" data-cite="d_shib">12:5–6</sup></p>
+    </div>
+    <div class="glass" style="padding:1.2rem;display:grid;gap:.6rem;align-content:start">
+      <span class="eyebrow">Jephthah's vow · 11:30–40</span>
+      <p>Driven out by his half-brothers, Jephthah is called back to lead Gilead against Ammon<sup class="cite" data-cite="d_jephthah">11:1–11</sup>. Before the battle he vows to offer as a burnt offering whatever first comes out of his door to meet him. He wins, and his only child, his daughter, comes out dancing<sup class="cite" data-cite="d_vow">11:30–35</sup>.</p>
+      <p class="small">She asks for two months to mourn in the hills, and he then does as he vowed. Each year Israel's young women commemorate her for four days.<sup class="cite" data-cite="d_daughter">11:36–40</sup> Readers have long debated whether this means a literal sacrifice or lifelong unmarried service; the text emphasizes that she never married. <span class="tag" data-label="Interpretation">Interpretation</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- D6 -->
+<section class="scene" id="jd6" data-dscene="6">
+  <div class="head">
+    <span class="num">13:5</span>
+    <span class="eyebrow">Part 6 · Samson</span>
+    <h2>Strong body, weak will</h2>
+    <p class="point">An angel tells a childless woman of Zorah she will have a son, set apart to God from birth: no razor on his head, and he will begin to rescue Israel from the Philistines<sup class="cite" data-cite="d_birth">13:2–5</sup>.</p>
+  </div>
+  <div class="four jd-feats">
+    <div class="glass"><span class="eyebrow">14:5–9</span><h3>A lion</h3><p>Torn apart bare-handed; later he finds bees and honey in its carcass.<sup class="cite" data-cite="d_lion">14:5–9</sup></p></div>
+    <div class="glass"><span class="eyebrow">15:4–5</span><h3>300 foxes</h3><p>Tied tail to tail with torches, burning the Philistines' grain, vineyards and olive groves.<sup class="cite" data-cite="d_foxes">15:4–5</sup></p></div>
+    <div class="glass"><span class="eyebrow">15:15</span><h3>A jawbone</h3><p>With a donkey's fresh jawbone he strikes down a thousand men.<sup class="cite" data-cite="d_jaw">15:14–16</sup></p></div>
+    <div class="glass"><span class="eyebrow">16:3</span><h3>The gates of Gaza</h3><p>Doors, posts and bar torn loose at midnight and carried to a hilltop.<sup class="cite" data-cite="d_gaza">16:1–3</sup></p></div>
+  </div>
+  <div data-guess id="jdg4">
+    <span class="lab">Guess first</span>
+    <p class="q">At his wedding Samson poses a riddle: from the eater came food, and from the strong came something sweet. What's the answer?</p>
+    <div class="row" role="group" aria-label="Pick one"><button class="choice">Bread from an oven</button><button class="choice" data-right>Honey from a lion</button><button class="choice">Milk from a goat</button></div>
+    <p class="reveal" hidden><strong>Honey from the lion's carcass.</strong> His wife's people pressure her for the answer and she gets it out of him on the seventh day.<sup class="cite" data-cite="d_riddle">14:12–18</sup></p>
+  </div>
+  <div class="split">
+    <div class="glass jd-delilah">
+      <span class="eyebrow">Delilah asks four times · 16:6–20</span>
+      <div class="jd-tries" id="jdTries"></div>
+      <div class="jd-meter"><span>Strength</span><i><b id="jdStrength"></b></i></div>
+      <p class="info" id="jdTryInfo" aria-live="polite">The Philistine rulers offer her 1,100 shekels of silver each to learn his secret.<sup class="cite" data-cite="d_delilah">16:5</sup></p>
+    </div>
+    <figure data-figure class="jd-templebox">
+      <canvas id="jdTemple" role="img" aria-label="The temple of Dagon, with two central pillars; push to bring it down"></canvas>
+      <button class="speak jd-push" id="jdPush"><span class="pulse"></span><span id="jdPushTxt">Strengthen me once more</span></button>
+    </figure>
+  </div>
+  <figcaption>The temple of Dagon in Gaza <span class="tag" data-label="Illustration">Illustration</span></figcaption>
+</section>
+
+<!-- D7 -->
+<section class="scene" id="jd7" data-dscene="7">
+  <div class="head">
+    <span class="num">17:6</span>
+    <span class="eyebrow">Part 7 · No king</span>
+    <h2>Everyone did as they saw fit</h2>
+    <p class="point">The last five chapters have no judge at all. Four times the narrator says Israel had no king<sup class="cite" data-cite="d_noking">17:6; 18:1; 19:1; 21:25</sup>. Tap each time to read what happened.</p>
+  </div>
+  <div class="glass jd-refrain">
+    <div class="jd-refs" id="jdRefs">
+      <button data-r="0"><b>17:6</b><span>a homemade shrine</span></button>
+      <button data-r="1"><b>18:1</b><span>a tribe steals it</span></button>
+      <button data-r="2"><b>19:1</b><span>a crime at Gibeah</span></button>
+      <button data-r="3"><b>21:25</b><span>the book's last line</span></button>
+    </div>
+    <div class="stepcard" id="jdRefCard" aria-live="polite"><p class="small">Each refrain opens a darker story.</p></div>
+  </div>
+  <details class="jd-warn"><summary>Content note: chapters 19–21 (sexual violence and war)</summary><div>
+    <p>A Levite traveling home with his concubine stops at Gibeah in Benjamin. Men of the town surround the house; the Levite pushes his concubine out to them, and she is abused through the night and dies at the door. He cuts her body into twelve parts and sends them through Israel.<sup class="cite" data-cite="d_gibeah">19:22–30</sup></p>
+    <p>Israel gathers 400,000 soldiers; Benjamin refuses to hand over the men of Gibeah. After two defeats, Israel wins on the third day.<sup class="cite" data-cite="d_war">20:12–48</sup></p>
+    <p>To keep Benjamin from vanishing, the tribes destroy Jabesh Gilead to take 400 young women for the survivors, then let Benjamites seize dancers at Shiloh's festival.<sup class="cite" data-cite="d_wives">21:8–23</sup> The narrator reports this without approving it. <span class="tag" data-label="Interpretation">Interpretation</span></p>
+  </div></details>
+  <figure data-figure class="glass jd-benjamin">
+    <span class="eyebrow">Benjamin's fighting men · chapter 20</span>
+    <canvas id="jdBen" role="img" aria-label="About 26,700 Benjamite soldiers, then 600 survivors"></canvas>
+    <div class="row"><button class="btn" id="jdBenBtn">After the war</button><span class="small" id="jdBenTxt">26,000 swordsmen plus 700 chosen men of Gibeah.<sup class="cite" data-cite="d_war">20:15</sup></span></div>
+  </figure>
+  <figcaption>One dot per 100 men. <span class="tag" data-label="Calculated">Calculated</span></figcaption>
+  <div class="glass jd-next">
+    <span class="eyebrow">What comes next</span>
+    <p>The very next book in your PDF, Ruth, opens in the days when the judges ruled, and ends with a family line leading to David, Israel's future king.<sup class="cite" data-cite="d_ruth">Ruth 1:1; 4:17–22</sup> <span class="tag" data-label="Observation">Observation</span></p>
+  </div>
+</section>
+
+<section class="scene" id="jdQuiz">
+  <div class="head"><span class="num">?</span><span class="eyebrow">Can you answer these?</span></div>
+  <div data-quiz>
+    <div class="glass qz" data-ans="1"><p class="q">How did God cut Gideon's army down to its final size?</p>
+      <div class="row"><button class="choice">By casting lots</button><button class="choice">By how they drank water</button><button class="choice">By who had swords</button></div>
+      <p class="reveal" hidden>By how they drank: the 300 who lapped with their hands to their mouths stayed.<sup class="cite" data-cite="d_lap">7:4–7</sup></p></div>
+    <div class="glass qz" data-ans="2"><p class="q">Which hand did Ehud use?</p>
+      <div class="row"><button class="choice">Right</button><button class="choice">Both</button><button class="choice">Left</button></div>
+      <p class="reveal" hidden>He was left-handed, with the sword strapped to his right thigh.<sup class="cite" data-cite="d_ehud">3:15–21</sup></p></div>
+    <div class="glass qz" data-ans="0"><p class="q">What was Samson's secret?</p>
+      <div class="row"><button class="choice">His hair had never been cut</button><button class="choice">A hidden amulet</button><button class="choice">He never drank water</button></div>
+      <p class="reveal" hidden>No razor had touched his head; he was a Nazirite set apart to God from birth.<sup class="cite" data-cite="d_secret">16:17</sup></p></div>
+    <div class="score" hidden><svg class="ring" viewBox="0 0 64 64"><circle class="bgc" cx="32" cy="32" r="26"/><circle class="fg" cx="32" cy="32" r="26" stroke-dasharray="163.4" stroke-dashoffset="163.4"/></svg><span class="scoreTxt"></span></div>
+  </div>
+</section>
+
+<footer>
+  <p><strong>Source:</strong> your NIV PDF (GODoor.net edition), pages 369–406. This tab is a guide to the whole book, retold in its own words, so many smaller episodes are summarized or left out. Tap any gold reference for the PDF page with the exact NIV wording.</p>
+  <p><strong>Labels:</strong> <em>Illustration</em> means drawn to explain. <em>Counted</em> and <em>Calculated</em> mean tallied or worked out from numbers in the text. <em>Interpretation</em> means a reading the text does not state. <em>Observation</em> means a link you can check yourself.</p>
+</footer>
+</div>
 </main>
 
 <div class="pop" id="pop" hidden role="dialog" aria-modal="true" aria-labelledby="popRef">
@@ -3350,7 +3690,8 @@ const BUILT = [
   { book: "Acts", from: 1, to: 2, tab: "acts-1-2", title: "Wind and Fire", blurb: "The ascension, the twelfth apostle, Pentecost and the first three thousand" },
   { book: "Exodus", from: 12, to: 14, tab: "exodus-12-14", title: "Through the Sea", blurb: "The first Passover, the night of leaving, and the crossing of the sea" },
   { book: "John", from: 1, to: 3, tab: "john-1-3", title: "The Word Became Flesh", blurb: "The Word, John the Baptist, the first followers, Cana, the temple and Nicodemus" },
-  { book: "Revelation", from: 21, to: 22, tab: "revelation-21-22", title: "All Things New", blurb: "The new heaven and earth, the holy city, and the river and tree of life" }
+  { book: "Revelation", from: 21, to: 22, tab: "revelation-21-22", title: "All Things New", blurb: "The new heaven and earth, the holy city, and the river and tree of life" },
+  { book: "Judges", from: 1, to: 21, tab: "judges-1-21", title: "No King in Israel", blurb: "The whole book: the repeating cycle, twelve judges, Deborah, Gideon, Samson and the dark ending" }
 ];
 const TABS = [{ id: "library", label: "Library" }, ...[...BUILT].sort((a, b) => BOOKS.findIndex(x => x[0] === a.book) - BOOKS.findIndex(x => x[0] === b.book) || a.from - b.from).map(b => ({ id: b.tab, label: `${b.book} ${b.from}–${b.to}` }))];
 
@@ -4704,6 +5045,271 @@ if (!motionOK()){ $("#rvCube").classList.add("paused"); $("#rvSpin").setAttribut
     $$(".choice", q).forEach((b, i) => b.onclick = () => { if (q.dataset.done) return; q.dataset.done = 1; answered++;
       if (i === ans) right++; else b.classList.add("wrong"); $$(".choice", q)[ans].classList.add("right"); $(".reveal", q).hidden = false;
       if (answered === 3){ $(".score", box).hidden = false; $(".scoreTxt", box).textContent = right === 3 ? "3 of 3. You know the ending." : `${right} of 3. Tap the references to review.`;
+        requestAnimationFrame(() => $(".fg", box).style.strokeDashoffset = 163.4 * (1 - right / 3)); } }); }); })();
+
+
+/* =========================================================
+   JUDGES 1–21 TAB
+   ========================================================= */
+Object.assign(SOURCES, {
+  d_judah: { page: 369, ref: "Judges 1:1–19", say: "After Joshua's death Israel asks who will fight first; the Lord says Judah. Judah, with Simeon, wins at Bezek, takes Jerusalem, Hebron and Debir, and the coastal cities. The Lord is with Judah and it takes the hill country, but cannot drive out the people of the plains, who have iron chariots. (Verses 16–19 are on page 370.)" },
+  d_failed: { page: 370, ref: "Judges 1:21, 27–34", say: "Benjamin fails to dislodge the Jebusites in Jerusalem. Manasseh, Ephraim, Zebulun, Asher and Naphtali do not drive out the Canaanites in their towns; some are put to forced labor. The Amorites confine the Danites to the hill country. (Verse 34 is on page 371.)" },
+  d_bokim: { page: 371, ref: "Judges 2:1–5", say: "The angel of the Lord comes to Bokim: God brought them out of Egypt and told them not to make treaties with the land's people, but they disobeyed. So he will not drive those nations out; they will be thorns in Israel's sides and their gods a snare. The people weep." },
+  d_forgot: { page: 371, ref: "Judges 2:7–10", say: "The people served the Lord while Joshua and the elders who outlived him were alive. Joshua died at 110. After that generation died, another grew up that knew neither the Lord nor what he had done for Israel." },
+  d_cycle: { page: 372, ref: "Judges 2:11–19", say: "Israel did evil, serving the Baals and Ashtoreths. In anger the Lord handed them to raiders and enemies, and they were in great distress. Then he raised up judges who saved them, and he was with each judge as long as the judge lived, out of compassion for their groaning. But when the judge died, they went back to ways even worse than their fathers'. (Verses 11–14 are on page 371.)" },
+  d_evil7: { page: 371, ref: "Judges 2:11; 3:7, 12; 4:1; 6:1; 10:6; 13:1", say: "The phrase that the Israelites did evil in the eyes of the Lord appears seven times in Judges, at 2:11 (p. 371), 3:7 (p. 372), 3:12 (p. 373), 4:1 (p. 374), 6:1 (p. 377), 10:6 (p. 387) and 13:1 (p. 391)." },
+  d_othniel: { page: 373, ref: "Judges 3:8–11", say: "Israel served Cushan-Rishathaim of Aram for eight years. When they cried out, the Lord raised up Othniel, Caleb's younger brother; the Spirit came on him, he won, and the land had peace forty years." },
+  d_ehud: { page: 373, ref: "Judges 3:12–30", say: "Eglon of Moab ruled Israel eighteen years. The Lord raised up Ehud, a left-handed Benjamite, who strapped a foot-and-a-half double-edged sword to his right thigh, killed Eglon in his upper room and escaped. Israel then defeated Moab, and the land had peace eighty years. (Verses 26–30 are on page 374.)" },
+  d_shamgar: { page: 374, ref: "Judges 3:31", say: "After Ehud came Shamgar son of Anath, who struck down six hundred Philistines with an oxgoad and saved Israel." },
+  d_jabin: { page: 374, ref: "Judges 4:1–3", say: "After Ehud's death Israel did evil again, and the Lord sold them to Jabin, a Canaanite king in Hazor. His commander Sisera had nine hundred iron chariots and cruelly oppressed Israel for twenty years." },
+  d_deborah: { page: 374, ref: "Judges 4:4–7", say: "Deborah, a prophet, was leading Israel and judged disputes under the Palm of Deborah between Ramah and Bethel. She told Barak that the Lord commanded him to take ten thousand men of Naphtali and Zebulun to Mount Tabor; God would draw Sisera to the Kishon River and give him into Barak's hands." },
+  d_barak: { page: 374, ref: "Judges 4:8–10", say: "Barak said he would go only if Deborah went with him. She agreed, but said the honor would not be his, because the Lord would hand Sisera over to a woman." },
+  d_rout: { page: 375, ref: "Judges 4:12–16", say: "Sisera gathered his 900 chariots at the Kishon. Deborah told Barak to go, since the Lord had gone ahead of him. Barak came down from Tabor with ten thousand men; the Lord routed Sisera's army, and Sisera fled on foot while all his troops fell." },
+  d_jael: { page: 375, ref: "Judges 4:17–22", say: "Sisera fled to the tent of Jael, wife of Heber the Kenite. She invited him in, gave him milk and covered him. While he slept she drove a tent peg through his temple, and showed Barak the dead man when he arrived." },
+  d_song: { page: 376, ref: "Judges 5:14–18", say: "Deborah's song lists who came to fight: Ephraim, Benjamin, Makir, Zebulun and Issachar, with Zebulun and Naphtali risking their lives. Reuben searched its heart and stayed by its flocks; Gilead stayed beyond the Jordan; Dan lingered by the ships; Asher stayed on the coast." },
+  d_peace40d: { page: 377, ref: "Judges 5:31", say: "The song ends asking that the Lord's enemies perish and those who love him be like the rising sun. Then the land had peace forty years." },
+  d_midian: { page: 377, ref: "Judges 6:1–6", say: "Israel did evil, and for seven years the Lord gave them to Midian. Israel hid in caves and strongholds; whenever they planted, Midianites, Amalekites and eastern peoples swarmed in like locusts and ruined the crops, until Israel cried out." },
+  d_gideon: { page: 378, ref: "Judges 6:11–16", say: "The angel of the Lord came to Ophrah, where Gideon was threshing wheat in a winepress to hide it from Midian, and called him a mighty warrior. Gideon asked why all this had happened if the Lord was with them. Told to go and save Israel, he said his clan was the weakest in Manasseh and he the least in his family; the Lord said he would be with him." },
+  d_fleece: { page: 379, ref: "Judges 6:36–40", say: "Gideon asked God for a sign: dew only on a wool fleece and the ground dry. The next morning he wrung a bowlful of water from it. Then he asked for the reverse: the fleece dry and the ground wet. That night God did so." },
+  d_fear: { page: 380, ref: "Judges 7:2–3", say: "The Lord told Gideon he had too many men, so Israel could not boast that its own strength saved it. Anyone afraid could go home; twenty-two thousand left and ten thousand remained." },
+  d_lap: { page: 380, ref: "Judges 7:4–8", say: "Still too many. At the water, the Lord separated those who lapped like a dog from those who knelt to drink. Three hundred lapped with their hands to their mouths; with them the Lord would save Israel, and the rest were sent home." },
+  d_jars: { page: 380, ref: "Judges 7:16–22", say: "Gideon divided the three hundred into three companies, each man with a trumpet and an empty jar with a torch inside. At the edge of the camp in the middle watch they blew the trumpets, smashed the jars, held up the torches and shouted. The Midianites ran, and the Lord set them against each other with their swords. (Verses 17–22 are on page 381.)" },
+  d_refuse: { page: 382, ref: "Judges 8:22–23", say: "Israel asked Gideon to rule over them, then his son and grandson. He said neither he nor his son would rule over them; the Lord would rule over them." },
+  d_ephod: { page: 383, ref: "Judges 8:24–28", say: "He asked for a gold earring from each man's plunder, about seventeen hundred shekels, and made it into an ephod in Ophrah. All Israel worshiped it there, and it became a snare to Gideon and his family. Midian was subdued, and in Gideon's lifetime the land had peace forty years. (Verse 24 begins on page 382.)" },
+  d_abim: { page: 383, ref: "Judges 9:1–7", say: "Abimelech, Gideon's son by a concubine in Shechem, won over Shechem, hired reckless men with seventy shekels from Baal-Berith's temple, and murdered his seventy brothers on one stone. Only the youngest, Jotham, escaped. Shechem crowned Abimelech, and Jotham shouted to them from the top of Mount Gerizim. (Verses 6b–7 are on page 384.)" },
+  d_fable: { page: 384, ref: "Judges 9:8–15", say: "The trees went to anoint a king. The olive tree would not give up its oil, the fig tree its sweet fruit, nor the vine its wine, to rule over the trees. The thornbush said: if you anoint me, take refuge in my shade; if not, let fire come out of the thornbush and burn up the cedars of Lebanon." },
+  d_abimend: { page: 384, ref: "Judges 9:22–57", say: "After Abimelech governed three years, God set Shechem against him. He destroyed Shechem and burned its tower with about a thousand people inside. At Thebez a woman dropped an upper millstone on his head; he had his armor-bearer kill him. So God repaid Abimelech and Shechem, as Jotham had cursed. (Pages 384–386.)" },
+  d_minor: { page: 386, ref: "Judges 10:1–5", say: "After Abimelech, Tola of Issachar rose to save Israel and led it twenty-three years. Then Jair of Gilead led Israel twenty-two years; his thirty sons rode thirty donkeys and controlled thirty towns. (Verses 2–5 are on page 387.)" },
+  d_ammon: { page: 387, ref: "Judges 10:6–16", say: "Israel did evil again, serving many gods. The Lord sold them to the Philistines and Ammonites, who crushed Israel east of the Jordan for eighteen years. When they cried out, the Lord told them to cry to the gods they had chosen; they confessed, removed their foreign gods and served the Lord, and he could bear their misery no longer." },
+  d_jephthah: { page: 387, ref: "Judges 11:1–11", say: "Jephthah of Gilead, a mighty warrior and son of a prostitute, was driven off by his half-brothers and gathered a band of adventurers in Tob. When Ammon attacked, Gilead's elders asked him to be their commander, promising to make him head of Gilead. (Verses 2–11 are on page 388.)" },
+  d_vow: { page: 389, ref: "Judges 11:29–35", say: "The Spirit of the Lord came on Jephthah. He vowed that if the Lord gave him the Ammonites, whatever first came out of his door to meet him would be the Lord's, offered as a burnt offering. He won, and when he came home his daughter, his only child, came out dancing to meet him. He tore his clothes, because he could not break his vow." },
+  d_daughter: { page: 390, ref: "Judges 11:36–40", say: "She told her father to do as he had promised, but asked for two months to roam the hills and weep with her friends, because she would never marry. Afterward he did as he had vowed, and she had never known a man. From this came a custom that Israel's young women commemorate her four days each year." },
+  d_shib: { page: 390, ref: "Judges 12:4–7", say: "Gilead fought Ephraim and held the Jordan fords. When a fugitive asked to cross, they made him say 'Shibboleth'; if he said 'Sibboleth', unable to pronounce it, they killed him. Forty-two thousand Ephraimites died. Jephthah led Israel six years." },
+  d_minor2: { page: 390, ref: "Judges 12:8–15", say: "After Jephthah, Ibzan of Bethlehem led Israel seven years; Elon of Zebulun ten years; and Abdon son of Hillel eight years, whose forty sons and thirty grandsons rode seventy donkeys. (Verses 12–15 are on page 391.)" },
+  d_birth: { page: 391, ref: "Judges 13:1–5", say: "Israel did evil again, and the Lord gave them to the Philistines for forty years. The angel of the Lord told the childless wife of Manoah, a Danite of Zorah, that she would have a son: she must avoid wine and unclean food, and no razor may touch his head, for he will be a Nazirite from birth and begin to deliver Israel from the Philistines." },
+  d_lion: { page: 393, ref: "Judges 14:5–9", say: "Near Timnah a young lion came roaring at Samson. The Spirit came on him and he tore it apart barehanded, telling no one. Later he found a swarm of bees and honey in its carcass, and ate some and gave some to his parents. (Verse 5 is on page 392.)" },
+  d_riddle: { page: 393, ref: "Judges 14:12–18", say: "At his wedding feast Samson gave thirty companions a riddle for thirty garments: out of the eater, something to eat; out of the strong, something sweet. They threatened his wife, who wept for seven days until he told her; she told them, and they answered: what is sweeter than honey, and stronger than a lion?" },
+  d_foxes: { page: 394, ref: "Judges 15:4–5", say: "Samson caught three hundred foxes, tied them tail to tail in pairs with a torch between each pair, and let them loose in the Philistines' standing grain, burning the grain, vineyards and olive groves." },
+  d_jaw: { page: 394, ref: "Judges 15:14–16", say: "Bound and handed over at Lehi, Samson felt the Spirit come on him; the ropes fell off like burned flax. With a fresh donkey's jawbone he struck down a thousand men." },
+  d_samson20: { page: 395, ref: "Judges 15:20; 16:31", say: "Samson led Israel twenty years in the days of the Philistines. (16:31 repeats it, on page 397.)" },
+  d_gaza: { page: 395, ref: "Judges 16:1–3", say: "In Gaza the people waited to kill Samson at dawn. At midnight he tore loose the doors of the city gate with both posts and the bar, and carried them to the top of the hill facing Hebron." },
+  d_delilah: { page: 395, ref: "Judges 16:4–5", say: "Samson loved Delilah of the Valley of Sorek. The Philistine rulers each offered her eleven hundred shekels of silver to learn the secret of his strength." },
+  d_tries: { page: 395, ref: "Judges 16:6–14", say: "Samson told Delilah he would be weak if tied with seven fresh thongs, then with new ropes, then if his seven braids were woven into a loom. Each time she called that the Philistines were upon him, and each time he broke free. (Verses 12b–14 are on page 396.)" },
+  d_secret: { page: 396, ref: "Judges 16:15–21", say: "Pressed day after day, he told her everything: no razor had touched his head, because he was a Nazirite from birth. She had his seven braids shaved while he slept, and his strength left him; he did not know the Lord had left him. The Philistines gouged out his eyes and set him grinding in the Gaza prison." },
+  d_pillars: { page: 397, ref: "Judges 16:23–30", say: "His hair began to grow back. At a great feast to their god Dagon, the Philistine rulers brought Samson out to entertain them, with about three thousand people on the roof. He prayed for strength once more, braced against the two central pillars, and pushed; the temple fell on the rulers and everyone in it. He killed more in his death than in his life. (Verses 23–26 are on page 396.)" },
+  d_micah: { page: 397, ref: "Judges 17:1–6", say: "Micah of Ephraim returned 1,100 stolen shekels to his mother, who had part of it made into a carved image and a cast idol. Micah had a shrine, an ephod and household gods, and made his son a priest. In those days Israel had no king; everyone did as he saw fit." },
+  d_dan: { page: 398, ref: "Judges 18:1–31", say: "In those days Israel had no king. The Danites, still without land, sent spies who stayed at Micah's house. Later six hundred armed Danites took Micah's idols and his hired Levite priest, attacked the peaceful, unsuspecting town of Laish, burned it, rebuilt it as Dan, and set up the idols there. (Pages 398–400.)" },
+  d_gibeah: { page: 400, ref: "Judges 19:1, 22–30", say: "In those days Israel had no king. A Levite and his concubine stopped for the night at Gibeah in Benjamin. Wicked men surrounded the house; he put her outside, they abused her all night, and at dawn she collapsed at the door, dead. He cut her body into twelve parts and sent them throughout Israel, and all who saw it said nothing like it had happened since the Exodus. (Verses 22–30 are on page 401.)" },
+  d_war: { page: 402, ref: "Judges 20:12–48", say: "Israel's tribes demanded Gibeah's guilty men; Benjamin refused and mustered 26,000 swordsmen plus 700 chosen men of Gibeah, against Israel's 400,000. Benjamin won the first two days; on the third, with an ambush, Israel struck down about 25,000 Benjamites. Six hundred men fled to the rock of Rimmon and stayed four months, and Israel burned Benjamin's towns. (Pages 402–404.)" },
+  d_wives: { page: 404, ref: "Judges 21:1–23", say: "Israel had sworn not to give daughters to Benjamin, then grieved that a tribe was missing. They destroyed Jabesh Gilead, which had not come to the assembly, and gave its 400 young women to the Benjamite survivors. For the rest, they told the Benjamites to seize girls dancing at the yearly festival at Shiloh, and so they did. (Pages 404–406.)" },
+  d_lastline: { page: 406, ref: "Judges 21:25", say: "In those days Israel had no king; everyone did as he saw fit. (The book's final verse.)" },
+  d_noking: { page: 397, ref: "Judges 17:6; 18:1; 19:1; 21:25", say: "The line that Israel had no king appears four times: 17:6 (p. 397), 18:1 (p. 398), 19:1 (p. 400) and 21:25 (p. 406). The first and last add that everyone did as he saw fit." },
+  d_ruth: { page: 407, ref: "Ruth 1:1; 4:17–22", say: "Ruth begins 'in the days when the judges ruled' (p. 407) and ends with the family line from Perez through Boaz and Obed to Jesse and David (p. 412)." }
+});
+$$("#tab-judges-1-21 sup.cite").forEach(s => { s.tabIndex = 0; s.setAttribute("role", "button"); });
+$$("[data-dgo]").forEach(b => b.onclick = () => jumpTo(b.dataset.dgo));
+const DAMB = { dark: [["#2a2214","#0a0806"],["#2a1a12","#0a0606"],["#14203a","#05080f"],["#1a2414","#06080a"],["#2a1414","#0a0406"],["#2a1a0c","#0a0604"],["#1a0c0c","#040204"]],
+               light: [["#efe2c4","#efece6"],["#f0d6c8","#f0eaea"],["#d4dcef","#eceff6"],["#dfe8d4","#eef0ea"],["#efd4d0","#f0eaea"],["#f2dcc0","#efe8e2"],["#e4d0d0","#ece6e6"]] };
+const jdAmbObs = new IntersectionObserver(es => es.forEach(en => { if (!en.isIntersecting || activeTab !== "judges-1-21") return;
+  const p = DAMB[isDark() ? "dark" : "light"][+en.target.dataset.dscene - 1]; root.style.setProperty("--amb-a", p[0]); root.style.setProperty("--amb-b", p[1]);
+}), { rootMargin: "-40% 0px -55% 0px" });
+$$("[data-dscene]").forEach(s => jdAmbObs.observe(s));
+
+/* hero: the downward spiral */
+(() => {
+  const cv = $("#jdHeroCanvas"), box = $("#jdTop"); let t = 0, on = false, raf = 0, turns = 0, shown = 0;
+  const NAMES = ["Othniel", "Ehud", "Deborah", "Gideon", "Jephthah", "Samson", "no judge"];
+  function frame(){ const F = fitCanvas(cv); if (!F) return; const { x, W, H } = F; t += motionOK() ? .016 : 0; shown += (turns - shown) * (motionOK() ? .04 : 1);
+    let g = x.createLinearGradient(0, 0, 0, H); g.addColorStop(0, "#1a1410"); g.addColorStop(1, "#050304"); x.fillStyle = g; x.fillRect(0, 0, W, H);
+    const narrow = W < 640, cx = W * (narrow ? .62 : .74), top = H * (narrow ? .05 : .1), step = H * (narrow ? .022 : .11), rx = narrow ? W * .3 : Math.min(W * .2, 200), ry = rx * (narrow ? .16 : .26);
+    for (let i = 0; i < 7; i++){ const cy = top + i * step, a = Math.max(0, Math.min(1, shown - i + 1)), dim = 1 - i * .12;
+      x.strokeStyle = `rgba(${233 * dim | 0},${180 * dim | 0},${100 * dim | 0},${.15 + .65 * a})`; x.lineWidth = 2.5 - i * .2; x.beginPath(); x.ellipse(cx, cy, rx * (1 - i * .06), ry, 0, 0, Math.PI * 2 * Math.max(.02, a)); x.stroke();
+      if (a > .6 && !narrow){ x.fillStyle = `rgba(240,225,190,${(a - .6) * 2 * dim})`; x.font = `600 ${Math.max(11, W / 90)}px ui-sans-serif,-apple-system,sans-serif`; x.textAlign = "left"; x.fillText(NAMES[i], cx + rx * (1 - i * .06) + 10, cy + 4); } }
+    const ang = t * 1.4, li = Math.min(6, Math.floor(shown)), cy = top + li * step; x.fillStyle = "#ff8c76"; x.beginPath(); x.arc(cx + Math.cos(ang) * rx * (1 - li * .06), cy + Math.sin(ang) * ry, 5, 0, 7); x.fill();
+    g = x.createLinearGradient(0, H * .55, 0, H); g.addColorStop(0, "rgba(0,0,0,0)"); g.addColorStop(1, "rgba(0,0,0,.6)"); x.fillStyle = g; x.fillRect(0, 0, W, H);
+    if (on && (motionOK() || Math.abs(turns - shown) > .01)) raf = requestAnimationFrame(frame); }
+  whenVisible(box, v => { on = v; cancelAnimationFrame(raf); if (v) raf = requestAnimationFrame(frame); });
+  addEventListener("resize", () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); });
+  turns = 1;
+  $("#jdTurn").onclick = () => { turns = turns >= 7 ? 1 : turns + 1; if (turns === 1) shown = 0; $("#jdTurnTxt").textContent = turns >= 7 ? "Start again" : `Turn the cycle (${turns} of 7)`; cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); };
+})();
+
+/* part 1: tribes + cycle */
+(() => {
+  const T = [
+    ["Judah", "ok", "Takes the hill country with the Lord's help, but can't drive out the plains people with iron chariots.", "d_judah"],
+    ["Simeon", "ok", "Fights alongside Judah.", "d_judah"],
+    ["Benjamin", "part", "Fails to dislodge the Jebusites from Jerusalem.", "d_failed"],
+    ["Manasseh", "part", "Doesn't drive out Beth Shan, Taanach, Dor, Ibleam or Megiddo.", "d_failed"],
+    ["Ephraim", "part", "Doesn't drive out the Canaanites of Gezer.", "d_failed"],
+    ["Zebulun", "part", "Leaves Kitron and Nahalol, using them for forced labor.", "d_failed"],
+    ["Asher", "part", "Leaves seven coastal towns and lives among the Canaanites.", "d_failed"],
+    ["Naphtali", "part", "Leaves Beth Shemesh and Beth Anath.", "d_failed"],
+    ["Dan", "part", "Confined to the hill country by the Amorites.", "d_failed"]
+  ];
+  $("#jdTribes").innerHTML = T.map(([n, k], i) => `<button class="${k}" data-i="${i}">${n}<small>${k === "ok" ? "advances" : "falls short"}</small></button>`).join("");
+  $$("#jdTribes button").forEach(b => b.onclick = () => { $$("#jdTribes button").forEach(x => x.classList.toggle("on", x === b)); const [n, , txt, id] = T[+b.dataset.i];
+    $("#jdTribeInfo").innerHTML = `<strong>${n}.</strong> ${txt}${cite(id)}`; });
+
+  const S = [["Sin", "They forget the Lord and serve other gods.", "d_cycle"], ["Oppression", "God hands them to raiders and enemies.", "d_cycle"], ["Cry out", "In great distress, they groan and cry for help.", "d_othniel"], ["A judge", "God raises up a judge who saves them, and is with the judge while he lives.", "d_cycle"], ["Peace", "The land rests, until the judge dies and they turn back, worse than before.", "d_cycle"]];
+  const svg = $("#jdCycle"), c = 180, R = 125;
+  svg.innerHTML = `<circle class="ring" cx="${c}" cy="${c}" r="${R}"/>` + S.map(([n], i) => { const a = -Math.PI / 2 + i * 2 * Math.PI / 5, X = c + Math.cos(a) * R, Y = c + Math.sin(a) * R;
+    return `<g class="jd-node" data-i="${i}"><circle cx="${X}" cy="${Y}" r="30"/><text x="${X}" y="${Y + 4}" text-anchor="middle">${n}</text></g>`; }).join("") + `<text x="${c}" y="${c - 4}" text-anchor="middle" style="font:700 12px var(--f-label);fill:var(--muted);letter-spacing:.12em">AND AGAIN</text><text x="${c}" y="${c + 16}" text-anchor="middle" style="font:500 11px var(--f-label);fill:var(--muted)">each time worse</text>`;
+  let i = 0, loop = 1;
+  const render = () => { $$(".jd-node").forEach(g => g.classList.toggle("on", +g.dataset.i === i)); const [n, txt, id] = S[i];
+    $("#jdCycleCard").innerHTML = `<span class="eyebrow">${i + 1} of 5</span><h3>${n}</h3><p>${txt}${cite(id)}</p>`; $("#jdLoop").textContent = `Loop ${loop}`; };
+  $("#jdCycleNext").onclick = () => { i++; if (i > 4){ i = 0; loop++; } render(); }; render();
+})();
+
+/* part 2: judges chart */
+(() => {
+  const J = [
+    ["Othniel", "Caleb's brother", 8, 40, 0, "Rescued Israel from an Aramean king.", "d_othniel"],
+    ["Ehud", "Benjamin", 18, 80, 0, "Left-handed; killed Eglon of Moab.", "d_ehud"],
+    ["Shamgar", "", 0, 0, 0, "Struck down 600 Philistines with an oxgoad. No years given.", "d_shamgar"],
+    ["Deborah", "with Barak", 20, 40, 0, "Prophet who sent Barak against Sisera's 900 chariots.", "d_jabin"],
+    ["Gideon", "Manasseh", 7, 40, 0, "Routed Midian with 300 men.", "d_gideon"],
+    ["Tola", "Issachar", 0, 0, 23, "Rose to save Israel after Abimelech.", "d_minor"],
+    ["Jair", "Gilead", 0, 0, 22, "Thirty sons on thirty donkeys.", "d_minor"],
+    ["Jephthah", "Gilead", 18, 0, 6, "Fought Ammon; made a rash vow.", "d_ammon"],
+    ["Ibzan", "Bethlehem", 0, 0, 7, "Thirty sons and thirty daughters.", "d_minor2"],
+    ["Elon", "Zebulun", 0, 0, 10, "Buried in Aijalon.", "d_minor2"],
+    ["Abdon", "Pirathon", 0, 0, 8, "Forty sons and thirty grandsons.", "d_minor2"],
+    ["Samson", "Dan", 40, 0, 20, "Began to rescue Israel from the Philistines.", "d_birth"]
+  ];
+  const MAX = 120; let order = "book";
+  const render = () => { const list = order === "book" ? J : [...J].sort((a, b) => (b[2] + b[3] + b[4]) - (a[2] + a[3] + a[4]));
+    $("#jdRows").innerHTML = list.map(j => { const [n, from, op, pc, ld] = j, i = J.indexOf(j);
+      const bar = (v, cls) => v ? `<i class="${cls}" style="width:${v / MAX * 100}%">${v >= 8 ? v : ""}</i>` : "";
+      return `<button class="jd-row" data-i="${i}"><b>${n}${from ? `<small>${from}</small>` : ""}</b><span class="jd-bars">${bar(op, "op")}${bar(pc, "pc")}${bar(ld, "ld")}${!op && !pc && !ld ? '<span class="none">no years given</span>' : ""}</span></button>`; }).join("");
+    $$(".jd-row").forEach(b => b.onclick = () => { $$(".jd-row").forEach(x => x.classList.toggle("on", x === b)); const [n, , op, pc, ld, txt, id] = J[+b.dataset.i];
+      const parts = [op && `oppressed ${op} years`, pc && `then peace ${pc} years`, ld && `led ${ld} years`].filter(Boolean).join(", ");
+      $("#jdJudgeInfo").innerHTML = `<strong>${n}.</strong> ${txt}${parts ? ` (${parts}.)` : ""}${cite(id)}${n === "Samson" ? cite("d_samson20") : ""}${n === "Jephthah" ? cite("d_shib") : ""}${n === "Deborah" ? cite("d_peace40d") : ""}${n === "Gideon" ? cite("d_ephod") : ""}`; }); };
+  $$(".jd-chart [data-ord]").forEach(b => b.onclick = () => { order = b.dataset.ord; $$(".jd-chart [data-ord]").forEach(x => x.setAttribute("aria-pressed", x === b ? "true" : "false")); render(); });
+  render();
+})();
+
+/* part 3: Deborah */
+(() => {
+  const S = [["Mount Tabor", "Barak gathers ten thousand men from Naphtali and Zebulun on Mount Tabor, with Deborah beside him.", "d_barak"],
+    ["Down from the mountain", "Sisera brings his 900 chariots to the Kishon. Deborah tells Barak this is the day: the Lord has gone ahead of him.", "d_rout"],
+    ["The rout", "The Lord routs Sisera's army; Sisera abandons his chariot and runs. Not one of his soldiers is left.", "d_rout"],
+    ["Jael's tent", "Sisera hides with Jael. She gives him milk, covers him, and while he sleeps drives a tent peg through his temple. The land then has peace forty years.", "d_jael", "d_peace40d"]];
+  let i = 0; const render = () => { const [h, t, ...ids] = S[i]; $("#jdBatCard").innerHTML = `<span class="eyebrow">${i + 1} of ${S.length}</span><h3>${h}</h3><p>${t}${ids.map(cite).join("")}</p>`;
+    $$("#jdBatSteps i").forEach((d, j) => d.classList.toggle("on", j <= i)); $("#jdBatPrev").disabled = i === 0; $("#jdBatNext").disabled = i === S.length - 1; };
+  $("#jdBatNext").onclick = () => { i = Math.min(S.length - 1, i + 1); render(); }; $("#jdBatPrev").onclick = () => { i = Math.max(0, i - 1); render(); }; render();
+  const C = [["Ephraim", 1], ["Benjamin", 1], ["Makir", 1], ["Zebulun", 1], ["Issachar", 1], ["Naphtali", 1], ["Reuben", 0], ["Gilead", 0], ["Dan", 0], ["Asher", 0]];
+  $("#jdCalls").innerHTML = C.map(([n], i) => `<button data-i="${i}">${n}</button>`).join("");
+  $$("#jdCalls button").forEach(b => b.onclick = () => { const [n, came] = C[+b.dataset.i]; b.classList.add(came ? "came" : "stayed");
+    const a = $$("#jdCalls .came").length, s = $$("#jdCalls .stayed").length;
+    $("#jdCallInfo").innerHTML = `${n} ${came ? "came" : "stayed home"}. So far ${a} came and ${s} stayed.${cite("d_song")}`; });
+})();
+
+/* part 4: Gideon */
+(() => {
+  const svg = $("#jdFleece");
+  const draw = (fleeceWet, groundWet) => { svg.innerHTML = `<rect width="420" height="220" fill="${isDark() ? "#0c1222" : "#1a2440"}"/>
+    <circle cx="360" cy="40" r="16" fill="#efe6c8" opacity=".85"/>
+    <ellipse cx="210" cy="170" rx="190" ry="40" fill="${groundWet ? "#4a6a7a" : "#8a6a3a"}"/>
+    ${groundWet ? Array.from({ length: 40 }, (_, i) => `<circle cx="${30 + (i * 37) % 360}" cy="${150 + (i * 13) % 40}" r="2" fill="#cfefff" opacity=".85"/>`).join("") : ""}
+    <path d="M150 165 q20 -40 60 -36 q40 -4 60 36 q-60 18 -120 0z" fill="${fleeceWet ? "#c8dbe6" : "#efe6d0"}" stroke="#8a7a60" stroke-width="2"/>
+    ${fleeceWet ? Array.from({ length: 14 }, (_, i) => `<circle cx="${165 + (i * 23) % 95}" cy="${140 + (i * 11) % 20}" r="2.5" fill="#e6f8ff"/>`).join("") : ""}
+    <text x="210" y="208" text-anchor="middle" font-family="ui-sans-serif,-apple-system,sans-serif" font-size="12" fill="#efe6cf">${fleeceWet === null ? "the threshing floor" : fleeceWet ? "fleece wet, ground dry" : "fleece dry, ground wet"}</text>`; };
+  draw(null, false);
+  $("#jdNight1").onclick = () => { draw(true, false); $("#jdNight2").disabled = false; $("#jdFleeceTxt").innerHTML = `Morning one: dew only on the fleece, and he wrings out a bowlful of water.${cite("d_fleece")}`; };
+  $("#jdNight2").onclick = () => { draw(false, true); $("#jdFleeceTxt").innerHTML = `He asks once more, the other way around. Morning two: the fleece is dry and the ground is wet with dew.${cite("d_fleece")}`; };
+
+  const cv = $("#jdArmy"); let n = 32000, shown = 32000, stage = 0, raf = 0;
+  const pts = Array.from({ length: 320 }, () => [Math.random(), Math.random()]);
+  function frame(){ const F = fitCanvas(cv); if (!F) return; const { x, W, H } = F; shown += (n - shown) * (motionOK() ? .06 : 1);
+    x.clearRect(0, 0, W, H); const css = getComputedStyle(root), gold = css.getPropertyValue("--gold").trim(), mut = css.getPropertyValue("--muted").trim();
+    const k = shown / 100; pts.forEach(([u, v], i) => { const keep = i < k; x.fillStyle = keep ? gold : mut; x.globalAlpha = keep ? 1 : .08; x.beginPath(); x.arc(14 + u * (W - 28), 14 + v * (H - 28), Math.max(2, W / 200), 0, 7); x.fill(); }); x.globalAlpha = 1;
+    $("#jdArmyN").textContent = Math.round(shown).toLocaleString();
+    if (Math.abs(n - shown) > 1) raf = requestAnimationFrame(frame); else $("#jdArmyN").textContent = n.toLocaleString(); }
+  whenVisible($(".jd-army"), v => { if (v) requestAnimationFrame(frame); });
+  addEventListener("resize", () => requestAnimationFrame(frame));
+  $("#jdCut").onclick = () => { stage++;
+    if (stage === 1){ n = 10000; $("#jdCut").textContent = "Still too many: take them to the water"; $("#jdArmyTxt").innerHTML = `22,000 who were afraid go home; 10,000 remain.${cite("d_fear")}`; }
+    else if (stage === 2){ n = 300; $("#jdCut").textContent = "Start over"; $("#jdArmyTxt").innerHTML = `Only those who lap water from their hands stay: 300 men. The point, God says, is that Israel can't claim its own strength saved it.${cite("d_lap")}${cite("d_fear")}`; }
+    else { stage = 0; n = 32000; $("#jdCut").textContent = "Too many: send the fearful home"; $("#jdArmyTxt").innerHTML = `22,000 leave and 10,000 stay, so he started with about 32,000.${cite("d_fear")} <span class="tag" data-label="Calculated">Calculated</span>`; }
+    cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); };
+
+  $("#jdJars").innerHTML = Array.from({ length: 300 / 10 }, () => "<span></span>").join("");
+  $("#jdBlow").onclick = () => { $$("#jdJars span").forEach((s, i) => setTimeout(() => s.classList.add("lit"), motionOK() ? i * 40 : 0));
+    $("#jdNightTxt").innerHTML = `In the middle watch they blow the trumpets, smash the jars and raise the torches, shouting for the Lord and for Gideon. Midian panics and turns its swords on itself.${cite("d_jars")} <span class="tag" data-label="Illustration">One jar per 10 men</span>`; };
+})();
+
+/* part 5: shibboleth */
+$$(".jd-shib [data-say]").forEach(b => b.onclick = () => { const ok = b.dataset.say === "Shibboleth";
+  $("#jdShibInfo").innerHTML = ok ? `"Shibboleth." You may cross. Gileadites said it with the "sh".${cite("d_shib")}` : `"Sibboleth." That marked a man as an Ephraimite at the fords; 42,000 Ephraimites died there.${cite("d_shib")}`; });
+
+/* part 6: Delilah + temple */
+(() => {
+  const T = [["Seven fresh thongs", "He snaps them like string near a flame.", 1], ["New, unused ropes", "He snaps them off his arms like threads.", 1], ["Seven braids woven into the loom", "He wakes and pulls up the pin, loom and all.", 1], ["The truth: no razor ever", "She has his seven braids shaved while he sleeps. His strength is gone, and he doesn't know the Lord has left him.", 0]];
+  $("#jdTries").innerHTML = T.map(([n], i) => `<button data-i="${i}" ${i ? "disabled" : ""}>${n}</button>`).join("");
+  $$("#jdTries button").forEach(b => b.onclick = () => { const i = +b.dataset.i, [n, txt, holds] = T[i]; b.classList.add(holds ? "done" : "lost"); b.dataset.res = holds ? "breaks free" : "strength gone"; b.disabled = true;
+    const nx = $$("#jdTries button")[i + 1]; if (nx) nx.disabled = false; if (!holds) $("#jdStrength").style.width = "4%";
+    $("#jdTryInfo").innerHTML = `${txt}${cite(holds ? "d_tries" : "d_secret")}`; });
+
+  const cv = $("#jdTemple"), box = $(".jd-templebox"); let fall = 0, falling = false, raf = 0, t = 0;
+  function frame(){ const F = fitCanvas(cv); if (!F) return; const { x, W, H } = F; t += .016; if (falling) fall = Math.min(1, fall + (motionOK() ? .012 : 1));
+    let g = x.createLinearGradient(0, 0, 0, H); g.addColorStop(0, "#1a120a"); g.addColorStop(1, "#0a0604"); x.fillStyle = g; x.fillRect(0, 0, W, H);
+    g = x.createRadialGradient(W / 2, H * .45, 0, W / 2, H * .45, W * .6); g.addColorStop(0, "rgba(255,170,90,.25)"); g.addColorStop(1, "rgba(0,0,0,0)"); x.fillStyle = g; x.fillRect(0, 0, W, H);
+    const roofY = H * .18 + fall * fall * H * .5, tilt = fall * .25;
+    // crowd on roof
+    x.save(); x.translate(W / 2, roofY); x.rotate(tilt * (fall > 0 ? 1 : 0) * .3);
+    x.fillStyle = "#5a3e24"; x.fillRect(-W * .42, -H * .03, W * .84, H * .05);
+    x.fillStyle = "#2a1c10"; for (let i = 0; i < 40; i++){ const px = -W * .4 + i * W * .02, ph = H * .03 + (i % 3) * 3; x.beginPath(); x.arc(px, -H * .03 - ph, H * .012, 0, 7); x.fill(); x.fillRect(px - H * .008, -H * .03 - ph, H * .016, ph); }
+    x.restore();
+    // pillars
+    const pw = W * .045, ph = H * .55;
+    for (const [px, k] of [[.18, 0], [.42, 1], [.58, 1], [.82, 0]]){ const ang = k ? (px < .5 ? -1 : 1) * fall * .5 : fall * .2 * (px < .5 ? -1 : 1);
+      x.save(); x.translate(W * px, H * .8); x.rotate(ang); x.fillStyle = k ? "#8a7a62" : "#6a5c48"; x.fillRect(-pw / 2, -ph, pw, ph); x.fillStyle = "#a89878"; x.fillRect(-pw * .7, -ph, pw * 1.4, H * .025); x.restore(); }
+    // Samson between central pillars
+    x.fillStyle = "#1a120a"; const sx = W / 2, sy = H * .8; x.beginPath(); x.arc(sx, sy - H * .19, H * .025, 0, 7); x.fill(); x.fillRect(sx - H * .03, sy - H * .17, H * .06, H * .17);
+    x.strokeStyle = "#1a120a"; x.lineWidth = H * .018; x.beginPath(); x.moveTo(sx - H * .03, sy - H * .14); x.lineTo(W * .42 + fall * 10, sy - H * .2); x.moveTo(sx + H * .03, sy - H * .14); x.lineTo(W * .58 - fall * 10, sy - H * .2); x.stroke();
+    x.fillStyle = "#3a2a18"; x.fillRect(0, H * .8, W, H * .2);
+    if (fall > .3){ x.fillStyle = `rgba(160,130,100,${(fall - .3) * .9})`; for (let i = 0; i < 60; i++){ const dx = Math.sin(i * 7.1) * W * .45, dy = H * .8 - Math.abs(Math.cos(i * 3.3)) * H * .3 * fall; x.beginPath(); x.arc(W / 2 + dx, dy, 4 + (i % 5) * 3, 0, 7); x.fill(); } }
+    if (falling && fall < 1) raf = requestAnimationFrame(frame); }
+  whenVisible(box, v => { if (v) requestAnimationFrame(frame); });
+  addEventListener("resize", () => requestAnimationFrame(frame));
+  $("#jdPush").onclick = () => { if (fall >= 1){ fall = 0; falling = false; $("#jdPushTxt").textContent = "Strengthen me once more"; requestAnimationFrame(frame); return; }
+    falling = true; $("#jdPushTxt").textContent = "He killed more in his death than in his life"; cancelAnimationFrame(raf); raf = requestAnimationFrame(frame);
+    $("#jdTryInfo").innerHTML = `Blind and shackled, his hair growing back, Samson is brought to Dagon's temple. He prays for strength once more, pushes the two central pillars, and the temple falls on the rulers and about three thousand people on the roof.${cite("d_pillars")}`; };
+})();
+
+/* part 7: refrains + Benjamin */
+(() => {
+  const R = [["A homemade shrine", "Micah has an idol made from stolen silver, sets up a shrine, and makes his own son priest, then hires a wandering Levite. Israel had no king; everyone did as he saw fit.", "d_micah"],
+    ["A tribe steals it", "The Danites, still landless, take Micah's idols and his priest at sword-point, wipe out the peaceful town of Laish, and set up the idols in their new city of Dan.", "d_dan"],
+    ["A crime at Gibeah", "A Levite's concubine is abused to death by men of Gibeah in Benjamin, and Israel goes to war against one of its own tribes. Details are in the content note below.", "d_gibeah"],
+    ["The book's last line", "After the war and the desperate fix for Benjamin's survivors, the book ends: Israel had no king, and everyone did as he saw fit.", "d_lastline"]];
+  $$("#jdRefs button").forEach(b => b.onclick = () => { $$("#jdRefs button").forEach(x => x.classList.toggle("on", x === b)); const [h, t, id] = R[+b.dataset.r];
+    $("#jdRefCard").innerHTML = `<h3>${h}</h3><p>${t}${cite(id)}${cite("d_noking")}</p>`; });
+
+  const cv = $("#jdBen"); let after = false, k = 0, raf = 0;
+  function frame(){ const F = fitCanvas(cv); if (!F) return; const { x, W, H } = F; k += ((after ? 1 : 0) - k) * (motionOK() ? .05 : 1);
+    x.clearRect(0, 0, W, H); const css = getComputedStyle(root), lap = css.getPropertyValue("--lapis").trim(), rub = css.getPropertyValue("--rubric").trim(), gold = css.getPropertyValue("--gold").trim();
+    const N = 267, cols = Math.max(10, Math.ceil(Math.sqrt(N * (W - 10) / (H - 10)))), rows = Math.ceil(N / cols), s = Math.min((W - 10) / cols, (H - 10) / rows), r = s * .36;
+    for (let i = 0; i < N; i++){ const cx = 5 + (i % cols) * s + s / 2, cy = 5 + Math.floor(i / cols) * s + s / 2, survivor = i < 6;
+      x.fillStyle = survivor ? gold : (k > .5 ? rub : lap); x.globalAlpha = survivor ? 1 : 1 - .85 * k; x.beginPath(); x.arc(cx, cy, r, 0, 7); x.fill(); }
+    x.globalAlpha = 1; if (Math.abs((after ? 1 : 0) - k) > .01) raf = requestAnimationFrame(frame); }
+  whenVisible($(".jd-benjamin"), v => { if (v) requestAnimationFrame(frame); });
+  addEventListener("resize", () => requestAnimationFrame(frame));
+  $("#jdBenBtn").onclick = () => { after = !after; $("#jdBenBtn").textContent = after ? "Before the war" : "After the war";
+    $("#jdBenTxt").innerHTML = after ? `About 25,000 fall; 600 escape to the rock of Rimmon and hide four months.${cite("d_war")} The six gold dots are those 600.` : `26,000 swordsmen plus 700 chosen men of Gibeah.${cite("d_war")}`;
+    cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); };
+})();
+
+/* guesses + quiz */
+["#jdg1", "#jdg2", "#jdg3", "#jdg4"].forEach(id => $$(id + " .choice").forEach(b => b.onclick = () => {
+  $$(id + " .choice").forEach(c => { c.setAttribute("aria-pressed", c === b ? "true" : "false"); if (c.hasAttribute("data-right")) c.classList.add("right"); else if (c === b) c.classList.add("wrong"); });
+  $(id + " .reveal").hidden = false; $(id).classList.add("done"); }));
+(() => { let answered = 0, right = 0; const box = $("#tab-judges-1-21 [data-quiz]");
+  $$("#tab-judges-1-21 .qz").forEach(q => { const ans = +q.dataset.ans;
+    $$(".choice", q).forEach((b, i) => b.onclick = () => { if (q.dataset.done) return; q.dataset.done = 1; answered++;
+      if (i === ans) right++; else b.classList.add("wrong"); $$(".choice", q)[ans].classList.add("right"); $(".reveal", q).hidden = false;
+      if (answered === 3){ $(".score", box).hidden = false; $(".scoreTxt", box).textContent = right === 3 ? "3 of 3. You know the book." : `${right} of 3. Tap the references to review.`;
         requestAnimationFrame(() => $(".fg", box).style.strokeDashoffset = 163.4 * (1 - right / 3)); } }); }); })();
 
 const startTab = (location.hash || "").slice(1) || store.get("bible:tab") || "library";

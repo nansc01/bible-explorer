@@ -6,6 +6,7 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 |---|---|---|
 | In the Beginning | Genesis 1–3 | Speak light into the dark, watch creation build day by day, name the animals, search the garden |
 | Through the Sea | Exodus 12–14 | Mark the doorframe, pack for the road, follow the route, cross the sea |
+| No King in Israel | Judges 1–21 | The whole book: the repeating cycle, twelve judges charted, Deborah, Gideon's 300, Samson, and the dark ending |
 | The Third Day | Luke 22–24 | The upper room, Peter by the fire, the three courts, roll the stone, walk to Emmaus |
 | The Word Became Flesh | John 1–3 | Question John the Baptist, fill the six jars at Cana, the night wind with Nicodemus |
 | Wind and Fire | Acts 1–2 | The ascension, casting lots, fifteen nations hearing in their own language, three thousand added |
