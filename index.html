@@ -945,6 +945,66 @@ footer{border-top:1px solid var(--rule);margin-top:2.5rem;padding-block:1.6rem 2
 .es-day.empty{opacity:.45}
 .es-keep{display:flex;flex-wrap:wrap;gap:.4rem}
 .es-keep span{padding:.35rem .8rem;border-radius:999px;background:var(--gold-soft);font:600 .8rem var(--f-label)}
+/* ---------- mobile ---------- */
+[hidden]{display:none!important}
+.menuBtn{display:none}
+.menu .sheet{max-height:min(86vh,46rem);overflow:auto;overscroll-behavior:contain}
+.menu h2{font-size:1.4rem}
+.menu-list{display:grid;gap:.35rem}
+.menu-list button{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:.2rem .6rem;text-align:left;min-height:3.4rem;padding:.55rem .9rem;border-radius:14px;border:1px solid var(--rule);background:var(--surface);cursor:pointer;color:var(--ink)}
+.menu-list button b{font:600 .95rem var(--f-label)}
+.menu-list button span{grid-column:1;font:500 .76rem var(--f-label);color:var(--muted)}
+.menu-list button i{grid-row:1/3;grid-column:2;font-style:normal;color:var(--gold);font-size:1.1rem}
+.menu-list button[aria-current="true"]{border-color:var(--gold);background:linear-gradient(90deg,var(--gold-soft),transparent),var(--surface)}
+.menu-tools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;padding-top:.4rem;border-top:1px solid var(--rule)}
+.menu-tools .lab{font:600 .76rem var(--f-label);color:var(--muted);margin-right:auto}
+.menu-tools .tool{height:2.75rem;min-width:2.75rem}
+.detail .closeD{display:none}
+.scrim{position:fixed;inset:0;z-index:34;background:rgba(4,6,13,.5);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+.pan{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:thin;overscroll-behavior-x:contain}
+.panhint{display:none}
+
+@media (max-width:900px){
+  .detail{position:fixed;left:max(8px,env(safe-area-inset-left,0px));right:max(8px,env(safe-area-inset-right,0px));bottom:calc(8px + env(safe-area-inset-bottom,0px));top:auto;z-index:35;
+    max-width:34rem;margin:0 auto;max-height:min(84vh,46rem);overflow:auto;overscroll-behavior:contain;
+    background:var(--surface-solid)!important;border-color:var(--gold)!important;box-shadow:0 30px 80px -20px rgba(0,0,0,.6);
+    transform:translateY(calc(100% + 30px));visibility:hidden;transition:transform .35s cubic-bezier(.2,.8,.2,1),visibility 0s linear .35s}
+  .detail.open{transform:none;visibility:visible;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+  .detail .closeD{display:grid;position:sticky;top:0;justify-self:end;margin-bottom:-3rem;z-index:2;background:var(--surface-solid)}
+  .detail .chgrid button{height:2.5rem}
+}
+
+@media (max-width:640px){
+  .bar{gap:.3rem;padding:.3rem .35rem}
+  #fsDown,#fsUp{display:none}
+  .menuBtn{display:grid}
+  .tabs-nav{scroll-snap-type:x proximity;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12px,#000 calc(100% - 20px),transparent);mask-image:linear-gradient(90deg,transparent,#000 12px,#000 calc(100% - 20px),transparent)}
+  .tabs-nav button{scroll-snap-align:center;height:2.6rem;padding:0 .8rem}
+
+  .shelf{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .book{padding:.7rem .7rem .65rem .85rem}
+  .book b{font-size:1rem}
+  .lib-tools .seg{flex:1 1 auto}
+  .lib-tools .seg button{flex:1 1 auto}
+
+  .journey{display:flex;overflow-x:auto;scroll-snap-type:x proximity;gap:.45rem;margin-left:-16px;margin-right:-16px;padding:0 0 .35rem 16px;scrollbar-width:none;
+    -webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent)}
+  .journey::-webkit-scrollbar{display:none}
+  .journey li{flex:0 0 7.4rem;scroll-snap-align:start}
+  .journey button{min-height:4.6rem;height:100%}
+  .journey li:last-child{margin-right:16px}
+
+  .pan > svg{min-width:var(--panw,620px)}
+  .panhint{display:block;font:600 .7rem var(--f-label);letter-spacing:.08em;color:var(--muted);text-align:center;padding:.2rem 0 .1rem}
+
+  .tag{font-size:.68rem}
+  .row{gap:.5rem}
+}
+
+@media (pointer:coarse){
+  sup.cite{position:relative;padding:.12em .45em}
+  sup.cite::after{content:"";position:absolute;inset:-10px -3px}
+}
 </style>
 
 <div class="ambient" aria-hidden="true"></div>
@@ -5875,6 +5935,80 @@ $$("[data-escene2]").forEach(s => esAmbObs.observe(s));
       if (i === ans) right++; else b.classList.add("wrong"); $$(".choice", q)[ans].classList.add("right"); $(".reveal", q).hidden = false;
       if (answered === 3){ $(".score", box).hidden = false; $(".scoreTxt", box).textContent = right === 3 ? "3 of 3. You know the book." : `${right} of 3. Tap the references to review.`;
         requestAnimationFrame(() => $(".fg", box).style.strokeDashoffset = 163.4 * (1 - right / 3)); } }); }); })();
+
+
+/* =========================================================
+   MOBILE: tab menu, library bottom sheet, swipeable maps, bigger tap areas
+   ========================================================= */
+(() => {
+  const nav = $("#tabsNav");
+  // 1. one menu button for every tab plus text size and theme
+  const THEME_SVG = $("#themeBtn").innerHTML;
+  const mb = document.createElement("button");
+  mb.className = "tool menuBtn"; mb.id = "menuBtn"; mb.setAttribute("aria-label", "All tabs and settings"); mb.setAttribute("aria-haspopup", "dialog");
+  mb.innerHTML = `<svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><g fill="currentColor"><rect x="2" y="2" width="5.5" height="5.5" rx="1.5"/><rect x="10.5" y="2" width="5.5" height="5.5" rx="1.5"/><rect x="2" y="10.5" width="5.5" height="5.5" rx="1.5"/><rect x="10.5" y="10.5" width="5.5" height="5.5" rx="1.5"/></g></svg>`;
+  $("#themeBtn").before(mb);
+  document.body.insertAdjacentHTML("beforeend", `<div class="pop menu" id="menuSheet" hidden role="dialog" aria-modal="true" aria-labelledby="menuTitle"><div class="sheet">
+    <div class="row" style="justify-content:space-between"><h2 id="menuTitle">Go to</h2><button class="tool" id="menuClose" aria-label="Close">✕</button></div>
+    <div class="menu-list" id="menuList"></div>
+    <div class="menu-tools"><span class="lab">Text size and theme</span><button class="tool" id="mFsDown" aria-label="Smaller text">A−</button><button class="tool" id="mFsUp" aria-label="Larger text">A+</button><button class="tool" id="mTheme" aria-label="Switch light or dark">${THEME_SVG}</button></div>
+  </div></div>`);
+  const menu = $("#menuSheet");
+  const sub = id => { if (id === "library") return "All 66 books · pick what to build next"; const b = BUILT.find(x => x.tab === id); return b ? b.title : ""; };
+  const openMenu = () => {
+    $("#menuList").innerHTML = TABS.map(t => `<button data-tab="${t.id}" aria-current="${t.id === activeTab}"><b>${t.label}</b><span>${sub(t.id)}</span><i aria-hidden="true">›</i></button>`).join("");
+    $$("#menuList button").forEach(b => b.onclick = () => { closeMenu(); showTab(b.dataset.tab); });
+    menu.hidden = false; ($("#menuList [aria-current=true]") || $("#menuClose")).focus(); };
+  const closeMenu = () => { if (menu.hidden) return; menu.hidden = true; mb.focus({ preventScroll: true }); };
+  mb.onclick = openMenu; $("#menuClose").onclick = closeMenu;
+  menu.addEventListener("click", e => { if (e.target === menu) closeMenu(); });
+  $("#mFsDown").onclick = () => $("#fsDown").click(); $("#mFsUp").onclick = () => $("#fsUp").click(); $("#mTheme").onclick = () => $("#themeBtn").click();
+
+  // 2. library detail becomes a bottom sheet on narrow screens
+  const det = $("#detail"), mq = matchMedia("(max-width:900px)");
+  const scrim = document.createElement("div"); scrim.className = "scrim"; scrim.hidden = true; document.body.append(scrim);
+  let lastBook = null;
+  const openDet = () => { if (!mq.matches) return; det.classList.add("open"); scrim.hidden = false; const c = $(".closeD", det); if (c) c.focus({ preventScroll: true }); };
+  const closeDet = () => { if (!det.classList.contains("open")) return; det.classList.remove("open"); scrim.hidden = true; if (lastBook) lastBook.focus({ preventScroll: true }); };
+  scrim.onclick = closeDet;
+  const _render = renderDetail;
+  renderDetail = function(){ _render(); det.insertAdjacentHTML("afterbegin", `<button class="tool closeD" aria-label="Close book details">✕</button>`); $(".closeD", det).onclick = closeDet; };
+  const _select = selectBook;
+  selectBook = function(name){ lastBook = document.activeElement; _select(name, false); openDet(); };
+  renderDetail();
+  mq.addEventListener("change", () => { if (!mq.matches){ det.classList.remove("open"); scrim.hidden = true; } });
+
+  // 3. keep the active tab centered in the scrolling strip
+  const center = smooth => { const b = $(`#tabsNav button[data-tab="${activeTab}"]`); if (!b) return;
+    nav.scrollTo({ left: b.offsetLeft - (nav.clientWidth - b.offsetWidth) / 2, behavior: smooth && motionOK() ? "smooth" : "auto" }); };
+  const _show = showTab;
+  showTab = function(id, push){ closeMenu(); closeDet(); _show(id, push); center(true); };
+  addEventListener("resize", () => center(false));
+
+  document.addEventListener("keydown", e => { if (e.key !== "Escape") return; if (!menu.hidden) closeMenu(); else closeDet(); });
+
+  // 4. small maps scroll sideways on phones so their labels stay readable
+  [["#acPlaces", 640, .5], ["#exRoute", 660, 0], ['.map .hit[data-k="gihon"]', 640, .55]].forEach(([sel, w, at]) => {
+    const el = $(sel), svg = el && (el.tagName.toLowerCase() === "svg" ? el : el.closest("svg")); if (!svg) return;
+    const wrap = document.createElement("div"); wrap.className = "pan"; wrap.style.setProperty("--panw", w + "px");
+    svg.before(wrap); wrap.append(svg);
+    const hint = document.createElement("p"); hint.className = "panhint"; hint.setAttribute("aria-hidden", "true"); hint.textContent = "← Swipe the map sideways →"; wrap.after(hint);
+    whenVisible(wrap, v => { if (v && !wrap.dataset.c && wrap.scrollWidth > wrap.clientWidth + 4){ wrap.dataset.c = 1; wrap.scrollLeft = (wrap.scrollWidth - wrap.clientWidth) * at; } });
+  });
+  // the Exodus route card follows the current stop
+  const rn = $("#exRouteNext"), rp = $("#exRoutePrev");
+  const follow = () => setTimeout(() => { const wrap = $("#exRoute") && $("#exRoute").parentElement, w = $("#exWalker"); if (!wrap || !w || !wrap.classList.contains("pan")) return;
+    const m = /translate\(([\d.]+)px/.exec(w.style.transform || ""); if (!m) return;
+    wrap.scrollTo({ left: +m[1] / 760 * wrap.scrollWidth - wrap.clientWidth / 2, behavior: motionOK() ? "smooth" : "auto" }); }, 30);
+  if (rn) rn.addEventListener("click", follow); if (rp) rp.addEventListener("click", follow);
+
+  // 5. invisible padding around small tappable map marks
+  const pad = (g, x, y, w, h, p) => { const ns = "http://www.w3.org/2000/svg", r = document.createElementNS(ns, "path");
+    r.setAttribute("d", `M${x - p} ${y - p}h${w + 2 * p}v${h + 2 * p}h${-(w + 2 * p)}z`); r.setAttribute("fill", "transparent"); r.setAttribute("class", "hitpad"); g.prepend(r); };
+  $$(".rv-gate").forEach(g => { const r = $("rect", g); if (r) pad(g, +r.getAttribute("x"), +r.getAttribute("y"), +r.getAttribute("width"), +r.getAttribute("height"), 10); });
+  $$(".ex-mark").forEach(g => { const r = $("rect", g); if (r) pad(g, +r.getAttribute("x"), +r.getAttribute("y"), +r.getAttribute("width"), +r.getAttribute("height"), 12); });
+  $$(".ac-place").forEach(g => { const c = $("circle", g); if (c){ const cx = +c.getAttribute("cx"), cy = +c.getAttribute("cy"); pad(g, cx - 8, cy - 8, 16, 16, 8); } });
+})();
 
 const startTab = (location.hash || "").slice(1) || store.get("bible:tab") || "library";
 showTab(startTab, false);
