@@ -4,11 +4,16 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 
 | Tab | Passage | What you can do |
 |---|---|---|
+| **Words of Jesus** | Matthew, Mark, Luke, John | 130 sayings of Jesus sorted into 13 themes, 14 life situations ("I'm anxious", "Someone hurt me", "I have doubts"…) and 7 study paths (Sermon on the Mount, the "I am" sayings, words from the cross…). Each has its meaning in plain words, one way to live it today, parallel accounts, a word for today, and save / "I did this today" tracking |
 | In the Beginning | Genesis 1–3 | Speak light into the dark, watch creation build day by day, name the animals, search the garden |
 | Through the Sea | Exodus 12–14 | Mark the doorframe, pack for the road, follow the route, cross the sea |
+| The King Has Come | Matthew 1–28 | The whole book: the King and his kingdom, a chapter map, people who met Jesus, and his words by theme |
+| The Servant Who Came to Give | Mark 1–16 | The whole book: the servant Son of God, a chapter map, and his words by theme |
 | No King in Israel | Judges 1–21 | The whole book: the repeating cycle, twelve judges charted, Deborah, Gideon's 300, Samson, and the dark ending |
 | For Such a Time | Esther 1–10 | The whole book: the empire at a glance, the cast lot, the relay through Hathach, a sleepless night, six reversals and the days of Purim |
+| A Savior for Everyone | Luke 1–24 | The whole book: the Savior who seeks the lost, a chapter map, and his words by theme |
 | The Third Day | Luke 22–24 | The upper room, Peter by the fire, the three courts, roll the stone, walk to Emmaus |
+| That You May Believe | John 1–21 | The whole book: seven signs, seven "I am" sayings, the upper room, a chapter map, and his words by theme |
 | The Word Became Flesh | John 1–3 | Question John the Baptist, fill the six jars at Cana, the night wind with Nicodemus |
 | Wind and Fire | Acts 1–2 | The ascension, casting lots, fifteen nations hearing in their own language, three thousand added |
 | No Condemnation | Romans 3–8 | Paul's argument as seven steps, from "all under sin" to a love nothing can break |
