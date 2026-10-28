@@ -872,8 +872,16 @@ footer{border-top:1px solid var(--rule);margin-top:2.5rem;padding-block:1.6rem 2
 .es-clue[aria-pressed="true"] .es-pay{color:var(--ink)}
 .es-clue.ping{animation:esPing 1.2s ease}
 @keyframes esPing{0%,100%{transform:none}30%{transform:scale(1.04);box-shadow:0 0 0 4px var(--glow)}}
-.es-empire{padding:0;display:grid;gap:.4rem;overflow:hidden}
-.es-empire canvas{width:100%;aspect-ratio:16/9;display:block}
+.es-empire{padding:1.2rem;display:grid;gap:.9rem;align-content:start;overflow:hidden}
+.es-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.55rem}
+@media (max-width:520px){.es-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.es-stats div{display:grid;gap:.15rem;align-content:start;padding:.8rem .9rem;border-radius:14px;background:var(--gold-soft);border:1px solid transparent;transition:all .5s}
+.es-stats b{font-family:var(--f-display);font-size:clamp(1.9rem,4vw,2.8rem);line-height:1;color:var(--gold);font-variant-numeric:tabular-nums}
+.es-stats span{font:600 .8rem/1.35 var(--f-label);color:var(--muted)}
+.es-stats .es-no{background:rgba(176,52,42,.1);border-color:var(--rubric)}
+.es-stats .es-no b{color:var(--rubric)}
+.es-stats.weighed div:not(.es-no){opacity:.4;transform:scale(.96)}
+.es-stats.weighed .es-no{transform:scale(1.06);box-shadow:0 0 0 3px rgba(176,52,42,.25),0 12px 30px -12px rgba(176,52,42,.5)}
 .es-list{margin:0;padding-left:1.1rem;display:grid;gap:.35rem}
 .es-year{padding:1.2rem;display:grid;gap:.8rem;align-content:start}
 .es-months{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:4px}
@@ -1005,6 +1013,91 @@ footer{border-top:1px solid var(--rule);margin-top:2.5rem;padding-block:1.6rem 2
   sup.cite{position:relative;padding:.12em .45em}
   sup.cite::after{content:"";position:absolute;inset:-10px -3px}
 }
+/* ---------- full width + compact ---------- */
+body{padding-left:max(clamp(16px,2.6vw,44px),env(safe-area-inset-left,0px));padding-right:max(clamp(16px,2.6vw,44px),env(safe-area-inset-right,0px))}
+.wrap,.bar{max-width:none}
+.scene{padding-block:clamp(1.6rem,3.2vw,2.5rem) 0;gap:1rem}
+.head{gap:.35rem clamp(1.5rem,4vw,4rem)}
+.hero{min-height:min(70vh,600px)}
+.split{gap:1rem}
+.splitcol{display:grid;gap:1rem;align-content:start;min-width:0}
+.split.measuring > *{align-self:start!important}
+.scene svg:not(.arc-svg),.scene canvas,.seek,.stage,.ex-seabox,.rm-love,.ac-dots,.ac-sky,.jd-army,.jd-templebox,.jn-windbox,.lk-firebox,.rm-ripple,.rm-stars,.rv-lightbox,.rv-scene3d,.lk-tombbox{max-height:min(68vh,520px)}
+.split > .glass:not(figure){align-self:stretch}
+footer{margin-top:1.8rem}
+
+/* ---------- heart of the story ---------- */
+.heart{display:grid;gap:1rem;margin-top:1rem}
+.heart-top{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(1rem,3vw,2.4rem);padding:clamp(1.1rem,2.6vw,2rem);align-items:center;
+  background:radial-gradient(120% 140% at 0% 0%,var(--gold-soft),transparent 60%),var(--surface)!important;border-color:var(--gold)!important}
+@media (max-width:860px){.heart-top{grid-template-columns:1fr}}
+.heart-lead{display:grid;gap:.6rem;align-content:center}
+.heart-lead .eyebrow{color:var(--gold)}
+.heart-word{font-family:var(--f-display);font-style:italic;font-weight:600;font-size:clamp(3rem,8vw,5.6rem);line-height:.9;letter-spacing:-.02em;
+  background:linear-gradient(100deg,var(--gold),var(--rubric));-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.08em}
+.heart-big{font-family:var(--f-display);font-size:clamp(1.12rem,2vw,1.42rem);line-height:1.42}
+.heart-lead .tag{justify-self:start;margin-left:0}
+.arc{margin:0;display:grid;gap:.4rem;min-width:0}
+.arc-cap{margin:0;font:500 .78rem var(--f-label);color:var(--muted)}
+.arc-cap b{color:var(--ink)}
+.arc-cap .lg{font-weight:700;letter-spacing:.06em;margin-left:.5rem;white-space:nowrap}.arc-cap .lg.up{color:var(--gold)}.arc-cap .lg.down{color:var(--rubric)}
+.arc-svg{width:100%;height:auto;display:block;overflow:visible}
+.arc-svg .mid{stroke:var(--rule);stroke-width:1.5;stroke-dasharray:4 6}
+.arc-svg .line{fill:none;stroke:var(--gold);stroke-width:3.5;stroke-linecap:round}
+.arc-svg .ax{font:700 10px var(--f-label);fill:var(--muted)}
+.arc-svg .axl{font:700 10.5px var(--f-label);letter-spacing:.14em;text-transform:uppercase}
+.arc-svg .axl.up{fill:var(--gold)}.arc-svg .axl.down{fill:var(--rubric)}
+.arc-pt{cursor:pointer}.arc-pt:focus{outline:none}
+.arc-pt circle{fill:var(--surface-solid);stroke:var(--gold);stroke-width:2.5;transition:all .3s}
+.arc-pt text{font:700 11px var(--f-label);fill:var(--ink);text-anchor:middle;pointer-events:none}
+.arc-pt text.nm{font:600 11px var(--f-label);fill:var(--muted)}
+.arc-pt .halo{fill:none;stroke:var(--rubric);stroke-width:2;stroke-dasharray:3 4;animation:spinh 12s linear infinite;transform-box:fill-box;transform-origin:center}
+@keyframes spinh{to{transform:rotate(360deg)}}
+.arc-pt.on circle:not(.halo),.arc-pt:hover circle:not(.halo),.arc-pt:focus-visible circle:not(.halo){fill:var(--gold);filter:drop-shadow(0 0 8px var(--glow))}
+.arc-pt.on text:not(.nm){fill:var(--bg)}
+.arc-pt.on text.nm{fill:var(--ink)}
+.arc-svg .turnlab{font:700 10px var(--f-label);letter-spacing:.14em;text-transform:uppercase;fill:var(--rubric)}
+@media (max-width:640px){.arc-pt text.nm,.arc-svg .turnlab{display:none}.arc-pt circle:not(.halo){r:13px}.arc-pt text{font-size:14px}}
+.arc-detail{display:flex;gap:.8rem 1rem;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:.8rem 1rem;border-radius:14px;background:var(--gold-soft);min-height:4.4rem}
+.arc-detail > div{flex:1 1 16rem;display:grid;gap:.2rem}
+.arc-detail p{font-family:var(--f-display);font-size:1.02rem;line-height:1.4}
+.arc-detail .eyebrow{color:var(--gold)}
+
+.heart-chars{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,13.5rem),1fr));gap:.8rem}
+.ccard{position:relative;display:grid;gap:.45rem;align-content:start;padding:1.1rem 1.1rem 1.15rem;border-radius:18px;border:1px solid var(--rule);background:var(--surface);overflow:hidden}
+.ccard::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--gold)}
+.ccard.warn::before{background:var(--rubric)}
+.ccard.mixed::before{background:linear-gradient(90deg,var(--gold),var(--rubric))}
+.ckind{font:700 .62rem var(--f-label);letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.ccard.warn .ckind{color:var(--rubric)}
+.ccard h3{font-size:1.15rem;font-family:var(--f-label);font-weight:700}
+.ccore{font-family:var(--f-display);font-style:italic;font-size:1.65rem;line-height:1.05;color:var(--gold)}
+.ccard.warn .ccore{color:var(--rubric)}
+.cmoment{font-size:.92rem;color:var(--muted);line-height:1.5}
+.ccard blockquote{margin:0;padding:.35rem 0 .35rem .8rem;border-left:3px solid var(--gold);font-family:var(--f-display);font-style:italic;font-size:1.15rem;line-height:1.3}
+.ccard.warn blockquote{border-color:var(--rubric)}
+.clesson{font-size:.95rem;line-height:1.5;padding-top:.45rem;border-top:1px solid var(--rule)}
+.clesson b{color:var(--ink)}
+
+.takeaway{color:var(--ink);display:grid;gap:.35rem;padding:.95rem 1.1rem;border-radius:16px;border:1px solid var(--gold);border-left-width:5px;
+  background:linear-gradient(100deg,var(--gold-soft),transparent 75%),var(--surface-solid)}
+.takeaway .tk-lab{font:700 .64rem var(--f-label);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.takeaway p{font-family:var(--f-display);font-size:clamp(1.05rem,1.8vw,1.28rem);line-height:1.4;font-weight:600}
+.takeaway .tag{justify-self:start;margin-left:0}
+.takeaway.wide{grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:.4rem 1rem}
+@media (max-width:640px){.takeaway.wide{grid-template-columns:1fr}}
+
+.reflect{padding-top:clamp(1.6rem,3.2vw,2.5rem)}
+.reflect-in{padding:clamp(1.1rem,2.6vw,1.8rem);display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:1rem 2rem;align-items:start}
+@media (max-width:760px){.reflect-in{grid-template-columns:1fr}}
+.reflect-head{display:grid;gap:.4rem}
+.reflect-head h2{font-size:clamp(1.5rem,3vw,2.2rem)}
+.reflect-head .eyebrow{color:var(--gold)}
+.reflect-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:.8rem}
+.rq{display:grid;gap:.45rem}
+.rq span{font-family:var(--f-display);font-size:1.06rem;line-height:1.35}
+.rq textarea{width:100%;resize:vertical;min-height:4.6rem;border-radius:12px;border:1px solid var(--rule);background:var(--surface-solid);color:var(--ink);padding:.7rem .8rem;font:500 .95rem/1.5 var(--f-label)}
+.rq textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
 </style>
 
 <div class="ambient" aria-hidden="true"></div>
@@ -3276,8 +3369,16 @@ footer{border-top:1px solid var(--rule);margin-top:2.5rem;padding-block:1.6rem 2
   </div>
   <div class="split">
     <figure data-figure class="glass es-empire">
-      <canvas id="esEmpire" role="img" aria-label="127 dots for the provinces; the decree spreads to each in its own script"></canvas>
-      <div class="row" style="padding:0 1rem 1rem"><button class="btn" id="esSend">Send the decree</button><span class="small" id="esSendTxt">To each province in its own script, each people in its own language.<sup class="cite" data-cite="e1_decree">1:22</sup></span></div>
+      <span class="eyebrow">The empire at a glance · 1:1–14</span>
+      <div class="es-stats" id="esStats">
+        <div><b data-n="127">127</b><span>provinces, from India to Cush</span></div>
+        <div><b data-n="180">180</b><span>days putting his wealth on display</span></div>
+        <div><b data-n="7">7</b><span>days of open banquet in Susa</span></div>
+        <div><b data-n="7">7</b><span>eunuchs sent to bring the queen</span></div>
+        <div><b data-n="7">7</b><span>nobles asked what the law says</span></div>
+        <div class="es-no"><b data-n="1">1</b><span>queen who would not come</span></div>
+      </div>
+      <div class="row"><button class="btn" id="esSend">Weigh it up</button><span class="small" id="esSendTxt">Every number on the king's side, and one on the other.<sup class="cite" data-cite="e1_empire">1:1</sup><sup class="cite" data-cite="e1_banquet">1:4–5</sup><sup class="cite" data-cite="e1_vashti">1:10–12</sup><sup class="cite" data-cite="e1_nobles">1:13–15</sup></span></div>
     </figure>
     <div class="glass" style="padding:1.2rem;display:grid;gap:.7rem;align-content:start">
       <span class="eyebrow">The banquet garden · 1:6–7</span>
@@ -3285,7 +3386,7 @@ footer{border-top:1px solid var(--rule);margin-top:2.5rem;padding-block:1.6rem 2
       <p class="small">Everyone could drink as much as they liked.<sup class="cite" data-cite="e1_banquet">1:6–8</sup></p>
     </div>
   </div>
-  <figcaption>One dot per province, not a map <span class="tag" data-label="Illustration">Illustration</span></figcaption>
+  <figcaption>Numbers stated in 1:1–14 <span class="tag" data-label="Counted">Counted</span></figcaption>
 </section>
 
 <!-- E2 -->
@@ -5698,6 +5799,7 @@ $$(".jd-shib [data-say]").forEach(b => b.onclick = () => { const ok = b.dataset.
 Object.assign(SOURCES, {
   e1_empire: { page: 747, ref: "Esther 1:1–2", say: "This happened in the time of Xerxes, who ruled 127 provinces stretching from India to Cush, reigning from his royal throne in the citadel of Susa." },
   e1_banquet: { page: 747, ref: "Esther 1:3–8", say: "In his third year Xerxes held a banquet for his nobles and officials and for 180 days displayed the wealth and splendor of his kingdom. Then he gave a seven-day banquet in the palace garden for everyone in Susa: white and blue linen hangings on silver rings and marble pillars, couches of gold and silver on a mosaic pavement, wine in gold goblets each different from the others, and each guest allowed to drink as he wished." },
+  e1_nobles: { page: 747, ref: "Esther 1:13–15", say: "Since it was the custom to consult experts in law and justice, the king spoke with the wise men closest to him, the seven nobles of Persia and Media who had special access to him, and asked what the law required be done to Queen Vashti. (Verse 15 continues on page 748.)" },
   e1_vashti: { page: 747, ref: "Esther 1:10–12", say: "On the seventh day, in high spirits from wine, the king ordered seven eunuchs to bring Queen Vashti wearing her royal crown so he could display her beauty. She refused to come, and the king burned with anger." },
   e1_decree: { page: 748, ref: "Esther 1:19–22", say: "Memucan advised an irrevocable royal decree that Vashti never again enter the king's presence and that her position go to someone better. The king agreed and sent dispatches to every province in its own script and every people in its own language, proclaiming that every man should rule his own household." },
   e2_mordecai: { page: 748, ref: "Esther 2:5–7", say: "In Susa lived Mordecai, a Jew of the tribe of Benjamin, whose family had been carried into exile from Jerusalem by Nebuchadnezzar with King Jehoiachin. He had brought up his cousin Hadassah, also called Esther, as his own daughter, since she had neither father nor mother. (The end of verse 7 is on page 749.)" },
@@ -5818,26 +5920,14 @@ $$("[data-escene2]").forEach(s => esAmbObs.observe(s));
   paint();
 })();
 
-/* scene 1: 127 provinces */
+/* scene 1: the empire at a glance */
 (() => {
-  const cv = $("#esEmpire"); let sent = 0, p = 0, raf = 0, on = false;
-  const R = rand(31), pts = []; for (let i = 0; i < 127; i++){ const a = Math.PI * (.08 + .84 * (i / 126)) + (R() - .5) * .08, r = .55 + R() * .38; pts.push([a, r, R()]); }
-  const GL = "ΣאΩبΦשΨعΔל"; // generic marks standing in for many scripts
-  function frame(){ const F = fitCanvas(cv); if (!F) return; const { x, W, H } = F; p += ((sent ? 1 : 0) - p) * (motionOK() ? .03 : 1);
-    x.clearRect(0, 0, W, H); const cx = W / 2, cy = H * .92, RR = Math.min(W * .48, H * .85);
-    x.strokeStyle = "rgba(160,130,80,.25)"; x.setLineDash([3, 5]); x.beginPath(); x.arc(cx, cy, RR * .95, Math.PI, 0); x.stroke(); x.setLineDash([]);
-    let lit = 0;
-    pts.forEach(([a, r, k], i) => { const px = cx - Math.cos(a) * RR * r, py = cy - Math.sin(a) * RR * r * .95, d = r, on2 = p * 1.15 > d * .9 + k * .1;
-      if (on2) lit++; x.fillStyle = on2 ? "#d9a441" : "rgba(140,120,90,.45)"; x.beginPath(); x.arc(px, py, on2 ? 3.6 : 2.6, 0, 7); x.fill();
-      if (on2 && W > 420 && i % 3 === 0){ x.fillStyle = isDark() ? "rgba(240,220,170,.8)" : "rgba(90,60,20,.75)"; x.font = "10px serif"; x.fillText([...GL][i % [...GL].length], px + 4, py - 4); } });
-    if (p > .02){ x.strokeStyle = `rgba(217,164,65,${.5 * (1 - p)})`; x.lineWidth = 2; x.beginPath(); x.arc(cx, cy, RR * p * 1.05, Math.PI, 0); x.stroke(); }
-    x.fillStyle = "#b0342a"; x.beginPath(); x.arc(cx, cy - 6, 6, 0, 7); x.fill(); x.fillStyle = isDark() ? "#ece4cf" : "#2a1d06"; x.font = "600 12px ui-sans-serif,-apple-system,sans-serif"; x.textAlign = "center"; x.fillText("Susa", cx, cy - 16);
-    x.textAlign = "left"; x.fillText("Cush", 8, cy - 6); x.textAlign = "right"; x.fillText("India", W - 8, cy - 6); x.textAlign = "left";
-    x.font = "700 26px Georgia,serif"; x.fillStyle = "#d9a441"; x.fillText(String(sent ? lit : 127), 12, 32); x.font = "600 11px ui-sans-serif,-apple-system,sans-serif"; x.fillStyle = isDark() ? "#c9c0a8" : "#6a5a40"; x.fillText(sent ? "provinces reached" : "provinces", 12, 48);
-    if (on && Math.abs((sent ? 1 : 0) - p) > .005) raf = requestAnimationFrame(frame); }
-  whenVisible(cv, v => { on = v; cancelAnimationFrame(raf); if (v) raf = requestAnimationFrame(frame); });
-  addEventListener("resize", () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); });
-  $("#esSend").onclick = () => { sent = sent ? 0 : 1; p = 0; $("#esSend").textContent = sent ? "Reset" : "Send the decree"; cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); };
+  const box = $("#esStats"); let done = false;
+  const count = () => $$("b[data-n]", box).forEach((b, i) => { const n = +b.dataset.n; if (!motionOK()){ b.textContent = n; return; }
+    const t0 = performance.now() + i * 120; const st = t => { const p = Math.max(0, Math.min(1, (t - t0) / 900)); b.textContent = Math.round(n * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(st); }; requestAnimationFrame(st); });
+  whenVisible(box, v => { if (v && !done){ done = true; count(); } });
+  $("#esSend").onclick = () => { const on = box.classList.toggle("weighed"); $("#esSend").textContent = on ? "Reset" : "Weigh it up";
+    $("#esSendTxt").innerHTML = on ? `All that power, and it could not make one person come. The king's answer is a decree to every province, in every language, that each man must rule his own household.${cite("e1_decree")}` : `Every number on the king's side, and one on the other.${cite("e1_empire")}${cite("e1_vashti")}`; };
 })();
 
 /* scene 2: twelve months */
@@ -6008,6 +6098,308 @@ $$("[data-escene2]").forEach(s => esAmbObs.observe(s));
   $$(".rv-gate").forEach(g => { const r = $("rect", g); if (r) pad(g, +r.getAttribute("x"), +r.getAttribute("y"), +r.getAttribute("width"), +r.getAttribute("height"), 10); });
   $$(".ex-mark").forEach(g => { const r = $("rect", g); if (r) pad(g, +r.getAttribute("x"), +r.getAttribute("y"), +r.getAttribute("width"), +r.getAttribute("height"), 12); });
   $$(".ac-place").forEach(g => { const c = $("circle", g); if (c){ const cx = +c.getAttribute("cx"), cy = +c.getAttribute("cy"); pad(g, cx - 8, cy - 8, 16, 16, 8); } });
+})();
+
+
+/* =========================================================
+   HEART OF THE STORY: core lesson, character cores, story arc, takeaways
+   Lessons are interpretation (labelled as such); every moment is cited.
+   ========================================================= */
+const LESSONS = {
+  "genesis-1-3": {
+    word: "Trust", axis: ["Broken", "Very good"],
+    big: "God made a very good world and gave people every tree but one. The fall began the moment they doubted his goodness, and even then God came looking for them.",
+    scenes: ["s1", "s2", "s3", "s4", "s5", "s6", "s7"], arc: [2, 3, 3, 1, -1, -3, -1], turn: 4,
+    take: ["God brings light and order where there was only darkness and emptiness. Nothing is too formless for his word.",
+      "You bear God's image before you do anything. Rest is built into creation: your worth comes before your work.",
+      "Life is God's breath in dust, and work was a gift in paradise, not a punishment.",
+      "God himself says it is not good to be alone. We are made for each other.",
+      "Temptation never starts with \"disobey\". It starts by making God sound less generous than he is.",
+      "Sin makes us hide and blame. God's first move is not to strike but to seek.",
+      "Grace arrives with the consequences: God clothes them and promises the serpent's defeat."],
+    chars: [
+      { name: "God", core: "The generous seeker", kind: "model", moment: "Gives every tree but one, and after the fall walks into the garden calling for Adam.", cites: ["command", "where"], line: "Where are you?",
+        lesson: "God's question is an invitation out of hiding, not a trap. He still comes looking." },
+      { name: "The serpent", core: "Doubt", kind: "warn", moment: "Opens with a question that twists God's command into a stingy one.", cites: ["crafty", "lie"], line: "",
+        lesson: "The oldest lie is that God is holding something good back from you. Know what he actually said." },
+      { name: "Eve", core: "Deceived by desire", kind: "warn", moment: "Sees the fruit is good to look at and wanted for wisdom, and eats.", cites: ["ate"], line: "",
+        lesson: "Desire plus doubt is a dangerous mix. Not everything that looks good is good for you." },
+      { name: "Adam", core: "Blame-shifting", kind: "warn", moment: "Was with her and ate, then blamed the woman and, through her, God.", cites: ["ate", "blame"], line: "",
+        lesson: "Owning our choices is the first step home. Blame keeps us hiding in the trees." }],
+    reflect: ["Where are you tempted to believe God is holding back something good from you?", "If God asked you \"Where are you?\" today, what would an honest answer be?"]
+  },
+  "exodus-12-14": {
+    word: "Deliverance", axis: ["Trapped", "Free"],
+    big: "Rescue is God's work from start to finish. His people are sheltered by a lamb's blood, led the long way for their good, and told to stand firm and watch him fight.",
+    scenes: ["ex1", "ex2", "ex3", "ex4", "ex5", "ex6", "ex7"], arc: [1, -1, 1, 2, 1, -3, 3], turn: 5,
+    take: ["God's rescue starts a new calendar. Freedom becomes the first day of a new life.",
+      "The blood on the door, not the goodness of the family inside, made the difference. Safety is a gift received by trust.",
+      "Be ready to move when God moves. They ate dressed for the road.",
+      "God keeps his word to the very day. Four hundred thirty years did not make him late.",
+      "The long way can be the loving way. God spared them a war they were not ready for.",
+      "Trapped between an army and the sea, the call is to stop panicking and stand firm. The battle is the Lord's.",
+      "God makes a way where there is none, and the people who walk through it learn to trust him."],
+    chars: [
+      { name: "Moses", core: "Steady faith", kind: "model", moment: "With chariots closing in and the people panicking, he tells them not to be afraid and to stand firm.", cites: ["e_still"], line: "Stand firm",
+        lesson: "Faith speaks calm into panic before the sea opens, not after." },
+      { name: "Each household", core: "Obedient trust", kind: "model", moment: "Marked the doorframe with the lamb's blood exactly as told, and stayed inside.", cites: ["e_sign", "e_hyssop"], line: "",
+        lesson: "They were not saved for being better than their neighbors but for trusting the sign God gave. Christians see Jesus as that lamb." },
+      { name: "The Israelites", core: "Fear learning trust", kind: "mixed", moment: "Terrified at the sea, they wish they had stayed slaves; on the far shore they fear the Lord and put their trust in him.", cites: ["e_afraid", "e_trust"], line: "",
+        lesson: "Fear looks back at Egypt. Trust is learned by walking through what God opens." },
+      { name: "Pharaoh", core: "A hardened heart", kind: "warn", moment: "Lets them go, regrets it, and chases them into the sea.", cites: ["e_chase", "e_harden"], line: "",
+        lesson: "Each no to God makes the next one easier, until pride drives straight into the sea." }],
+    reflect: ["Where do you feel trapped between an army and a sea right now?", "What \"long way\" in your life might have been God protecting you?"]
+  },
+  "judges-1-21": {
+    word: "Faithfulness", axis: ["No king", "Rescued"],
+    big: "When people forget God and each does what seems right to them, life spirals down. God keeps rescuing, but every deliverer is flawed, and the book leaves us longing for a true king.",
+    scenes: ["jd1", "jd2", "jd3", "jd4", "jd5", "jd6", "jd7"], arc: [1, 0, 2, 1, -1, -2, -3], turn: 4,
+    take: ["Half obedience leaves thorns that grow back. What we tolerate today trips us tomorrow.",
+      "Sin, oppression, crying out, rescue, forgetting: God's patience outlasts our short memory.",
+      "God uses whoever says yes. A tent peg beat nine hundred iron chariots.",
+      "God trimmed Gideon's army so no one could boast. Weakness is where his strength shows.",
+      "Leaders who grab power or bargain with God make everything worse.",
+      "Strength without self-control destroys its owner. Gifts are no substitute for a surrendered heart.",
+      "When everyone does as they see fit, the weak get hurt. We need a king who is good."],
+    chars: [
+      { name: "Deborah", core: "Courageous leadership", kind: "model", moment: "Calls Barak to battle and goes with him when he will not go alone.", cites: ["d_deborah", "d_barak"], line: "",
+        lesson: "Courage is contagious. God uses whoever is willing, man or woman." },
+      { name: "Gideon", core: "Weakness made strong", kind: "mixed", moment: "Found hiding in a winepress, he wins with three hundred men, then ends by making a gold ephod that becomes a snare.", cites: ["d_gideon", "d_fear", "d_ephod"], line: "",
+        lesson: "God can do much with little, but a good start does not guarantee a faithful finish." },
+      { name: "Samson", core: "Gifted but undisciplined", kind: "warn", moment: "Gives away the secret of his strength after Delilah presses him day after day.", cites: ["d_secret"], line: "",
+        lesson: "Small compromises add up. The Spirit's gifts cannot replace a surrendered will." },
+      { name: "Jephthah", core: "A rash vow", kind: "warn", moment: "Bargains with God before battle, and his only daughter pays for the promise.", cites: ["d_vow", "d_daughter"], line: "",
+        lesson: "God does not need to be bribed. Bargaining shows we do not yet know his heart." },
+      { name: "The next generation", core: "Forgetting", kind: "warn", moment: "Grew up knowing neither the Lord nor what he had done for Israel.", cites: ["d_forgot"], line: "",
+        lesson: "Faith that is not passed on can be lost in a single generation." }],
+    reflect: ["Which part of the cycle (drifting, trouble, crying out, rescue) are you in right now?", "What has God done for you that the next generation around you needs to hear?"]
+  },
+  "esther-1-10": {
+    word: "Surrender", axis: ["Doomed", "Delivered"],
+    big: "God is never named in Esther, yet he is everywhere. Deliverance turned on one moment: a frightened queen surrendered her life to God's purpose and said, if I perish, I perish.",
+    scenes: ["es1", "es2", "es3", "es4", "es5", "es6", "es7"], arc: [0, 1, -2, -3, 1, 2, 3], turn: 3,
+    take: ["Earthly power is loud and fragile. The ruler of 127 provinces could not command one queen.",
+      "God places people quietly, long before the crisis. Esther wore the crown before she knew why.",
+      "One act of faithful integrity can stir up great opposition. Mordecai stood anyway.",
+      "Your position is not for your comfort but for others. Esther surrendered her safety, and everything turned.",
+      "God works through sleepless nights and forgotten records. Nothing done in faithfulness is wasted.",
+      "Pride digs its own pit. God turns the tables on the proud.",
+      "Remember what God has done, celebrate it together, and give to the poor."],
+    chars: [
+      { name: "Esther", core: "Surrender", kind: "model", moment: "Afraid for her life, she fasts three days, then goes to the king uninvited, against the law.", cites: ["e4_perish", "e5_scepter"], line: "If I perish, I perish",
+        lesson: "Courage is not the absence of fear. It is putting your life in God's hands and stepping forward anyway." },
+      { name: "Mordecai", core: "Faithful conviction", kind: "model", moment: "Refuses to bow to Haman, then tells Esther she may have been made queen for this moment.", cites: ["e3_kneel", "e4_time"], line: "For such a time as this",
+        lesson: "Integrity in small refusals prepares you for big moments. Where God has placed you is on purpose." },
+      { name: "Haman", core: "Pride", kind: "warn", moment: "Has everything, yet cannot rest while one man won't bow; builds a gallows and is hanged on it.", cites: ["e5_gallows", "e7_hanged"], line: "",
+        lesson: "Pride is never satisfied, and the trap it sets for others becomes its own." },
+      { name: "King Xerxes", core: "Impulsive power", kind: "warn", moment: "Hands his signet ring to Haman to wipe out a people without asking who they are.", cites: ["e3_offer"], line: "",
+        lesson: "Power without wisdom is dangerous. Ask before you sign." }],
+    reflect: ["What are you holding back from surrendering to God because it feels too risky?", "Where has God placed you \"for such a time as this\", and who needs you to speak up?"]
+  },
+  "luke-22-24": {
+    word: "Hope", axis: ["Darkest", "Risen"],
+    big: "Jesus walks willingly into betrayal, denial and death, praying not my will but yours. On the third day he rises, and no failure, not even Peter's, is final with him.",
+    scenes: ["lk1", "lk2", "lk3", "lk4", "lk5", "lk6", "lk7"], arc: [0, -1, -2, -2, -3, 1, 3], turn: 5,
+    take: ["In Jesus' kingdom the greatest is the one who serves.",
+      "Surrender is the path through anguish: not my will, but yours.",
+      "Following at a distance makes denial easier. Stay close.",
+      "Declared innocent again and again, Jesus is still condemned, in the place of the guilty.",
+      "Even on the cross Jesus forgives and welcomes a dying criminal. It is never too late.",
+      "The tomb is empty. Do not look for the living among the dead.",
+      "The risen Jesus walks beside the discouraged and opens their eyes through Scripture and broken bread."],
+    chars: [
+      { name: "Jesus", core: "Surrendered obedience", kind: "model", moment: "Kneels on the Mount of Olives and asks the Father to take the cup, yet yields to his will.", cites: ["l_olives", "l_angel"], line: "Not my will, but yours",
+        lesson: "Real prayer brings our will under God's, even when it costs everything." },
+      { name: "Peter", core: "Failure restored", kind: "mixed", moment: "Denies Jesus three times by the fire; the Lord looks at him and he weeps. Days later he runs to the tomb.", cites: ["l_peterwarn", "l_look", "l_peterrun"], line: "",
+        lesson: "Jesus prayed for Peter before he fell. Your worst moment is not your last chapter." },
+      { name: "Judas", core: "Betrayal", kind: "warn", moment: "Leads the crowd to Jesus and comes to kiss him.", cites: ["l_kiss"], line: "",
+        lesson: "You can sit close to Jesus and still sell him out. Nearness is not the same as love." },
+      { name: "The criminal", core: "Last-minute faith", kind: "model", moment: "Admits his guilt, defends Jesus, and asks to be remembered.", cites: ["l_crim2"], line: "Today you will be with me in paradise",
+        lesson: "Grace is not earned by a long record. One honest turn to Jesus is enough." },
+      { name: "Cleopas", core: "Hope rekindled", kind: "model", moment: "Walks away disappointed; recognizes Jesus when he breaks bread, and hurries back that night.", cites: ["l_cleopas", "l_broke"], line: "",
+        lesson: "Jesus meets us inside our disappointment and turns us around." }],
+    reflect: ["Where are you following Jesus \"at a distance\" right now?", "What failure do you need to let Jesus restore, the way he restored Peter?"]
+  },
+  "john-1-3": {
+    word: "Belief", axis: ["Darkness", "Light"],
+    big: "The eternal Word became flesh so we could see what God is like. Everyone who receives him is born again by the Spirit, and the right response is to believe and let him become greater.",
+    scenes: ["jn1", "jn2", "jn3", "jn4", "jn5", "jn6", "jn7"], arc: [2, 1, 2, 3, 0, 1, 2], turn: 5,
+    take: ["Jesus is not only a good teacher. He is the eternal Word through whom everything was made.",
+      "A true witness points away from himself: look, the Lamb of God.",
+      "The best invitation is simple. Come and see.",
+      "Jesus saves the best for last, and works through ordinary obedience.",
+      "Jesus cares about true worship, and points to his own body as the real temple.",
+      "No one can fix themselves into the kingdom. You must be born again, and God gave his Son so that whoever believes has life.",
+      "Joy is found in making Jesus greater and ourselves less."],
+    chars: [
+      { name: "Jesus, the Word", core: "God made visible", kind: "model", moment: "The Word who was with God and was God becomes flesh and lives among us.", cites: ["j_word", "j_flesh"], line: "",
+        lesson: "If you want to know what God is like, look at Jesus." },
+      { name: "John the Baptist", core: "Humility", kind: "model", moment: "When his followers drift to Jesus, he rejoices like the bridegroom's friend.", cites: ["j_bride", "j_greater"], line: "He must become greater",
+        lesson: "Joy comes from pointing to Jesus, not from being at the center." },
+      { name: "Andrew", core: "The bringer", kind: "model", moment: "After one afternoon with Jesus, the first thing he does is find his brother Simon.", cites: ["j_come", "j_andrew"], line: "Come and see",
+        lesson: "Faith spreads one person at a time. You do not need answers to bring someone to Jesus." },
+      { name: "Mary at Cana", core: "Trusting obedience", kind: "model", moment: "Brings the empty wine problem to Jesus and tells the servants to do what he says.", cites: ["j_cana"], line: "Do whatever he tells you",
+        lesson: "Bring the need to Jesus, then obey his instructions even when they seem odd." },
+      { name: "Nicodemus", core: "Honest seeker", kind: "mixed", moment: "A respected teacher comes at night with questions and is told he must be born again.", cites: ["j_nico", "j_born"], line: "",
+        lesson: "Being religious is not enough. Everyone needs new life from the Spirit, and honest questions are welcome." }],
+    reflect: ["Who could you invite to \"come and see\" this week?", "Where do you need to become less so that Jesus becomes greater?"]
+  },
+  "acts-1-2": {
+    word: "Power", axis: ["Waiting", "Spirit-filled"],
+    big: "The church does not begin with a strategy but with waiting, prayer and the Holy Spirit. Ordinary, even failed, people become bold witnesses when God fills them.",
+    scenes: ["ac1", "ac2", "ac3", "ac4", "ac5", "ac6", "ac7"], arc: [1, 0, 1, 3, 2, 2, 3], turn: 3,
+    take: ["Wait for God's power before you run. Witness starts right where you are.",
+      "Do not stand staring at the sky. Jesus will come back, so get on with his work.",
+      "Pray together and seek God's choice, not just your own.",
+      "The good news is for every language and nation. No one is outside its reach.",
+      "God's Spirit is poured out on all kinds of people: sons and daughters, young and old, servants too.",
+      "The resurrection is the center. God raised Jesus, and the witnesses could not stay quiet.",
+      "Repentance leads into a new family: devoted, generous, joyful and growing."],
+    chars: [
+      { name: "Peter", core: "Restored boldness", kind: "model", moment: "The man who denied Jesus by a fire now stands up before thousands and tells them to repent.", cites: ["a_nine", "a_repent"], line: "",
+        lesson: "God uses restored failures. The Spirit turns fear into courage." },
+      { name: "The disciples", core: "Waiting obedience", kind: "model", moment: "Go back to the upstairs room and keep praying together, as they were told.", cites: ["a_wait", "a_room"], line: "",
+        lesson: "Waiting in prayer is not wasted time. It is how power arrives." },
+      { name: "The crowd", core: "Cut to the heart", kind: "model", moment: "Hearing Peter, they are stung and ask what they should do.", cites: ["a_cut"], line: "What shall we do?",
+        lesson: "When truth reaches the heart, the right response is to turn, not to argue." },
+      { name: "The first believers", core: "Devoted community", kind: "model", moment: "Devote themselves to teaching, fellowship, breaking bread and prayer, and share what they own.", cites: ["a_devoted", "a_common"], line: "",
+        lesson: "The Spirit builds a generous family, not just a crowd of individuals." }],
+    reflect: ["What are you trying to do in your own strength instead of waiting on God?", "Of the four devotions (teaching, fellowship, bread, prayer), which is weakest in your life?"]
+  },
+  "romans-3-8": {
+    word: "Grace", axis: ["Condemned", "Free"],
+    big: "Everyone falls short, but God declares people right as a gift, through faith in Jesus. So there is now no condemnation, and nothing in all creation can separate us from his love.",
+    scenes: ["rm1", "rm2", "rm3", "rm4", "rm5", "rm6", "rm7"], arc: [-3, 1, 1, 2, 1, -2, 3], turn: 1,
+    take: ["No one is righteous on their own. The ground is level at the foot of the cross.",
+      "Being made right with God is a gift received by faith, not wages earned by effort.",
+      "It has always worked this way: Abraham believed God, and it was counted to him.",
+      "We have peace with God, and even suffering becomes a road to hope.",
+      "Grace is not permission to keep sinning. You belong to a new master now.",
+      "The law shows what is wrong but cannot fix it. Even Paul cried out for rescue.",
+      "No condemnation, and no separation. Nothing can cut you off from God's love in Christ."],
+    chars: [
+      { name: "Abraham", core: "Faith credited", kind: "model", moment: "About a hundred years old, he believes God's promise against all hope.", cites: ["r_hope", "r_hundred"], line: "",
+        lesson: "Faith looks at God's promise, not at our ability. God counts that trust as righteousness." },
+      { name: "Jesus", core: "Love that goes first", kind: "model", moment: "Dies for the ungodly while they are still powerless and sinners.", cites: ["r_while"], line: "",
+        lesson: "God does not wait for us to become good before he loves us." },
+      { name: "Paul", core: "Honest struggle", kind: "mixed", moment: "Admits he does what he hates, calls himself wretched, then thanks God for rescue through Jesus.", cites: ["r_want", "r_wretched"], line: "",
+        lesson: "Struggle does not mean you are not a Christian. The answer is not trying harder but Jesus." },
+      { name: "Adam", core: "One man's fall", kind: "warn", moment: "Through one man sin entered the world, and death through sin.", cites: ["r_adam", "r_gift"], line: "",
+        lesson: "One man's choice spread death to all; one man's obedience brings life to many." }],
+    reflect: ["Are you still trying to earn what God gives freely?", "Which hardship makes you doubt God's love? Read 8:38–39 against it."]
+  },
+  "revelation-21-22": {
+    word: "Hope", axis: ["Old order", "All things new"],
+    big: "The Bible ends where it began, in a garden with the tree of life, only better. God lives with his people, wipes away every tear and makes everything new, and the last word is an invitation: come.",
+    scenes: ["rv1", "rv2", "rv3", "rv4", "rv5", "rv6", "rv7"], arc: [1, 2, 2, 2, 2, 3, 3], turn: 6,
+    take: ["God will wipe away every tear. Death, mourning and pain do not get the last word.",
+      "The one who began the story will finish it, and he gives water of life without cost.",
+      "God's people from Israel and the apostles are one family, built on his promises.",
+      "The city is perfectly measured. God's future is complete and secure.",
+      "What we treasure here is pavement there. Hold earthly riches loosely.",
+      "No temple, no sun: God himself is the light. Being with him is the point.",
+      "Eden restored: the curse is gone, and his people will see his face."],
+    chars: [
+      { name: "God on the throne", core: "Makes all things new", kind: "model", moment: "Announces he is making everything new and will live with his people.", cites: ["v_tears", "v_newall"], line: "",
+        lesson: "Your story's ending is written by a God who restores, not just repairs." },
+      { name: "The bride", core: "Beloved", kind: "model", moment: "The holy city comes down prepared like a bride dressed for her husband.", cites: ["v_city"], line: "",
+        lesson: "God's people are not just rescued; they are cherished." },
+      { name: "John", core: "Worship rightly aimed", kind: "mixed", moment: "Overwhelmed, he falls at the angel's feet and is told to worship God.", cites: ["v_worship"], line: "Worship God!",
+        lesson: "Even good and glorious things can steal worship. Keep it for God alone." },
+      { name: "Whoever is thirsty", core: "Invited", kind: "model", moment: "The Spirit and the bride say come; the water of life is free.", cites: ["v_come"], line: "Come",
+        lesson: "The Bible's last invitation costs nothing. All you bring is thirst." }],
+    reflect: ["What tears are you carrying that God promises to wipe away?", "If you are sure of the ending, what would you do differently today?"]
+  }
+};
+
+(() => {
+  const ROMAN = ["i", "ii", "iii", "iv", "v", "vi", "vii"];
+  const KIND = { model: "Follow this", warn: "Beware", mixed: "Learn from both sides" };
+  const esc = t => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  const takeHTML = (L, i) => `<aside class="takeaway" data-take="${i}"><span class="tk-lab">Takeaway · ${ROMAN[i]}</span><p>${esc(L.take[i])}</p><span class="tag" data-label="Interpretation">Lesson</span></aside>`;
+
+  Object.entries(LESSONS).forEach(([tab, L]) => {
+    const pane = document.getElementById("tab-" + tab); if (!pane) return;
+    const names = $$(".journey .t", pane).map(e => e.textContent.trim());
+    const W = 640, H = 262, x0 = 46, x1 = W - 30, yMid = 122, k = 30;
+    const P = L.arc.map((v, i) => [x0 + (x1 - x0) * i / 6, yMid - v * k]);
+    let d = `M${P[0][0]} ${P[0][1]}`;
+    for (let i = 0; i < 6; i++){ const [a, b] = [P[i], P[i + 1]], p0 = P[i - 1] || a, p3 = P[i + 2] || b;
+      d += ` C${(a[0] + (b[0] - p0[0]) / 6).toFixed(1)} ${(a[1] + (b[1] - p0[1]) / 6).toFixed(1)} ${(b[0] - (p3[0] - a[0]) / 6).toFixed(1)} ${(b[1] - (p3[1] - a[1]) / 6).toFixed(1)} ${b[0].toFixed(1)} ${b[1].toFixed(1)}`; }
+    const area = `${d} L${x1} ${yMid} L${x0} ${yMid} Z`;
+    const svg = `<svg viewBox="0 0 ${W} ${H}" class="arc-svg" role="group" aria-label="The shape of the story: hope rising and falling across seven scenes">
+      <defs><linearGradient id="arcG-${tab}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--gold)" stop-opacity=".45"/><stop offset=".47" stop-color="var(--gold)" stop-opacity=".05"/><stop offset=".53" stop-color="var(--rubric)" stop-opacity=".05"/><stop offset="1" stop-color="var(--rubric)" stop-opacity=".4"/></linearGradient>
+      <clipPath id="arcC-${tab}"><rect x="0" y="0" width="0" height="${H}" class="arc-reveal"/></clipPath></defs>
+      <line class="mid" x1="${x0}" x2="${x1}" y1="${yMid}" y2="${yMid}"/>
+      <g clip-path="url(#arcC-${tab})"><path class="area" d="${area}" fill="url(#arcG-${tab})"/><path class="line" d="${d}"/></g>
+      ${P.map(([x, y], i) => `<g class="arc-pt${i === L.turn ? " turn" : ""}" data-i="${i}" tabindex="0" role="button" aria-label="Scene ${i + 1}: ${esc(names[i] || "")}">
+        <path class="hitpad" d="M${x - 22} ${y - 22}h44v44h-44z" fill="transparent"/>${i === L.turn ? `<circle class="halo" cx="${x}" cy="${y}" r="17"/>` : ""}<circle cx="${x}" cy="${y}" r="10"/><text x="${x}" y="${y + 4}">${i + 1}</text>
+        <text class="nm" x="${x}" y="${H - 8}">${esc(names[i] || "")}</text></g>`).join("")}
+      ${(() => { const [x, y] = P[L.turn]; const low = L.arc[L.turn] <= 0, edge = L.turn === 6 ? "end" : L.turn === 0 ? "start" : "middle"; return `<text class="turnlab" x="${x}" y="${low ? y - 24 : y + 32}" text-anchor="${edge}">turning point</text>`; })()}
+    </svg>`;
+    const heart = document.createElement("section");
+    heart.className = "heart"; heart.dataset.heart = tab; heart.id = tab + "-heart";
+    heart.innerHTML = `<div class="heart-top glass">
+        <div class="heart-lead">
+          <span class="eyebrow">The heart of the story</span>
+          <div class="heart-word">${esc(L.word)}</div>
+          <p class="heart-big">${esc(L.big)}</p>
+          <span class="tag" data-label="Interpretation">Lesson · interpretation</span>
+        </div>
+        <figure class="arc" data-figure>
+          <figcaption class="arc-cap"><b>The shape of the story</b> <span class="lg up">▲ ${esc(L.axis[1])}</span> <span class="lg down">▼ ${esc(L.axis[0])}</span> · tap a scene</figcaption>
+          ${svg}
+          <div class="arc-detail" aria-live="polite"></div>
+        </figure>
+      </div>
+      <div class="heart-chars">${L.chars.map(c => `<article class="ccard ${c.kind}">
+          <span class="ckind">${KIND[c.kind]}</span>
+          <h3>${esc(c.name)}</h3>
+          <div class="ccore">${esc(c.core)}</div>
+          <p class="cmoment">${esc(c.moment)}${c.cites.map(cite).join("")}</p>
+          ${c.line ? `<blockquote>"${esc(c.line)}"</blockquote>` : ""}
+          <p class="clesson"><b>For us:</b> ${esc(c.lesson)}</p>
+        </article>`).join("")}</div>`;
+    const journey = $(".journey", pane); journey.after(heart);
+
+    const det = $(".arc-detail", heart);
+    const pick = i => { $$(".arc-pt", heart).forEach(g => g.classList.toggle("on", +g.dataset.i === i));
+      det.innerHTML = `<div><span class="eyebrow">Scene ${ROMAN[i]} · ${esc(names[i] || "")}${i === L.turn ? " · the turning point" : ""}</span><p>${esc(L.take[i])}</p></div><button class="btn ghost" data-arcgo="${L.scenes[i]}">Go to scene</button>`;
+      $("[data-arcgo]", det).onclick = () => jumpTo(L.scenes[i]); };
+    $$(".arc-pt", heart).forEach(g => { g.addEventListener("click", () => pick(+g.dataset.i)); g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " "){ e.preventDefault(); pick(+g.dataset.i); } }); });
+    pick(L.turn);
+    const rv = $(".arc-reveal", heart);
+    whenVisible($(".arc-svg", heart), v => { if (!v || rv.dataset.done) return; rv.dataset.done = 1;
+      if (!motionOK()){ rv.setAttribute("width", W); return; } const t0 = performance.now();
+      const step = t => { const p = Math.max(0, Math.min(1, (t - t0) / 1400)); rv.setAttribute("width", (W * (1 - Math.pow(1 - p, 3))).toFixed(1)); if (p < 1) requestAnimationFrame(step); }; requestAnimationFrame(step); });
+
+    // reflection before the quiz
+    const quiz = $("[data-quiz]", pane), qsec = quiz && quiz.closest("section");
+    const refl = document.createElement("section"); refl.className = "reflect";
+    refl.innerHTML = `<div class="glass reflect-in"><div class="reflect-head"><span class="eyebrow">Take it home</span><h2>${esc(L.word)}, in your own life</h2>
+      <p class="small">Your notes stay in this browser only.</p></div>
+      <div class="reflect-grid">${L.reflect.map((q, i) => `<label class="rq"><span>${esc(q)}</span><textarea rows="3" data-k="${tab}:${i}" placeholder="Write a sentence or two…"></textarea></label>`).join("")}</div></div>`;
+    if (qsec) qsec.before(refl); else pane.append(refl);
+    $$("textarea", refl).forEach(t => { t.value = store.get("reflect:" + t.dataset.k) || ""; t.addEventListener("input", () => store.set("reflect:" + t.dataset.k, t.value)); });
+  });
+
+  // takeaways: placed once per tab, into the shorter column of a side-by-side layout when there is one
+  const placeTakeaways = tab => {
+    const L = LESSONS[tab], pane = document.getElementById("tab-" + tab); if (!L || !pane || pane.dataset.taken) return;
+    if (!pane.getBoundingClientRect().width) return; pane.dataset.taken = 1;
+    L.scenes.forEach((sid, i) => { const sc = document.getElementById(sid); if (!sc) return;
+      const wrap = document.createElement("div"); wrap.innerHTML = takeHTML(L, i); const tk = wrap.firstElementChild;
+      let best = null, gap = 0;
+      $$(".split", sc).forEach(sp => { const kids = [...sp.children]; if (kids.length !== 2) return; sp.classList.add("measuring"); const [a, b] = kids.map(k => k.getBoundingClientRect()); sp.classList.remove("measuring");
+        if (Math.abs(a.top - b.top) > 8) return; const g = Math.abs(a.height - b.height); if (g > gap){ gap = g; best = a.height < b.height ? kids[0] : kids[1]; } });
+      if (best && gap > 120){
+        if (best.tagName === "DIV" && !best.matches("[data-guess]")) best.append(tk);
+        else { const col = document.createElement("div"); col.className = "splitcol"; best.before(col); col.append(best, tk); }
+      } else { const head = $(".head", sc); (head || sc.firstElementChild).after(tk); tk.classList.add("wide"); }
+    });
+  };
+  const _show2 = showTab;
+  showTab = function(id, push){ _show2(id, push); requestAnimationFrame(() => placeTakeaways(id)); };
 })();
 
 const startTab = (location.hash || "").slice(1) || store.get("bible:tab") || "library";
