@@ -19,13 +19,15 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | No Condemnation | Romans 3–8 | Paul's argument as seven steps, from "all under sin" to a love nothing can break |
 | All Things New | Revelation 21–22 | The city coming down, its gates and jewels, the river and tree of life, back to Eden |
 
-## Three ways to view the Bible
+## Four ways to view the Bible
 
 A switch at the top of the page changes how you see the whole Bible:
 
 - **By book**: the Library of all 66 books and every study tab (what is listed below).
 - **God's plan**: a timeline of five eras, from Adam to eternity: Deity-consciousness (Adam to Noah), Sacrifice (Noah to Moses), Law (Moses to Jesus), Grace (Jesus to the second coming, marked "We are here") and the Millennium (to the great judgment), then the new heaven and earth. Tap an era for how people came to God, what God was doing, key events with verses, the people, where to read it, and which study tabs belong there.
-- **God's character**: thirteen attributes in two rings, what God is like (love, mercy, compassion, righteousness, faithfulness, peace, hope) and who he is to us (Father, Shepherd, Rock, King, Master and Lord, Source of all things). Each has key verses, what it means for you today, a prayer, the stories that show it, and what Jesus said.
+- **God's character**: eighteen attributes in two rings, what God is like (love, grace, mercy, compassion, truth, righteousness, justice, uprightness, faithfulness, peace, hope) and who he is to us (Father, Shepherd, Rock, Vine, King, Master and Lord, Source of all things). Each has key verses, what it means for you today, a prayer, the stories that show it, and what Jesus said.
+
+- **Church life**: how to live as the church, in nine areas: Christ and the church (head and body, bridegroom and bride, cornerstone and living stones, vine and branches, shepherd and flock), the authority of the church, shepherds and the flock, one body with many members, gathering and worship, baptism and the Lord's Supper, giving and serving, restoring someone who falls, and being sent into the world. Each has Scripture and a "how to live it" checklist you can tick, plus the sixteen "one another" commands.
 
 ## The heart of each story
 
