@@ -19,6 +19,14 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | No Condemnation | Romans 3–8 | Paul's argument as seven steps, from "all under sin" to a love nothing can break |
 | All Things New | Revelation 21–22 | The city coming down, its gates and jewels, the river and tree of life, back to Eden |
 
+## Three ways to view the Bible
+
+A switch at the top of the page changes how you see the whole Bible:
+
+- **By book**: the Library of all 66 books and every study tab (what is listed below).
+- **God's plan**: a timeline of five eras, from Adam to eternity: Deity-consciousness (Adam to Noah), Sacrifice (Noah to Moses), Law (Moses to Jesus), Grace (Jesus to the second coming, marked "We are here") and the Millennium (to the great judgment), then the new heaven and earth. Tap an era for how people came to God, what God was doing, key events with verses, the people, where to read it, and which study tabs belong there.
+- **God's character**: thirteen attributes in two rings, what God is like (love, mercy, compassion, righteousness, faithfulness, peace, hope) and who he is to us (Father, Shepherd, Rock, King, Master and Lord, Source of all things). Each has key verses, what it means for you today, a prayer, the stories that show it, and what Jesus said.
+
 ## The heart of each story
 
 Every passage tab opens with a lesson layer:
