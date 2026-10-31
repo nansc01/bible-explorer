@@ -16,9 +16,15 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | Where You Go, I Will Go | Ruth 1–4 | The whole book: Ruth's vow, gleaning in Boaz's field, what a kinsman-redeemer is, two relatives compared, and the family line from Moab to the Messiah |
 | The Shepherd King | 1 Samuel 16–17, 2 Samuel 7 | God looks at the heart, Goliath's height and armor to scale, the lion and the bear, the battle is the Lord's, and the forever promise behind "Son of David" |
 | Fire and a Whisper | 1 Kings 17–19 | Ravens and the widow's jar, 450 prophets of Baal against one, fire on Carmel, how God cares for a burned-out servant, and the gentle whisper |
+| Rebuild the Wall | Nehemiah 1–8 | A quick prayer before the king, the night inspection, everyone repairing their own section, sword in one hand and trowel in the other, fifty-two days, and the joy of the Lord |
 | For Such a Time | Esther 1–10 | The whole book: the empire at a glance, the cast lot, the relay through Hathach, a sleepless night, six reversals and the days of Purim |
+| Out of the Storm | Job 1–42 | The whole book: the scene behind the curtain, one terrible day, seven silent days, the friends' theory against the truth, "I know that my Redeemer lives", God's questions from the storm, and "now my eyes have seen you" |
 | Four Prayers for Every Season | Psalms 23, 51, 103, 139 | The shepherd's path step by step, a prayer of repentance, six benefits not to forget, and being fully known, each linked to God's character |
+| Wisdom for Every Day | Proverbs 1, 3, 31 (and more) | The fear of the Lord, trust with all your heart, guard your heart, words that heal or wound, plans and steps, friends who sharpen, and the woman of noble character |
+| Under the Sun | Ecclesiastes 1–12 | The whole book: meaningless!, weigh up everything the Teacher tried, a time for everything, two are better than one, practical wisdom, and the conclusion of the matter |
 | The Suffering Servant | Isaiah 52:13–53:12 | The great exchange row by row, Isaiah 53:6 read slowly, the lamb thread through the Bible, and seven details set beside the Gospels |
+| A Hope and a Future | Jeremiah 29–31 | A letter to exiles, plans to give you hope, healing for the outcast, an everlasting love, Rachel weeping, and the new covenant compared with Sinai |
+| Can These Bones Live? | Ezekiel 36–37 | A new heart and spirit, step through the valley as bones become an army, breath and Spirit, two sticks made one, and God's dwelling with his people |
 | Faithful in Babylon | Daniel 1–6 | Daniel's resolve, the statue of kingdoms step by step, "even if he does not", four men in the furnace, two proud kings, and the lions' den |
 | The Runaway Prophet | Jonah 1–4 | The whole book: down, down, down; pagan sailors who pray; the sign of Jonah; a whole city that repents; and God's last question |
 | The King Has Come | Matthew 1–28 | The whole book: the King and his kingdom, a chapter map, people who met Jesus, and his words by theme |
@@ -28,13 +34,17 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | That You May Believe | John 1–21 | The whole book: seven signs, seven "I am" sayings, the upper room, a chapter map, and his words by theme |
 | The Word Became Flesh | John 1–3 | Question John the Baptist, fill the six jars at Cana, the night wind with Nicodemus |
 | Wind and Fire | Acts 1–2 | The ascension, casting lots, fifteen nations hearing in their own language, three thousand added |
+| To the Ends of the Earth | Acts 9–28 | Paul's journeys on a Mediterranean map: the Damascus road, sent from Antioch, the Jerusalem council, Philippi at midnight, Athens, farewell at Miletus, and shipwreck to Rome |
 | No Condemnation | Romans 3–8 | Paul's argument as seven steps, from "all under sin" to a love nothing can break |
+| A Living Sacrifice | Romans 12–13 | Conformed or transformed, seven gifts in one body, a sincere-love checklist, overcoming evil with good, authorities, and the debt of love |
 | The Greatest Is Love | 1 Corinthians 12–13 | Nine gifts, the foot and the hand, gifts without love, and the fifteen marks of love read as "Love", "Jesus" or your own name, with one to focus on this week |
 | Set Free | Galatians 1–6 | The whole letter: two gospels compared, crucified with Christ, children of Abraham by faith, sons not slaves, and the nine-fold fruit of the Spirit to pick from |
 | One New People | Ephesians 1–6 | The whole letter: every blessing in Christ, saved by grace, the wall coming down, one body, old self and new, Christ and his bride, and the armor of God as a daily checklist |
 | Joy in Chains | Philippians 1–4 | Joy from prison, Christ's path down to the cross and up to the highest name, Paul's credentials counted as loss, and the steps from anxiety to peace |
 | A Cloud of Witnesses | Hebrews 11–12 | The hall of faith with links to every story built so far, faith in triumph and in suffering, how to run the race, and Sinai against Zion |
 | Faith That Works | James 1–5 | Joy in trials, the mirror, no favorites, dead and living faith (and how Paul and James agree), the tongue, humility, and when to pray |
+| Living Stones | 1 Peter 1–5 | A living hope, what fades and what lasts, a royal priesthood, Christ's steps through suffering, a ready answer, fiery trials, and casting every care on him |
+| God Is Love | 1 John 1–5 | An eyewitness, God is light, confession step by step, children of God, love in action, test the spirits, and where love comes from |
 | The King Returns | Revelation 19–20 | Hallelujah in heaven, the wedding of the Lamb, the rider called Faithful and True, the order of events, three readings of the thousand years, and the great white throne |
 | All Things New | Revelation 21–22 | The city coming down, its gates and jewels, the river and tree of life, back to Eden |
 
