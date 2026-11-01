@@ -6,6 +6,7 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 |---|---|---|
 | **Words of Jesus** | Matthew, Mark, Luke, John | 130 sayings of Jesus sorted into 13 themes, 14 life situations ("I'm anxious", "Someone hurt me", "I have doubts"…) and 7 study paths (Sermon on the Mount, the "I am" sayings, words from the cross…). Each has its meaning in plain words, one way to live it today, parallel accounts, a word for today, and save / "I did this today" tracking |
 | In the Beginning | Genesis 1–3 | Speak light into the dark, watch creation build day by day, name the animals, search the garden |
+| East of Eden | Genesis 4–11 | Cain and Abel's offerings, sin crouching at the door, "Am I my brother's keeper?", mercy for a murderer, Enoch who walked with God, and Babel set against God's call to Abram |
 | The Ark and the Rainbow | Genesis 6–9 | Noah: a grieving God, the ark to scale, step through a year in the ark as the water rises and falls, the first altar, and the rainbow covenant band by band |
 | The Father of Faith | Genesis 12–22 | Abraham's journeys on a map, seven promises, the stars he could not count and Romans 4, twenty-five years of waiting, and Moriah set beside the cross |
 | Meant for Good | Genesis 37–50 | Joseph from Hebron to Egypt on a map, thirteen years from pit to palace, Pharaoh's dreams, the brothers' tests, and what people meant against what God meant |
@@ -17,7 +18,9 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | Be Strong and Courageous | Joshua 1–6 | God's charge to Joshua, Rahab's scarlet cord, the Red Sea and the Jordan side by side, twelve memorial stones, and thirteen laps around Jericho |
 | No King in Israel | Judges 1–21 | The whole book: the repeating cycle, twelve judges charted, Deborah, Gideon's 300, Samson, and the dark ending |
 | Where You Go, I Will Go | Ruth 1–4 | The whole book: Ruth's vow, gleaning in Boaz's field, what a kinsman-redeemer is, two relatives compared, and the family line from Moab to the Messiah |
+| Speak, Lord | 1 Samuel 1–15 | Hannah's prayer, the boy Samuel hearing God at night, Ichabod and Ebenezer, "give us a king", Saul hiding in the baggage, and "to obey is better than sacrifice" |
 | The Shepherd King | 1 Samuel 16–17, 2 Samuel 7 | God looks at the heart, Goliath's height and armor to scale, the lion and the bear, the battle is the Lord's, and the forever promise behind "Son of David" |
+| The Wisest King | 1 Kings 3–11 | Solomon asks for wisdom, two mothers and a sword, the temple filled with God's glory cloud, Solomon's great prayer, the queen of Sheba, and a heart that slowly turned |
 | Fire and a Whisper | 1 Kings 17–19 | Ravens and the widow's jar, 450 prophets of Baal against one, fire on Carmel, how God cares for a burned-out servant, and the gentle whisper |
 | Chariots of Fire | 2 Kings 2–6 | Elisha: "I will not leave you", a double portion, the widow's jars of oil, the Shunammite's son, Naaman's expectations against God's grace, and hills full of chariots of fire |
 | Home Again | Ezra 1–10 | The whole book: Cyrus's decree, a foundation laid with shouts and weeping, years of discouragement, prophets who restart the work, a finished temple, and Ezra's study-do-teach |
@@ -27,6 +30,7 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | Four Prayers for Every Season | Psalms 23, 51, 103, 139 | The shepherd's path step by step, a prayer of repentance, six benefits not to forget, and being fully known, each linked to God's character |
 | Wisdom for Every Day | Proverbs 1, 3, 31 (and more) | The fear of the Lord, trust with all your heart, guard your heart, words that heal or wound, plans and steps, friends who sharpen, and the woman of noble character |
 | Under the Sun | Ecclesiastes 1–12 | The whole book: meaningless!, weigh up everything the Teacher tried, a time for everything, two are better than one, practical wisdom, and the conclusion of the matter |
+| Holy, Holy, Holy | Isaiah 6, 40 | Isaiah's throne-room vision, the live coal and "Here am I. Send me!", "Comfort my people", the shepherd God, and strength to soar on wings like eagles |
 | The Suffering Servant | Isaiah 52:13–53:12 | The great exchange row by row, Isaiah 53:6 read slowly, the lamb thread through the Bible, and seven details set beside the Gospels |
 | A Hope and a Future | Jeremiah 29–31 | A letter to exiles, plans to give you hope, healing for the outcast, an everlasting love, Rachel weeping, and the new covenant compared with Sinai |
 | Can These Bones Live? | Ezekiel 36–37 | A new heart and spirit, step through the valley as bones become an army, breath and Spirit, two sticks made one, and God's dwelling with his people |
@@ -37,11 +41,13 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | Yet I Will Rejoice | Habakkuk 1–3 | The whole book: how long?, God's surprising answer, the watchtower, the righteous live by faith, and joy when the fig tree doesn't bud |
 | The Sun of Righteousness | Malachi 1–4 | The whole book: the people's "how?" pushback, second-best offerings, the messenger and refiner, "return to me", a scroll of remembrance, and the sunrise with healing in its wings |
 | The King Has Come | Matthew 1–28 | The whole book: the King and his kingdom, a chapter map, people who met Jesus, and his words by theme |
+| The Sermon on the Mount | Matthew 5–7 | The Beatitudes, salt and light, "You have heard… but I tell you", the Lord's Prayer step by step, freedom from worry, and the wise and foolish builders |
 | The Servant Who Came to Give | Mark 1–16 | The whole book: the servant Son of God, a chapter map, and his words by theme |
 | A Savior for Everyone | Luke 1–24 | The whole book: the Savior who seeks the lost, a chapter map, and his words by theme |
+| Lost and Found | Luke 15 | The lost sheep, the lost coin, the son in the far country, a father who runs, and an older brother who won't come in |
 | The Third Day | Luke 22–24 | The upper room, Peter by the fire, the three courts, roll the stone, walk to Emmaus |
-| That You May Believe | John 1–21 | The whole book: seven signs, seven "I am" sayings, the upper room, a chapter map, and his words by theme |
 | The Word Became Flesh | John 1–3 | Question John the Baptist, fill the six jars at Cana, the night wind with Nicodemus |
+| That You May Believe | John 1–21 | The whole book: seven signs, seven "I am" sayings, the upper room, a chapter map, and his words by theme |
 | Wind and Fire | Acts 1–2 | The ascension, casting lots, fifteen nations hearing in their own language, three thousand added |
 | Heaven Open | Acts 6–7 | Seven chosen to serve, Stephen's face like an angel, his sermon on God beyond one place, rejected rescuers, and a martyr praying like his Lord while Saul looks on |
 | To the Ends of the Earth | Acts 9–28 | Paul's journeys on a Mediterranean map: the Damascus road, sent from Antioch, the Jerusalem council, Philippi at midnight, Athens, farewell at Miletus, and shipwreck to Rome |
@@ -52,10 +58,14 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | One New People | Ephesians 1–6 | The whole letter: every blessing in Christ, saved by grace, the wall coming down, one body, old self and new, Christ and his bride, and the armor of God as a daily checklist |
 | Joy in Chains | Philippians 1–4 | Joy from prison, Christ's path down to the cross and up to the highest name, Paul's credentials counted as loss, and the steps from anxiety to peace |
 | Christ Is All | Colossians 1–4 | The whole letter: Paul's prayer, who Christ is in seven layers, Christ in you, shadow and reality, take off / put on, and everyday faith |
+| Encourage One Another | 1 Thessalonians 1–5 | Faith, love and hope at work, a pastor gentle as a mother, a quiet life, grieving with hope, the Lord's return, and "be joyful always" |
 | Finish the Race | 2 Timothy 1–4 | The whole letter: faith from Lois and Eunice, fan the flame, four generations in one verse, God's word not chained, Scripture God-breathed, and the race finished |
+| Grace That Teaches | Titus 1–3 | The whole letter: leaders of character, teaching for every generation, grace that trains us, saved by mercy, and devoted to doing good |
+| No Longer a Slave | Philemon | The whole letter: Onesimus sent home as a brother, Paul's appeal on the basis of love, and "charge it to me" |
 | A Cloud of Witnesses | Hebrews 11–12 | The hall of faith with links to every story built so far, faith in triumph and in suffering, how to run the race, and Sinai against Zion |
 | Faith That Works | James 1–5 | Joy in trials, the mirror, no favorites, dead and living faith (and how Paul and James agree), the tongue, humility, and when to pray |
 | Living Stones | 1 Peter 1–5 | A living hope, what fades and what lasts, a royal priesthood, Christ's steps through suffering, a ready answer, fiery trials, and casting every care on him |
+| Until the Day Dawns | 2 Peter 1–3 | Everything we need, a ladder of growing faith, eyewitnesses of glory, Scripture as a lamp, false teachers, and a patient God promising a new heaven and earth |
 | God Is Love | 1 John 1–5 | An eyewitness, God is light, confession step by step, children of God, love in action, test the spirits, and where love comes from |
 | The King Returns | Revelation 19–20 | Hallelujah in heaven, the wedding of the Lamb, the rider called Faithful and True, the order of events, three readings of the thousand years, and the great white throne |
 | All Things New | Revelation 21–22 | The city coming down, its gates and jewels, the river and tree of life, back to Eden |
