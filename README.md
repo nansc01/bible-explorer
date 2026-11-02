@@ -64,6 +64,7 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | Treasure in Jars of Clay | 2 Corinthians 1, 3–5, 8–9, 12 | The God of all comfort, unveiled faces, treasure in jars of clay, a new creation, cheerful giving, and power made perfect in weakness |
 | Set Free | Galatians 1–6 | The whole letter: two gospels compared, crucified with Christ, children of Abraham by faith, sons not slaves, and the nine-fold fruit of the Spirit to pick from |
 | One New People | Ephesians 1–6 | The whole letter: every blessing in Christ, saved by grace, the wall coming down, one body, old self and new, Christ and his bride, and the armor of God as a daily checklist |
+| Live Worthy of the Calling | Ephesians 4 (deep dive) | Verse by verse through the hinge of the letter: what "worthy" means, guarding the unity the Spirit made, the gifts of the ascended King, how a church grows up, the old self and the new, and five everyday swaps with the reason behind each |
 | Joy in Chains | Philippians 1–4 | Joy from prison, Christ's path down to the cross and up to the highest name, Paul's credentials counted as loss, and the steps from anxiety to peace |
 | Christ Is All | Colossians 1–4 | The whole letter: Paul's prayer, who Christ is in seven layers, Christ in you, shadow and reality, take off / put on, and everyday faith |
 | Encourage One Another | 1 Thessalonians 1–5 | Faith, love and hope at work, a pastor gentle as a mother, a quiet life, grieving with hope, the Lord's return, and "be joyful always" |
