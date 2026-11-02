@@ -2237,6 +2237,17 @@ body[data-view="church"] .viewnav{display:flex}
 @media (min-width:1180px){body.sp-open .totop{right:calc(27rem + 16px)}}
 @media (max-width:1179px){body.sp-open .totop{opacity:0;pointer-events:none}}
 @media (prefers-reduced-motion:reduce){.totop{transition:none}}
+/* ---------- Take it home: save bar ---------- */
+.rf-bar{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:.6rem .9rem;margin-top:.2rem}
+.rf-save{display:inline-flex;align-items:center;gap:.45rem;min-height:2.9rem;padding:0 1.2rem;border-radius:999px;border:0;cursor:pointer;
+  background:linear-gradient(120deg,var(--gold),#d98a3a);color:#1a1206;font:700 .9rem var(--f-label);box-shadow:0 6px 18px -8px var(--glow)}
+.rf-save:disabled{opacity:.55;cursor:default;box-shadow:none}
+.rf-save.done{background:var(--surface-solid);color:var(--gold);border:1px solid var(--gold)}
+.rf-open{border:0;background:none;padding:0;color:var(--lapis);font:600 .84rem var(--f-label);cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.rf-status{font:600 .78rem var(--f-label);color:var(--muted)}
+.rf-status.ok{color:#2f8a4e}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .rf-status.ok{color:#7fd39b}}
+:root[data-theme="dark"] .rf-status.ok{color:#7fd39b}
 
 </style>
 
@@ -10254,6 +10265,12 @@ if (pop){ const sh = $(".sheet", pop); const b = document.createElement("button"
   b.onclick = () => { const ref = $("#popRef").textContent.trim(), say = $("#popSay").textContent.trim(), pg = $("#popPg").textContent.trim(); addToNote(`${ref}: ${say}${pg ? " (" + pg + ")" : ""}`, ref); }; }
 
 paintBadge();
+// used by the "Take it home" save buttons
+window.studyNotes = {
+  save(id, title, body, tab){ const cur = notes.find(x => x.id === id); const n = { ...(cur || { created: Date.now() }), id, title, body, tab, deleted: false }; upsert(n); return n; },
+  open(id){ open("notes"); edit(id); },
+  toast, synced: () => !!cloudCol, has: id => notes.some(x => x.id === id && !x.deleted)
+};
 if ((store.get("bible:sp") || "") && wide.matches) open(store.get("bible:sp"));
 initCloud();
 })();
@@ -10334,6 +10351,43 @@ let tick = 0, endSeen = false; const upd = () => { tick = 0; fab.classList.toggl
 if ("IntersectionObserver" in window){ const seen = new Set(); const io = new IntersectionObserver(es => { es.forEach(e => e.isIntersecting ? seen.add(e.target) : seen.delete(e.target)); endSeen = seen.size > 0; upd(); });
   document.querySelectorAll(".endnav").forEach(n => io.observe(n)); }
 addEventListener("scroll", () => { if (!tick) tick = requestAnimationFrame(upd); }, { passive: true }); upd();
+})();
+/* ---------- Take it home: visible saving + "Save to my notes" ---------- */
+(() => {
+const CHECK = `<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+const lab = id => (TABS.find(t => t.id === id) || {}).label || id;
+const ago = t => { const s = (Date.now() - t) / 1000; return s < 50 ? "just now" : s < 3600 ? Math.round(s / 60) + " min ago" : new Date(t).toLocaleString([], { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }); };
+function enhance(sec){
+  if (sec.dataset.rf) return; const tas = [...sec.querySelectorAll("textarea[data-k]")]; if (!tas.length) return; sec.dataset.rf = 1;
+  const pane = sec.closest(".tabpane"), tab = pane ? pane.dataset.tab : tas[0].dataset.k.split(":")[0], id = "reflect-" + tab;
+  const head = sec.querySelector(".reflect-head h2"), small = sec.querySelector(".reflect-head .small");
+  if (small) small.textContent = "Your answers save as you type. Tap Save to keep them in your notes too.";
+  const grid = sec.querySelector(".reflect-grid") || tas[0].parentElement.parentElement;
+  const bar = document.createElement("div"); bar.className = "rf-bar";
+  bar.innerHTML = `<button class="rf-save" type="button">${CHECK}<span>Save to my notes</span></button><span class="rf-status" aria-live="polite"></span><button class="rf-open" type="button" hidden>Open in notes</button>`;
+  grid.after(bar);
+  const btn = bar.querySelector(".rf-save"), st = bar.querySelector(".rf-status"), op = bar.querySelector(".rf-open");
+  const stamp = () => { try { return window.studyNotes && studyNotes.has(id) ? +store.get("reflect:saved:" + tab) || 0 : 0; } catch { return 0; } };
+  const body = () => tas.map(t => { const q = (t.closest("label") || {}).querySelector ? t.closest("label").querySelector("span") : null; return `${q ? q.textContent.trim() : "Question"}\n${t.value.trim() || "—"}`; }).join("\n\n");
+  const any = () => tas.some(t => t.value.trim());
+  const paint = (msg, ok) => { st.textContent = msg; st.classList.toggle("ok", !!ok); };
+  const refresh = () => { const s = stamp() && window.studyNotes && studyNotes.has(id) ? stamp() : 0; btn.disabled = !any(); op.hidden = !(s && window.studyNotes);
+    if (s){ btn.classList.add("done"); btn.querySelector("span").textContent = "Saved to my notes"; paint("Saved " + ago(s), true); } else paint(any() ? "Saved in this browser" : ""); };
+  let tm; tas.forEach(t => t.addEventListener("input", () => {
+    try { store.set("reflect:" + t.dataset.k, t.value); } catch {}
+    btn.disabled = !any(); btn.classList.remove("done"); btn.querySelector("span").textContent = stamp() ? "Update my notes" : "Save to my notes";
+    paint("Saving…"); clearTimeout(tm); tm = setTimeout(() => paint(stamp() ? "Saved in this browser · tap Update to refresh your note" : "Saved in this browser"), 600); }));
+  btn.onclick = () => {
+    tas.forEach(t => { try { store.set("reflect:" + t.dataset.k, t.value); } catch {} });
+    if (window.studyNotes){ studyNotes.save(id, `Take it home · ${lab(tab)}`, `${head ? head.textContent.trim() : "Take it home"}\n\n${body()}`, tab); try { store.set("reflect:saved:" + tab, String(Date.now())); } catch {}
+      studyNotes.toast("Saved to your notes", "Open", () => studyNotes.open(id)); }
+    refresh(); };
+  op.onclick = () => window.studyNotes && studyNotes.open(id);
+  refresh();
+}
+const run = () => document.querySelectorAll(".reflect").forEach(enhance);
+run();
+const _st = window.showTab; if (typeof _st === "function") window.showTab = function(){ const r = _st.apply(this, arguments); setTimeout(run, 0); return r; };
 })();
 </script>
 
