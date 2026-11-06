@@ -9,9 +9,14 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | East of Eden | Genesis 4–11 | Cain and Abel's offerings, sin crouching at the door, "Am I my brother's keeper?", mercy for a murderer, Enoch who walked with God, and Babel set against God's call to Abram |
 | The Ark and the Rainbow | Genesis 6–9 | Noah: a grieving God, the ark to scale, step through a year in the ark as the water rises and falls, the first altar, and the rainbow covenant band by band |
 | The Father of Faith | Genesis 12–22 | Abraham's journeys on a map, seven promises, the stars he could not count and Romans 4, twenty-five years of waiting, and Moriah set beside the cross |
+| The Gate of Heaven | Genesis 23–28 | A servant's prayer at a well, twins at war, a birthright sold for stew, a stolen blessing, and a stairway to heaven over a runaway |
+| Wrestling Until Daybreak | Genesis 29–36 | Jacob deceived, twelve sons born of rivalry, a night wrestling with God, a new name, and an embrace from Esau |
 | Meant for Good | Genesis 37–50 | Joseph from Hebron to Egypt on a map, thirteen years from pit to palace, Pharaoh's dreams, the brothers' tests, and what people meant against what God meant |
+| Drawn Out of the Water | Exodus 1–2 | Pharaoh's three plans, five women who saved Moses, a prince who runs, and a God who hears |
 | The Burning Bush | Exodus 3–4 | God hears the cry, holy ground, "Who am I?" answered with "I will be with you", the name I AM, three signs, and five excuses matched with five answers |
+| Let My People Go | Exodus 5–11 | Who is the Lord?, God's ‘I will’ promises, the ten plagues, a hardening heart, and a distinction between Egypt and Goshen |
 | Through the Sea | Exodus 12–14 | Mark the doorframe, pack for the road, follow the route, cross the sea |
+| Bread from Heaven | Exodus 15–18 | The victory song, bitter water made sweet, daily manna, water from the rock, held-up arms, and Jethro's advice |
 | Ten Words from Sinai | Exodus 19–20 | Eagles' wings and the covenant offer, who may come near the mountain, and the Ten Commandments one by one: what each means, how to live it today, and how Jesus and Paul read it |
 | Be Holy | Leviticus 1, 16, 19, 23, 25 | Offerings that bring people near, the Day of Atonement and the scapegoat, "love your neighbor as yourself", Israel's calendar of feasts, and the Jubilee |
 | Giants and Grasshoppers | Numbers 13–14 | Twelve spies, a cluster of grapes on a pole, two reports compared, a night of tears, Moses praying God's own words back, and forty years for forty days |
