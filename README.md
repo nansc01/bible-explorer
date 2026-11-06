@@ -19,6 +19,10 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | Bread from Heaven | Exodus 15–18 | The victory song, bitter water made sweet, daily manna, water from the rock, held-up arms, and Jethro's advice |
 | Ten Words from Sinai | Exodus 19–20 | Eagles' wings and the covenant offer, who may come near the mountain, and the Ten Commandments one by one: what each means, how to live it today, and how Jesus and Paul read it |
 | Be Holy | Leviticus 1, 16, 19, 23, 25 | Offerings that bring people near, the Day of Atonement and the scapegoat, "love your neighbor as yourself", Israel's calendar of feasts, and the Jubilee |
+| The Book of the Covenant | Exodus 21–24 | Freedom in the seventh year, fair limits, God hears the vulnerable, help your enemy's donkey, feasts, and a covenant sealed with blood and a meal |
+| God Moves In | Exodus 25–31 · 35–40 | The tabernacle as a walk from the gate to the ark, the high priest's heart, Spirit-filled craftsmen, more than enough, and glory filling the tent |
+| The Golden Calf | Exodus 32–34 | The calf, Moses standing in the gap, smashed tablets, ‘show me your glory’, and God's self-portrait: compassionate and gracious |
+| Coming Near | Leviticus 2–10 · 12–15 · 18 · 20–22 · 24 · 27 | Five offerings, priests ordained ear to toe, strange fire, clean and unclean, a different people, lamps that never go out, and the tithe |
 | Giants and Grasshoppers | Numbers 13–14 | Twelve spies, a cluster of grapes on a pole, two reports compared, a night of tears, Moses praying God's own words back, and forty years for forty days |
 | Hear, O Israel | Deuteronomy 6–8 | Love God with heart, soul and strength, faith at home in four ordinary moments, the danger of a full stomach, telling your kids the rescue story, and bread from heaven |
 | Be Strong and Courageous | Joshua 1–6 | God's charge to Joshua, Rahab's scarlet cord, the Red Sea and the Jordan side by side, twelve memorial stones, and thirteen laps around Jericho |
