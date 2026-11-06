@@ -23,8 +23,14 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | God Moves In | Exodus 25–31 · 35–40 | The tabernacle as a walk from the gate to the ark, the high priest's heart, Spirit-filled craftsmen, more than enough, and glory filling the tent |
 | The Golden Calf | Exodus 32–34 | The calf, Moses standing in the gap, smashed tablets, ‘show me your glory’, and God's self-portrait: compassionate and gracious |
 | Coming Near | Leviticus 2–10 · 12–15 · 18 · 20–22 · 24 · 27 | Five offerings, priests ordained ear to toe, strange fire, clean and unclean, a different people, lamps that never go out, and the tithe |
+| The Camp on the Move | Numbers 1–12 | A census, the camp around God's tent, the priestly blessing, the cloud that says go or stay, cravings for Egypt, and Moses at breaking point |
 | Giants and Grasshoppers | Numbers 13–14 | Twelve spies, a cluster of grapes on a pole, two reports compared, a night of tears, Moses praying God's own words back, and forty years for forty days |
+| Look and Live | Numbers 15–25 | Korah's rebellion, Aaron between the living and the dead, a blossoming staff, Moses at the rock, the bronze snake, Balaam and Peor |
+| A New Generation | Numbers 26–36 | A new census, five sisters who change the law, Joshua commissioned, two tribes tempted to settle, the journey journal, cities of refuge |
+| Remember the Road | Deuteronomy 1–5 · 9–11 | Eleven days that took forty years, carried like a son, the covenant for a new generation, not by your goodness, what God asks |
 | Hear, O Israel | Deuteronomy 6–8 | Love God with heart, soul and strength, faith at home in four ordinary moments, the danger of a full stomach, telling your kids the rescue story, and bread from heaven |
+| A Society Shaped by Grace | Deuteronomy 12–26 | Worship as a feast for all, open hands, humble leaders, practical neighbor-love, fair wages, gleanings, honest weights, a thankful creed |
+| Choose Life | Deuteronomy 27–34 | Blessings and curses, a way back after exile, the word is near, choose life, never leave you, the Rock, and Moses on Nebo |
 | Be Strong and Courageous | Joshua 1–6 | God's charge to Joshua, Rahab's scarlet cord, the Red Sea and the Jordan side by side, twelve memorial stones, and thirteen laps around Jericho |
 | No King in Israel | Judges 1–21 | The whole book: the repeating cycle, twelve judges charted, Deborah, Gideon's 300, Samson, and the dark ending |
 | Where You Go, I Will Go | Ruth 1–4 | The whole book: Ruth's vow, gleaning in Boaz's field, what a kinsman-redeemer is, two relatives compared, and the family line from Moab to the Messiah |
