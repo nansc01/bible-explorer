@@ -46,9 +46,12 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | A Kingdom Torn in Two | 1 Kings 12–16, 20–22 | Rehoboam's harsh answer, Jeroboam's golden calves, north vs south, Ahab and Jezebel, Naboth's vineyard, and Micaiah |
 | Fire and a Whisper | 1 Kings 17–19 | Ravens and the widow's jar, 450 prophets of Baal against one, fire on Carmel, how God cares for a burned-out servant, and the gentle whisper |
 | Chariots of Fire | 2 Kings 2–6 | Elisha: "I will not leave you", a double portion, the widow's jars of oil, the Shunammite's son, Naaman's expectations against God's grace, and hills full of chariots of fire |
+| The Fall of the North | 2 Kings 1, 7–17 | Every northern king on a reign timeline, the four lepers, Jehu, a hidden boy-king, three arrows, and why Samaria fell |
+| The Last Kings of Judah | 2 Kings 18–25 | Judah's last eight kings on a timeline, Hezekiah's prayer, Manasseh, Josiah finds the Book, Jerusalem burns, a king released |
 | Seek Him and Be Found | 1 & 2 Chronicles | Both books as a picture: the family line from Adam, David and the ark, God's promise of a house forever, the temple filled with glory, and all 20 rulers of Judah on one interactive timeline, colored by how each turned out, with who, what happened and the lesson |
 | Home Again | Ezra 1–10 | The whole book: Cyrus's decree, a foundation laid with shouts and weeping, years of discouragement, prophets who restart the work, a finished temple, and Ezra's study-do-teach |
 | Rebuild the Wall | Nehemiah 1–8 | A quick prayer before the king, the night inspection, everyone repairing their own section, sword in one hand and trowel in the other, fifty-two days, and the joy of the Lord |
+| Remember Me, O My God | Nehemiah 9–13 | The great confession, a signed promise, two choirs on the wall, promises broken, and remember me |
 | For Such a Time | Esther 1–10 | The whole book: the empire at a glance, the cast lot, the relay through Hathach, a sleepless night, six reversals and the days of Purim |
 | Out of the Storm | Job 1–42 | The whole book: the scene behind the curtain, one terrible day, seven silent days, the friends' theory against the truth, "I know that my Redeemer lives", God's questions from the storm, and "now my eyes have seen you" |
 | Four Prayers for Every Season | Psalms 23, 51, 103, 139 | The shepherd's path step by step, a prayer of repentance, six benefits not to forget, and being fully known, each linked to God's character |
