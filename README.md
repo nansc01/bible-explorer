@@ -33,6 +33,7 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | Four Prayers for Every Season | Psalms 23, 51, 103, 139 | The shepherd's path step by step, a prayer of repentance, six benefits not to forget, and being fully known, each linked to God's character |
 | Wisdom for Every Day | Proverbs 1, 3, 31 (and more) | The fear of the Lord, trust with all your heart, guard your heart, words that heal or wound, plans and steps, friends who sharpen, and the woman of noble character |
 | Under the Sun | Ecclesiastes 1–12 | The whole book: meaningless!, weigh up everything the Teacher tried, a time for everything, two are better than one, practical wisdom, and the conclusion of the matter |
+| Love Strong as Death | Song of Songs 1–8 | The whole book as a love song: delight, waiting for love's time, two night searches, words that build up, and love as a seal that many waters cannot quench |
 | Holy, Holy, Holy | Isaiah 6, 40 | Isaiah's throne-room vision, the live coal and "Here am I. Send me!", "Comfort my people", the shepherd God, and strength to soar on wings like eagles |
 | The Suffering Servant | Isaiah 52:13–53:12 | The great exchange row by row, Isaiah 53:6 read slowly, the lamb thread through the Bible, and seven details set beside the Gospels |
 | A Hope and a Future | Jeremiah 29–31 | A letter to exiles, plans to give you hope, healing for the outcast, an everlasting love, Rachel weeping, and the new covenant compared with Sinai |
@@ -42,9 +43,12 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | Love That Won't Let Go | Hosea 1–14 | The whole book: a prophet's painful marriage, names of judgment renamed for mercy, a door of hope, a wife bought back, "how can I give you up?", and the dew and the lily |
 | Rend Your Heart | Joel 1–3 | The whole book: waves of locusts, "return to me with all your heart", the years the locusts ate restored, and the Spirit poured out on all people |
 | Let Justice Roll | Amos 1–9 | The whole book: a shepherd-prophet, the needy sold for sandals, warnings ignored, worship without justice, the plumb line, and David's tent rebuilt |
+| Brought Down from the Heights | Obadiah | Edom's pride, the slide from watching to joining in, the boomerang of justice, and the last line: the kingdom will be the Lord's |
 | The Runaway Prophet | Jonah 1–4 | The whole book: down, down, down; pagan sailors who pray; the sign of Jonah; a whole city that repents; and God's last question |
 | Act Justly, Love Mercy | Micah 1–7 | The whole book: justice for sale, swords into plowshares, a ruler from Bethlehem, God's case against his people, what the Lord requires, and sins hurled into the sea |
+| A Refuge in Trouble | Nahum 1–3 | Slow to anger but not soft on evil, a refuge for those who trust him, good news on the mountains, and the fall of Nineveh |
 | Yet I Will Rejoice | Habakkuk 1–3 | The whole book: how long?, God's surprising answer, the watchtower, the righteous live by faith, and joy when the fig tree doesn't bud |
+| He Will Sing Over You | Zephaniah 1–3 | The darkest day, the call to seek humility, judgment on every side, and God rejoicing over his people with singing |
 | Give Careful Thought | Haggai 1–2 | The whole book: "not the time yet", wages in a purse with holes, "I am with you", a small temple with greater glory, and a signet ring |
 | Your King Comes | Zechariah 1–14 | Return to me, filthy clothes exchanged, "not by might but by my Spirit", children playing in the streets, a king on a donkey, and the one they pierced |
 | The Sun of Righteousness | Malachi 1–4 | The whole book: the people's "how?" pushback, second-best offerings, the messenger and refiner, "return to me", a scroll of remembrance, and the sunrise with healing in its wings |
@@ -69,6 +73,7 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | Joy in Chains | Philippians 1–4 | Joy from prison, Christ's path down to the cross and up to the highest name, Paul's credentials counted as loss, and the steps from anxiety to peace |
 | Christ Is All | Colossians 1–4 | The whole letter: Paul's prayer, who Christ is in seven layers, Christ in you, shadow and reality, take off / put on, and everyday faith |
 | Encourage One Another | 1 Thessalonians 1–5 | Faith, love and hope at work, a pastor gentle as a mother, a quiet life, grieving with hope, the Lord's return, and "be joyful always" |
+| Stand Firm | 2 Thessalonians 1–3 | Growing under pressure, God will set it right, a rumor answered (not yet), stand firm, keep working, never tire of doing right |
 | The Worst of Sinners | 1 Timothy 1–6 | The whole letter: the goal of love, the worst of sinners shown mercy, one mediator, leaders of character, set an example, and godliness with contentment |
 | Finish the Race | 2 Timothy 1–4 | The whole letter: faith from Lois and Eunice, fan the flame, four generations in one verse, God's word not chained, Scripture God-breathed, and the race finished |
 | Grace That Teaches | Titus 1–3 | The whole letter: leaders of character, teaching for every generation, grace that trains us, saved by mercy, and devoted to doing good |
