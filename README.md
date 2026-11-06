@@ -32,10 +32,13 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | A Society Shaped by Grace | Deuteronomy 12–26 | Worship as a feast for all, open hands, humble leaders, practical neighbor-love, fair wages, gleanings, honest weights, a thankful creed |
 | Choose Life | Deuteronomy 27–34 | Blessings and curses, a way back after exile, the word is near, choose life, never leave you, the Rock, and Moses on Nebo |
 | Be Strong and Courageous | Joshua 1–6 | God's charge to Joshua, Rahab's scarlet cord, the Red Sea and the Jordan side by side, twelve memorial stones, and thirteen laps around Jericho |
+| The Day the Sun Stood Still | Joshua 7–12 | Achan hides plunder and Israel loses at Ai, the Gibeonite trick, the sun stands still, and thirty-one kings |
+| As for Me and My House | Joshua 13–24 | Caleb at 85 asks for the mountain, tribes that settle for less, the witness altar, not one promise failed, and choose this day |
 | No King in Israel | Judges 1–21 | The whole book: the repeating cycle, twelve judges charted, Deborah, Gideon's 300, Samson, and the dark ending |
 | Where You Go, I Will Go | Ruth 1–4 | The whole book: Ruth's vow, gleaning in Boaz's field, what a kinsman-redeemer is, two relatives compared, and the family line from Moab to the Messiah |
 | Speak, Lord | 1 Samuel 1–15 | Hannah's prayer, the boy Samuel hearing God at night, Ichabod and Ebenezer, "give us a king", Saul hiding in the baggage, and "to obey is better than sacrifice" |
 | The Shepherd King | 1 Samuel 16–17, 2 Samuel 7 | God looks at the heart, Goliath's height and armor to scale, the lion and the bear, the battle is the Lord's, and the forever promise behind "Son of David" |
+| Running from a King | 1 Samuel 18–31 | Saul jealous, Jonathan a true friend, the cave of Adullam, David spares Saul twice, Abigail, Endor, and Gilboa |
 | You Are the Man | 2 Samuel 11–12 | David stays home and abuses his power, Uriah's integrity, the cover-up, Nathan's story of the little lamb, confession without excuses, and grace that follows |
 | The Wisest King | 1 Kings 3–11 | Solomon asks for wisdom, two mothers and a sword, the temple filled with God's glory cloud, Solomon's great prayer, the queen of Sheba, and a heart that slowly turned |
 | Fire and a Whisper | 1 Kings 17–19 | Ravens and the widow's jar, 450 prophets of Baal against one, fire on Carmel, how God cares for a burned-out servant, and the gentle whisper |
