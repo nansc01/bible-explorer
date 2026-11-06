@@ -39,8 +39,11 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | Speak, Lord | 1 Samuel 1–15 | Hannah's prayer, the boy Samuel hearing God at night, Ichabod and Ebenezer, "give us a king", Saul hiding in the baggage, and "to obey is better than sacrifice" |
 | The Shepherd King | 1 Samuel 16–17, 2 Samuel 7 | God looks at the heart, Goliath's height and armor to scale, the lion and the bear, the battle is the Lord's, and the forever promise behind "Son of David" |
 | Running from a King | 1 Samuel 18–31 | Saul jealous, Jonathan a true friend, the cave of Adullam, David spares Saul twice, Abigail, Endor, and Gilboa |
+| The King Who Danced | 2 Samuel 1–10 | David mourns Saul, seven years in Hebron, Jerusalem captured, dancing before the ark, the forever promise, and Mephibosheth at the table |
 | You Are the Man | 2 Samuel 11–12 | David stays home and abuses his power, Uriah's integrity, the cover-up, Nathan's story of the little lamb, confession without excuses, and grace that follows |
+| O My Son | 2 Samuel 13–24, 1 Kings 1–2 | The sword in David's house, Absalom steals hearts and the throne, David flees barefoot, a father's cry, and Solomon crowned |
 | The Wisest King | 1 Kings 3–11 | Solomon asks for wisdom, two mothers and a sword, the temple filled with God's glory cloud, Solomon's great prayer, the queen of Sheba, and a heart that slowly turned |
+| A Kingdom Torn in Two | 1 Kings 12–16, 20–22 | Rehoboam's harsh answer, Jeroboam's golden calves, north vs south, Ahab and Jezebel, Naboth's vineyard, and Micaiah |
 | Fire and a Whisper | 1 Kings 17–19 | Ravens and the widow's jar, 450 prophets of Baal against one, fire on Carmel, how God cares for a burned-out servant, and the gentle whisper |
 | Chariots of Fire | 2 Kings 2–6 | Elisha: "I will not leave you", a double portion, the widow's jars of oil, the Shunammite's son, Naaman's expectations against God's grace, and hills full of chariots of fire |
 | Seek Him and Be Found | 1 & 2 Chronicles | Both books as a picture: the family line from Adam, David and the ark, God's promise of a house forever, the temple filled with glory, and all 20 rulers of Judah on one interactive timeline, colored by how each turned out, with who, what happened and the lesson |
