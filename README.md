@@ -56,6 +56,8 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | Out of the Storm | Job 1–42 | The whole book: the scene behind the curtain, one terrible day, seven silent days, the friends' theory against the truth, "I know that my Redeemer lives", God's questions from the storm, and "now my eyes have seen you" |
 | Four Prayers for Every Season | Psalms 23, 51, 103, 139 | The shepherd's path step by step, a prayer of repentance, six benefits not to forget, and being fully known, each linked to God's character |
 | Wisdom for Every Day | Proverbs 1, 3, 31 (and more) | The fear of the Lord, trust with all your heart, guard your heart, words that heal or wound, plans and steps, friends who sharpen, and the woman of noble character |
+| Two Voices Calling | Proverbs 2, 5–9 | Dig for wisdom like treasure, the ant, a young man walks into a trap, Wisdom at creation, and two dinner invitations |
+| Wisdom on the Street | Proverbs 11–30 | Proverbs sorted by topic: money, work, temper, words, enemies, confession, and Agur's prayer |
 | Under the Sun | Ecclesiastes 1–12 | The whole book: meaningless!, weigh up everything the Teacher tried, a time for everything, two are better than one, practical wisdom, and the conclusion of the matter |
 | Love Strong as Death | Song of Songs 1–8 | The whole book as a love song: delight, waiting for love's time, two night searches, words that build up, and love as a seal that many waters cannot quench |
 | Holy, Holy, Holy | Isaiah 6, 40 | Isaiah's throne-room vision, the live coal and "Here am I. Send me!", "Comfort my people", the shepherd God, and strength to soar on wings like eagles |
@@ -64,6 +66,7 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | New Every Morning | Lamentations 1–5 | The whole book: grief over fallen Jerusalem, honest darkness, the turn at the center ("his compassions never fail"), and a prayer still waiting |
 | Can These Bones Live? | Ezekiel 36–37 | A new heart and spirit, step through the valley as bones become an army, breath and Spirit, two sticks made one, and God's dwelling with his people |
 | Faithful in Babylon | Daniel 1–6 | Daniel's resolve, the statue of kingdoms step by step, "even if he does not", four men in the furnace, two proud kings, and the lions' den |
+| One Like a Son of Man | Daniel 7–12 | Four beasts and the Ancient of Days, a prayer answered as it began, seventy sevens, and the wise who shine like stars |
 | Love That Won't Let Go | Hosea 1–14 | The whole book: a prophet's painful marriage, names of judgment renamed for mercy, a door of hope, a wife bought back, "how can I give you up?", and the dew and the lily |
 | Rend Your Heart | Joel 1–3 | The whole book: waves of locusts, "return to me with all your heart", the years the locusts ate restored, and the Spirit poured out on all people |
 | Let Justice Roll | Amos 1–9 | The whole book: a shepherd-prophet, the needy sold for sandals, warnings ignored, worship without justice, the plumb line, and David's tent rebuilt |
