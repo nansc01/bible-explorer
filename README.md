@@ -60,8 +60,14 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | Wisdom on the Street | Proverbs 11–30 | Proverbs sorted by topic: money, work, temper, words, enemies, confession, and Agur's prayer |
 | Under the Sun | Ecclesiastes 1–12 | The whole book: meaningless!, weigh up everything the Teacher tried, a time for everything, two are better than one, practical wisdom, and the conclusion of the matter |
 | Love Strong as Death | Song of Songs 1–8 | The whole book as a love song: delight, waiting for love's time, two night searches, words that build up, and love as a seal that many waters cannot quench |
+| Scarlet to Snow | Isaiah 1–5, 7–12 | Worship without justice, scarlet sins made white, the vineyard song, Immanuel, a child called Mighty God, the shoot from Jesse's stump |
 | Holy, Holy, Holy | Isaiah 6, 40 | Isaiah's throne-room vision, the live coal and "Here am I. Send me!", "Comfort my people", the shepherd God, and strength to soar on wings like eagles |
+| Death Swallowed Up | Isaiah 13–27 | Proud Babylon falls, Egypt called my people, the watchman, and a feast where death is swallowed up |
+| In Quietness and Trust | Isaiah 28–39 | Don't run to Egypt, the desert blooms, Hezekiah spreads the letter before God, fifteen more years, and a proud mistake |
+| You Are Mine | Isaiah 41–48 | Fear not, called by name, the gentle servant, half a log for dinner and half for a god, Cyrus named in advance |
+| Engraved on His Palms | Isaiah 49–52, 54–55 | A light to the nations, a mother who might forget, a face like flint, beautiful feet, come to the waters |
 | The Suffering Servant | Isaiah 52:13–53:12 | The great exchange row by row, Isaiah 53:6 read slowly, the lamb thread through the Bible, and seven details set beside the Gospels |
+| Arise, Shine | Isaiah 56–66 | A house of prayer for all nations, the fast God wants, beauty for ashes, we are the clay, new heavens and earth |
 | A Hope and a Future | Jeremiah 29–31 | A letter to exiles, plans to give you hope, healing for the outcast, an everlasting love, Rachel weeping, and the new covenant compared with Sinai |
 | New Every Morning | Lamentations 1–5 | The whole book: grief over fallen Jerusalem, honest darkness, the turn at the center ("his compassions never fail"), and a prayer still waiting |
 | Can These Bones Live? | Ezekiel 36–37 | A new heart and spirit, step through the valley as bones become an army, breath and Spirit, two sticks made one, and God's dwelling with his people |
