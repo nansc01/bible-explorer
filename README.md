@@ -68,7 +68,12 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | Engraved on His Palms | Isaiah 49–52, 54–55 | A light to the nations, a mother who might forget, a face like flint, beautiful feet, come to the waters |
 | The Suffering Servant | Isaiah 52:13–53:12 | The great exchange row by row, Isaiah 53:6 read slowly, the lamb thread through the Bible, and seven details set beside the Gospels |
 | Arise, Shine | Isaiah 56–66 | A house of prayer for all nations, the fast God wants, beauty for ashes, we are the clay, new heavens and earth |
+| Broken Cisterns | Jeremiah 1–10 | A young prophet called, the spring traded for leaky cisterns, peace when there is no peace, the temple sermon, no balm in Gilead? |
+| Clay in the Potter's Hand | Jeremiah 11–20 | A ruined belt, a tree by the water, the potter reshapes the clay, a smashed jar, fire in his bones |
+| Good Figs, Bad Figs | Jeremiah 21–28 | Cedar palaces and unpaid workers, the righteous Branch, two baskets of figs, seventy years, a wooden yoke broken |
 | A Hope and a Future | Jeremiah 29–31 | A letter to exiles, plans to give you hope, healing for the outcast, an everlasting love, Rachel weeping, and the new covenant compared with Sinai |
+| Down in the Mud | Jeremiah 32–39 | A field bought in a war zone, a scroll burned, Jeremiah in the cistern, Ebed-Melech's rags, Jerusalem falls |
+| Don't Go to Egypt | Jeremiah 40–52 | Gedaliah murdered, a promise to obey broken, the flight to Egypt, a word for Baruch, and a seat at the king's table |
 | New Every Morning | Lamentations 1–5 | The whole book: grief over fallen Jerusalem, honest darkness, the turn at the center ("his compassions never fail"), and a prayer still waiting |
 | Can These Bones Live? | Ezekiel 36–37 | A new heart and spirit, step through the valley as bones become an army, breath and Spirit, two sticks made one, and God's dwelling with his people |
 | Faithful in Babylon | Daniel 1–6 | Daniel's resolve, the statue of kingdoms step by step, "even if he does not", four men in the furnace, two proud kings, and the lions' den |
