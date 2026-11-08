@@ -128,12 +128,18 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | Finish the Race | 2 Timothy 1–4 | The whole letter: faith from Lois and Eunice, fan the flame, four generations in one verse, God's word not chained, Scripture God-breathed, and the race finished |
 | Grace That Teaches | Titus 1–3 | The whole letter: leaders of character, teaching for every generation, grace that trains us, saved by mercy, and devoted to doing good |
 | No Longer a Slave | Philemon | The whole letter: Onesimus sent home as a brother, Paul's appeal on the basis of love, and "charge it to me" |
+| An Anchor for the Soul | Hebrews 1–6 | Jesus greater than angels, don't drift, he was tempted like us, today if you hear his voice, the throne of grace, hope as an anchor |
+| Once for All | Hebrews 7–10, 13 | Melchizedek, a new covenant on hearts, his own blood behind the curtain, he sat down, draw near, keep loving |
 | A Cloud of Witnesses | Hebrews 11–12 | The hall of faith with links to every story built so far, faith in triumph and in suffering, how to run the race, and Sinai against Zion |
 | Faith That Works | James 1–5 | Joy in trials, the mirror, no favorites, dead and living faith (and how Paul and James agree), the tongue, humility, and when to pray |
 | Living Stones | 1 Peter 1–5 | A living hope, what fades and what lasts, a royal priesthood, Christ's steps through suffering, a ready answer, fiery trials, and casting every care on him |
 | Until the Day Dawns | 2 Peter 1–3 | Everything we need, a ladder of growing faith, eyewitnesses of glory, Scripture as a lamp, false teachers, and a patient God promising a new heaven and earth |
 | God Is Love | 1 John 1–5 | An eyewitness, God is light, confession step by step, children of God, love in action, test the spirits, and where love comes from |
 | Walk in the Truth | 2 John, 3 John, Jude | Three short letters: truth and love, no platform for deceivers, Gaius and Diotrephes, contend for the faith, and "to him who is able to keep you from falling" |
+| Among the Lampstands | Revelation 1–3 | The risen Christ on Patmos and his letters to seven churches: first love, open door, lukewarm, I stand at the door and knock |
+| Worthy Is the Lamb | Revelation 4–7 | The throne room, the sealed scroll, the Lion who is a Lamb, four horsemen, how long?, a multitude no one can count |
+| The Dragon and the Lamb | Revelation 8–14 | Prayers like incense, seven trumpets, two witnesses, the woman and the dragon, two beasts and the mark, the Lamb on Zion |
+| Fallen Is Babylon | Revelation 15–18 | The song of Moses and the Lamb, seven bowls, stay awake, Babylon the great, come out of her, the millstone |
 | The King Returns | Revelation 19–20 | Hallelujah in heaven, the wedding of the Lamb, the rider called Faithful and True, the order of events, three readings of the thousand years, and the great white throne |
 | All Things New | Revelation 21–22 | The city coming down, its gates and jewels, the river and tree of life, back to Eden |
 
