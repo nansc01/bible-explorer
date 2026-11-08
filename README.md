@@ -75,7 +75,11 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | Down in the Mud | Jeremiah 32–39 | A field bought in a war zone, a scroll burned, Jeremiah in the cistern, Ebed-Melech's rags, Jerusalem falls |
 | Don't Go to Egypt | Jeremiah 40–52 | Gedaliah murdered, a promise to obey broken, the flight to Egypt, a word for Baruch, and a seat at the king's table |
 | New Every Morning | Lamentations 1–5 | The whole book: grief over fallen Jerusalem, honest darkness, the turn at the center ("his compassions never fail"), and a prayer still waiting |
+| The Glory Departs | Ezekiel 1–11 | Wheels within wheels by a river in Babylon, the scroll and the watchman, idols in the dark, God's glory leaving the temple |
+| Stand in the Gap | Ezekiel 12–24 | Whitewashed walls, the rescued foundling, sour grapes and repent and live, no one in the gap, Ezekiel's wife |
+| I Myself Will Search | Ezekiel 25–35 | Proud Tyre sinks, ‘I am a god’, the city has fallen, bad shepherds and the Good Shepherd |
 | Can These Bones Live? | Ezekiel 36–37 | A new heart and spirit, step through the valley as bones become an army, breath and Spirit, two sticks made one, and God's dwelling with his people |
+| The Lord Is There | Ezekiel 38–48 | Gog defeated, the glory returns from the east, the river that gets deeper and brings life, the city's new name |
 | Faithful in Babylon | Daniel 1–6 | Daniel's resolve, the statue of kingdoms step by step, "even if he does not", four men in the furnace, two proud kings, and the lions' den |
 | One Like a Son of Man | Daniel 7–12 | Four beasts and the Ancient of Days, a prayer answered as it began, seventy sevens, and the wise who shine like stars |
 | Love That Won't Let Go | Hosea 1–14 | The whole book: a prophet's painful marriage, names of judgment renamed for mercy, a door of hope, a wife bought back, "how can I give you up?", and the dew and the lily |
