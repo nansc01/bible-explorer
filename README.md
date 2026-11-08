@@ -2,6 +2,8 @@
 
 An interactive Bible library in a single web page. The Library tab maps all 66 books, and each built passage gets its own hands-on tab:
 
+Every tab also has a **Read** button that opens the full chapters (World English Bible, public domain) with the verses the tab quotes underlined, plus a one-tap link to the same chapter in the NIV. Tap any scene number (like "18:9") to jump straight to that verse. The pictures respond to your mouse, finger and scrolling; tap one to bring it to life.
+
 | Tab | Passage | What you can do |
 |---|---|---|
 | **Words of Jesus** | Matthew, Mark, Luke, John | 130 sayings of Jesus sorted into 13 themes, 14 life situations ("I'm anxious", "Someone hurt me", "I have doubts"…) and 7 study paths (Sermon on the Mount, the "I am" sayings, words from the cross…). Each has its meaning in plain words, one way to live it today, parallel accounts, a word for today, and save / "I did this today" tracking |
