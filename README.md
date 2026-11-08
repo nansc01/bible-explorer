@@ -103,10 +103,14 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | The Word Became Flesh | John 1–3 | Question John the Baptist, fill the six jars at Cana, the night wind with Nicodemus |
 | That You May Believe | John 1–21 | The whole book: seven signs, seven "I am" sayings, the upper room, a chapter map, and his words by theme |
 | Wind and Fire | Acts 1–2 | The ascension, casting lots, fifteen nations hearing in their own language, three thousand added |
+| What I Have I Give You | Acts 3–5, 8 | The beggar at the Beautiful gate, ordinary men made bold, sharing so no one is in need, Ananias and Sapphira, Philip and the Ethiopian |
 | Heaven Open | Acts 6–7 | Seven chosen to serve, Stephen's face like an angel, his sermon on God beyond one place, rejected rescuers, and a martyr praying like his Lord while Saul looks on |
 | To the Ends of the Earth | Acts 9–28 | Paul's journeys on a Mediterranean map: the Damascus road, sent from Antioch, the Jerusalem council, Philippi at midnight, Athens, farewell at Miletus, and shipwreck to Rome |
+| Not Ashamed | Romans 1–2 | The gospel is God's power, creation shows God, the great swap, and the judge who does the same things |
 | No Condemnation | Romans 3–8 | Paul's argument as seven steps, from "all under sin" to a love nothing can break |
+| Oh, the Depth | Romans 9–11 | Paul's heartbreak, mercy not effort, Jesus is Lord, beautiful feet, the olive tree, and worship |
 | A Living Sacrifice | Romans 12–13 | Conformed or transformed, seven gifts in one body, a sincere-love checklist, overcoming evil with good, authorities, and the debt of love |
+| Accept One Another | Romans 14–16 | Weak and strong, righteousness peace and joy, welcome as Christ welcomed you, Spain, and Phoebe and friends |
 | The Greatest Is Love | 1 Corinthians 12–13 | Nine gifts, the foot and the hand, gifts without love, and the fifteen marks of love read as "Love", "Jesus" or your own name, with one to focus on this week |
 | Treasure in Jars of Clay | 2 Corinthians 1, 3–5, 8–9, 12 | The God of all comfort, unveiled faces, treasure in jars of clay, a new creation, cheerful giving, and power made perfect in weakness |
 | Set Free | Galatians 1–6 | The whole letter: two gospels compared, crucified with Christ, children of Abraham by faith, sons not slaves, and the nine-fold fruit of the Spirit to pick from |
