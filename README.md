@@ -111,7 +111,11 @@ An interactive Bible library in a single web page. The Library tab maps all 66 b
 | Oh, the Depth | Romans 9–11 | Paul's heartbreak, mercy not effort, Jesus is Lord, beautiful feet, the olive tree, and worship |
 | A Living Sacrifice | Romans 12–13 | Conformed or transformed, seven gifts in one body, a sincere-love checklist, overcoming evil with good, authorities, and the debt of love |
 | Accept One Another | Romans 14–16 | Weak and strong, righteousness peace and joy, welcome as Christ welcomed you, Spain, and Phoebe and friends |
+| Christ Crucified | 1 Corinthians 1–4 | Fan clubs around leaders, the foolish cross, God chooses the weak, planting and watering, one foundation |
+| You Are Not Your Own | 1 Corinthians 5–11 | A little yeast, bought at a price, marriage and singleness, love builds up, run to win, a way out, the Lord's Supper |
 | The Greatest Is Love | 1 Corinthians 12–13 | Nine gifts, the foot and the hand, gifts without love, and the fifteen marks of love read as "Love", "Jesus" or your own name, with one to focus on this week |
+| Death Has Lost Its Sting | 1 Corinthians 14–16 | Gifts that build up, died buried raised and seen by 500, if not raised, sown and raised, not in vain |
+| Godly Sorrow | 2 Corinthians 7, 10 | Comfort through Titus, a painful letter, godly vs worldly sorrow, weapons that demolish strongholds, the comparison trap |
 | Treasure in Jars of Clay | 2 Corinthians 1, 3–5, 8–9, 12 | The God of all comfort, unveiled faces, treasure in jars of clay, a new creation, cheerful giving, and power made perfect in weakness |
 | Set Free | Galatians 1–6 | The whole letter: two gospels compared, crucified with Christ, children of Abraham by faith, sons not slaves, and the nine-fold fruit of the Spirit to pick from |
 | One New People | Ephesians 1–6 | The whole letter: every blessing in Christ, saved by grace, the wall coming down, one body, old self and new, Christ and his bride, and the armor of God as a daily checklist |
