@@ -2547,6 +2547,26 @@ body.rd-open{overflow:hidden}
 .rd-foot .rd-niv{margin:0 auto}
 @media (max-width:520px){.rd-foot .rd-prev span,.rd-foot .rd-next span{display:none}.rd-card{width:100vw;border-left:0}.rd-head{padding-left:1rem}.rd-body{padding:1rem 1.05rem 2rem}}
 @media (prefers-reduced-motion:reduce){.rd-card,.rd-scrim{transition:none}.rd-body{scroll-behavior:auto}}
+
+/* floating read button */
+.rd-float{position:fixed;z-index:31;right:calc(env(safe-area-inset-right,0px) + 16px);bottom:calc(env(safe-area-inset-bottom,0px) + 18px);display:inline-flex;align-items:center;gap:.55rem;
+  height:3rem;padding:0 1.05rem 0 .9rem;border-radius:999px;border:1px solid color-mix(in srgb,var(--gold) 55%,transparent);background:var(--surface-solid);color:var(--ink);cursor:pointer;
+  box-shadow:0 12px 30px -12px rgba(0,0,0,.5);opacity:0;transform:translateY(14px);pointer-events:none;transition:opacity .25s,transform .25s,bottom .25s,right .25s,border-color .2s}
+.rd-float.on{opacity:1;transform:none;pointer-events:auto}
+body:has(.totop.on) .rd-float{bottom:calc(env(safe-area-inset-bottom,0px) + 18px + 3.6rem)}
+.rd-float svg{color:var(--gold);flex:none;width:19px;height:19px}
+.rd-float .rd-fl-t{display:flex;flex-direction:column;align-items:flex-start;line-height:1.1;text-align:left}
+.rd-float small{font:700 .6rem var(--f-label);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.rd-float b{font:700 .86rem var(--f-label);white-space:nowrap;max-width:11rem;overflow:hidden;text-overflow:ellipsis}
+.rd-float:hover{border-color:var(--gold);transform:translateY(-2px)}
+.rd-float:active{transform:scale(.96)}
+.rd-float:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+body.rd-open .rd-float{opacity:0;pointer-events:none}
+@media (min-width:1180px){body.sp-open .rd-float{right:calc(27rem + 16px)}}
+@media (max-width:1179px){body.sp-open .rd-float{opacity:0;pointer-events:none}}
+@media (max-width:520px){.rd-float{height:2.9rem;padding:0 .9rem 0 .8rem}.rd-float b{max-width:8.5rem}}
+@media print{.rd-float{display:none}}
+@media (prefers-reduced-motion:reduce){.rd-float{transition:none}}
 /* ---------- the ten plagues gallery ---------- */
 .pg-realms{display:flex;flex-wrap:wrap;gap:.4rem .9rem;margin:.6rem 0 .2rem;font:600 .74rem var(--f-label);color:var(--muted)}
 .pg-realms span{display:inline-flex;align-items:center;gap:.35rem}
@@ -12406,8 +12426,27 @@ addEventListener("resize", upd); upd();
     $$(".scene .head .num", pane).forEach(n => { const m = n.textContent.trim().match(/^(?:(.+?)\s)?(\d+):(\d+)/); if (!m) return;
       let bk = t.book; if (m[1]) { const ab = m[1].toLowerCase().replace(/[^a-z0-9]/g, ""); const sub = name => { const n = name.toLowerCase().replace(/[^a-z0-9]/g, ""); let i = 0; for (const ch of n) if (ch === ab[i]) i++; return i === ab.length && n[0] === ab[0]; };
         const cands = [t.book, ...(t.also || []).map(a => a[0]), ...(typeof BOOKS !== "undefined" ? BOOKS.map(b => b[0]) : [])]; const hit = cands.find(sub); if (hit) bk = hit; }
-      n.classList.add("rd-num"); n.setAttribute("role", "button"); n.tabIndex = 0; n.title = `Read ${label(bk, +m[2])}:${m[3]}`;
+      n.dataset.rdbk = bk; n.dataset.rdc = m[2]; n.dataset.rdv = m[3]; n.classList.add("rd-num"); n.setAttribute("role", "button"); n.tabIndex = 0; n.title = `Read ${label(bk, +m[2])}:${m[3]}`;
       const go = () => open(pane, bk, +m[2], +m[3]); n.onclick = go; n.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } }; }); });
+
+  // ---------- floating "Read" button: always on screen, opens the chapter you are looking at ----------
+  const fl = document.createElement("button"); fl.className = "rd-float"; fl.type = "button";
+  fl.innerHTML = `${book}<span class="rd-fl-t"><small>Read</small><b></b></span>`; document.body.append(fl);
+  let here = null;
+  const where = () => { const pane = $(".tabpane:not([hidden])"); const t = pane && typeof BUILT !== "undefined" && BUILT.find(b => b.tab === pane.dataset.tab);
+    if (!t || !$(".rd-sec", pane)) { here = null; fl.classList.remove("on"); return; }
+    const list0 = chaptersFor(t); let bk = list0[0][0], c = list0[0][1], v = 0; const mid = innerHeight * .5;
+    for (const n of $$(".rd-num", pane)) { if (n.getBoundingClientRect().top > mid) break; bk = n.dataset.rdbk; c = +n.dataset.rdc; v = +n.dataset.rdv; }
+    here = { pane, bk, c, v }; const lbl = label(bk, c);
+    const b = $("b", fl); if (b.textContent !== lbl) b.textContent = lbl;
+    fl.setAttribute("aria-label", `Read ${lbl}`); fl.title = `Read ${lbl}${v ? ":" + v : ""} (R)`; fl.classList.add("on"); };
+  fl.onclick = () => { where(); if (here) open(here.pane, here.bk, here.c, here.v || undefined); };
+  let qd = 0; const q = () => { if (qd) return; qd = requestAnimationFrame(() => { qd = 0; where(); }); };
+  addEventListener("scroll", q, { passive: true }); addEventListener("resize", q);
+  new MutationObserver(q).observe(document.body, { subtree: true, attributes: true, attributeFilter: ["hidden"] });
+  addEventListener("keydown", e => { if ((e.key === "r" || e.key === "R") && !e.metaKey && !e.ctrlKey && !e.altKey && !document.body.classList.contains("rd-open")
+    && !(e.target.closest && e.target.closest("input, textarea, select, [contenteditable]")) && fl.classList.contains("on")) { e.preventDefault(); fl.click(); } });
+  q();
   window.openReader = (tab, bk, c, v) => { const p = document.getElementById("tab-" + tab); if (p) open(p, bk, c, v); };
 })();
 
